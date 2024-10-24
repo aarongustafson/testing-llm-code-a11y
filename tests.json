@@ -1,0 +1,614 @@
+{
+	"tests": [
+		{
+			"title": "Text Field",
+			"prompts": [
+				"Insert a field to respond to the question “What color is an orange?”",
+				"Text field: What color is an orange?",
+				"Field: What color is an orange?",
+				"Field and label for “What color is an orange?”",
+				"Accessible field to answer What color is an orange?"
+			]
+		},
+		{
+			"title": "Text Field (Required)",
+			"prompts": [
+				"Insert a required field to respond to the question “What color is an orange?”",
+				"Text field (required): What color is an orange?",
+				"Required field: What color is an orange?",
+				"Required field and label for “What color is an orange?”",
+				"Accessible field (required) to answer What color is an orange?"
+			]
+		},
+		{
+			"title": "Text Field with Placeholder",
+			"prompts": [
+				"Field to respond to the question “Who is your favorite dinosaur?” Hint: “Rex”",
+				"Text field: Who is your favorite dinosaur? Provide an example: “Rex”",
+				"Field: Who is your favorite dinosaur? Hint: “Rex”",
+				"Field and label for “Who is your favorite dinosaur?” Placeholder: “Rex”",
+				"Accessible field to answer Who is your favorite dinosaur? Sample response: “Rex”"
+			]
+		},
+		{
+			"title": "Text Field with Pattern",
+			"prompts": [
+				"Field “Enter two letters followed by 3 numbers”",
+				"Text field: Enter two letters followed by 3 numbers",
+				"Field: Enter two letters followed by 3 numbers",
+				"Field and label for “Enter two letters followed by 3 numbers”",
+				"Accessible field “Enter two letters followed by 3 numbers”"
+			]
+		},
+		{
+			"title": "Text Field with Autocomplete Suggestion",
+			"prompts": [
+				"Field requesting “Your first name”",
+				"Text field: Your first name",
+				"Field: Your first name",
+				"Field and label for “Your first name”",
+				"Accessible field “Your first name”"
+			]
+		},
+		{
+			"title": "Text Field with Accessible Description",
+			"prompts": [
+				"Field asking “What is your favorite U.S. city?” with note “Please include the state name or abbreviation”",
+				"Text field: What is your favorite U.S. city? Helper text: Please include the state name or abbreviation",
+				"Field: What is your favorite U.S. city? Help text: Please include the state name or abbreviation",
+				"Field and label for “What is your favorite U.S. city?” with helper text “Please include the state name or abbreviation”",
+				"Accessible field “What is your favorite U.S. city?” with description “Please include the state name or abbreviation”"
+			]
+		},
+		{
+			"title": "Text Field with Non-visible Label",
+			"prompts": [
+				"Field with hidden label: “Search for”",
+				"Field with invisible label: “Search for”",
+				"Text field with hidden label: “Search for”",
+				"Text field with invisible label: “Search for”",
+				"Field: “Search for” with hidden label",
+				"Accessible field with hidden label: “Search for”"
+			]
+		},
+		{
+			"title": "Text Field with Validation Error",
+			"prompts": [
+				"Field “What color is an orange?” has an error: “That’s not right. Try again.”",
+				"Text field “What color is an orange?” with error message “That’s not right. Try again.”",
+				"Field: “What color is an orange?” Error: “That’s not right. Try again.”",
+				"Field and label for “What color is an orange?” with an error: “That’s not right. Try again.”",
+				"Accessible field “What color is an orange?” with error “That’s not right. Try again.”"
+			]
+		},
+		{
+			"title": "Email Field",
+			"prompts": [
+				"Insert a field for a user to pick their “Desired email address”",
+				"Email field: Desired email address",
+				"Field: Desired email address",
+				"Field and label for “Desired email address”",
+				"Accessible field for Desired email address"
+			]
+		},
+		{
+			"title": "Email Field with Required",
+			"prompts": [
+				"Insert a required field for a user to pick their “Desired email address”",
+				"Required email field: Desired email address",
+				"Field (required): Desired email address",
+				"Field and label for “Desired email address” (required)",
+				"Accessible required field for Desired email address"
+			]
+		},
+		{
+			"title": "Email Field with Placeholder",
+			"prompts": [
+				"Insert a field for a user to pick their “Desired email address” Hint: “yourname@ourdomain.tld”",
+				"Text field: Desired email address Provide an example: “yourname@ourdomain.tld”",
+				"Field: Desired email address  Hint: “yourname@ourdomain.tld”",
+				"Field and label for “Desired email address” Placeholder: “yourname@ourdomain.tld”",
+				"Accessible field to provide Desired email address Sample response: “yourname@ourdomain.tld”"
+			]
+		},
+		{
+			"title": "Email Field with Autocomplete Suggestion",
+			"prompts": [
+				"Field requesting “Email address”",
+				"Text field: Email address",
+				"Field: Email address",
+				"Field and label for “Email address”",
+				"Accessible field “Email address”"
+			]
+		},
+		{
+			"title": "Email Field with Accessible Description",
+			"prompts": [
+				"Field for “Email Address” with note “We will never share or sell your email address”",
+				"Field: Email Address Help text: We will never share or sell your email address",
+				"Field and label for Email Address with helper text “We will never share or sell your email address”",
+				"Accessible field Email Address with description “We will never share or sell your email address”"
+			]
+		},
+		{
+			"title": "Email Field with Required, Autocomplete, and Accessible Description",
+			"prompts": [
+				"Required field for “Email Address” with note “We will never share or sell your email address”",
+				"Required field: Email Address Help text: We will never share or sell your email address",
+				"Field (required) and label for Email Address with helper text “We will never share or sell your email address”",
+				"Accessible field (required) Email Address with description “We will never share or sell your email address”"
+			]
+		},
+		{
+			"title": "Email Field with Validation Error",
+			"prompts": [
+				"Field “Email Address” has an error: “Your email address is invalid.”",
+				"Text field “Email Address” with error message “Your email address is invalid.”",
+				"Field: “Email Address” Error: “Your email address is invalid.”",
+				"Field and label for “Email Address” with an error: “Your email address is invalid.”",
+				"Accessible field “Email Address” with error “Your email address is invalid.”"
+			]
+		},
+		{
+			"title": "Credit Card Field",
+			"prompts": [
+				"Field for “Credit Card Number”",
+				"“Credit Card Number” field",
+				"Field: “Credit Card Number”",
+				"Field and label for “Credit Card Number”",
+				"Accessible field “Credit Card Number”"
+			]
+		},
+		{
+			"title": "Quantity Field",
+			"prompts": [
+				"Field for “Item Quantity”",
+				"“Item Quantity” field",
+				"Field: “Item Quantity”",
+				"Field and label for “Item Quantity”",
+				"Accessible field “Item Quantity”"
+			]
+		},
+		{
+			"title": "Select Field",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a select field to choose a theme",
+				"a “theme” field using a select",
+				"a theme chooser field",
+				"a labeled field to choose a theme",
+				"an accessible field to choose a theme"
+			]
+		},
+		{
+			"title": "Select Field with Required",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a required select field to choose a theme",
+				"a “theme” field using a select (required)",
+				"a required theme chooser field",
+				"a labeled field (required) to choose a theme",
+				"an accessible required field to choose a theme"
+			]
+		},
+		{
+			"title": "Select Field with Accessible Description",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a select field to choose a theme and a note “You can change this later”",
+				"a “theme” field using a select. Help text: You can change this later",
+				"a theme chooser field with helper text “You can change this later”",
+				"an accessible required field to choose a theme with description “You can change this later”"
+			]
+		},
+		{
+			"title": "Radio Group",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a radio group to choose a theme",
+				"a “theme” picker using radio controls",
+				"a radio control-based theme chooser",
+				"an accessible theme chooser with radio controls"
+			]
+		},
+		{
+			"title": "Radio Group with Accessible Description",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a radio group to choose a theme and a helper text “You can change this later”",
+				"a “theme” picker using radio controls with note: You can change this later",
+				"a radio control-based theme chooser with description “You can change this later”",
+				"an accessible theme chooser with radio controls and a description “You can change this later”"
+			]
+		},
+		{
+			"title": "Radio Group with Validation Error",
+			"prefix": "Given the options light, dark, and high contrast, create",
+			"prompts": [
+				"a radio group to choose a theme and a validation error “You must choose a theme to proceed”",
+				"a “theme” picker using radio controls with a validation error: You must choose a theme to proceed",
+				"a radio control-based theme chooser with an error “You must choose a theme to proceed”",
+				"an accessible theme chooser with radio controls and a validation error “You must choose a theme to proceed”"
+			]
+		},
+		{
+			"title": "Checkbox Group",
+			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prompts": [
+				"a checkbox control to answer “What fruits do you like?”",
+				"a field set for “What fruits do you like?” ",
+				"a set of checkboxes to respond to What fruits do you like?",
+				"an accessible checkbox group labelled What fruits do you like?"
+			]
+		},
+		{
+			"title": "Checkbox Group with Accessible Description",
+			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prompts": [
+				"a checkbox control to answer “What fruits do you like?” with help text “You can change this later”",
+				"a field set for “What fruits do you like?” with note: You can change this later ",
+				"a set of checkboxes to respond to What fruits do you like? with the description You can change this later",
+				"an accessible checkbox group labelled What fruits do you like? and description “You can change this later”"
+			]
+		},
+		{
+			"title": "Checkbox Group with Validation Error",
+			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prompts": [
+				"a checkbox control to answer “What fruits do you like?” with a validation error “You must choose one or more fruits”",
+				"a field set for “What fruits do you like?” with a validation error: You must choose one or more fruits",
+				"a set of checkboxes to respond to What fruits do you like? with the validation error You must choose one or more fruits",
+				"an accessible checkbox group labelled What fruits do you like? and a validation error “You must choose one or more fruits”"
+			]
+		},
+		{
+			"title": "Confirmation Checkbox",
+			"prompts": [
+				"Checkbox for agreeing to the Terms and Conditions.",
+				"Confirmation field for agreeing to the terms and conditions of this site",
+				"Confirm: I agree to the Terms and Conditions",
+				"Accessible confirmation field: I agree to the Terms and Conditions"
+			]
+		},
+		{
+			"title": "Confirmation Checkbox with Link",
+			"prompts": [
+				"Checkbox for agreeing to the Terms and Conditions, with a link to that page.",
+				"Confirmation field for agreeing to the terms and conditions of this site (with a link to view them)",
+				"Confirm: I agree to the Terms and Conditions. Include a link to read them.",
+				"Accessible confirmation field: I agree to the Terms and Conditions. Include a link to read the Terms and Conditions."
+			]
+		},
+		{
+			"title": "Textarea Field",
+			"prompts": [
+				"Message field",
+				"Textarea field (required): “Message”",
+				"Big text field for sending a message.",
+				"Accessible long text field: Message."
+			]
+		},
+		{
+			"title": "Textarea Field with Required",
+			"prompts": [
+				"Required message field",
+				"Textarea field (required): “Message”",
+				"Required big text field for sending a message.",
+				"Accessible required long text field: Message."
+			]
+		},
+		{
+			"title": "Textarea Field with Accessible Description",
+			"prompts": [
+				"Message field with note: Please describe your problem in as much detail as possible.",
+				"Textarea field for “Message” with description: Please describe your problem in as much detail as possible.",
+				"Big text field for sending a message. It has a note: Please describe your problem in as much detail as possible.",
+				"Accessible long text field: Message. It has a description: Please describe your problem in as much detail as possible."
+			]
+		},
+		{
+			"title": "Textarea Field with Validation Error",
+			"prompts": [
+				"Message field with validation error: Your message should be at least 20 words long. Please describe your problem in as much detail as possible.",
+				"Textarea field for “Message” with error: Your message should be at least 20 words long. Please describe your problem in as much detail as possible.",
+				"Big text field for sending a message. It has a validation error: Your message should be at least 20 words long. Please describe your problem in as much detail as possible.",
+				"Accessible long text field: Message. It has an error: Your message should be at least 20 words long. Please describe your problem in as much detail as possible."
+			]
+		},
+		{
+			"title": "Navigation Patterns",
+			"prefix": "Using the top-level items in the JavaScript object [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}]",
+			"prompts": [
+				"create navigation markup",
+				"build a navigation menu",
+				"create the main nav",
+				"build an accessible navigation menu"
+			]
+		},
+		{
+			"title": "Basic Navigation with Current Page",
+			"prefix": "Using the top-level items in the JavaScript object [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}] and assuming the current page is “Products”",
+			"prompts": [
+				"create navigation markup",
+				"build a navigation menu",
+				"create the main nav",
+				"build an accessible navigation menu"
+			]
+		},
+		{
+			"title": "Navigation with Subnav",
+			"prefix": "Using the items in the JavaScript object [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}]",
+			"prompts": [
+				"create navigation markup",
+				"build a navigation menu",
+				"create the main nav",
+				"build an accessible navigation menu"
+			]
+		},
+		{
+			"title": "Collapsed Navigation with Button to Expand",
+			"prefix": "Using the top-level items in the JavaScript object [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}]",
+			"prompts": [
+				"create navigation markup that is shown using a button",
+				"build a navigation menu accessible via a button",
+				"create the main nav and a hamburger menu to show/hide it",
+				"build an accessible navigation menu that is shown/hidden with a button"
+			]
+		},
+		{
+			"title": "Navigation with Button to Expand Subnav",
+			"prefix": "Using the items in the JavaScript object [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}]",
+			"prompts": [
+				"create navigation markup where subnav items are shown using a button",
+				"build a navigation menu where the subnav is expanded via a button",
+				"create the main nav where sub nav is shown/hidden by buttons",
+				"build an accessible navigation menu with subnav controlled via buttons"
+			]
+		},
+		{
+			"title": "Table of Contents Navigation",
+			"prefix": "Using all headings appearing on this on this HTML page: <h1>Page title</h1><p>Content</p><h2 id='section-1'>Section one</h2><p>Content</p><h2 id='section-2'>Section 2</h2><p>Content</p><h2 id='section-3'>Section 3</h2><p>Content</p>",
+			"prompts": [
+				"create a table of contents nav",
+				"build a table of contents with links to the headings",
+				"generate a table of contents",
+				"build an accessible table of contents navigation menu"
+			]
+		},
+		{
+			"title": "Additional Navigation Element",
+			"prefix": "Given the Policies and Legal Information navigation structure [{url:'/privacy',label:'Privacy Policy'},{url:'/accessibility',label:'Accessibility Statement'},{url:/terms',label:'Terms of Use'}]",
+			"prompts": [
+				"create the nav element for these links",
+				"build a navigation list ",
+				"generate our legal nav",
+				"build an accessible Policies and Legal Information navigation"
+			]
+		},
+		{
+			"title": "Breadcrumb Navigation",
+			"prefix": "This page sits at the URL /section/subsection/page. Knowing that",
+			"prompts": [
+				"create the breadcrumb navigation for this page",
+				"build a breadcrumb trail nav",
+				"generate the breadcrumb nav",
+				"build the accessible breadcrumb navigation"
+			]
+		},
+		{
+			"title": "Table with Header Row",
+			"prefix": "Given the data [{name:'Barbara',grade:'Kindergarten'},{name:'Gregory',grade:'1st Grade'},{name:'Janine',grade:'2nd Grade'}]",
+			"prompts": [
+				"generate a simple table",
+				"build a table",
+				"create a data table",
+				"build an accessible table"
+			]
+		},
+		{
+			"title": "Table With Header Row and Column",
+			"prefix": "Given the data [{name:'Barbara',grade:'Kindergarten'},{name:'Gregory',grade:'1st Grade'},{name:'Janine',grade:'2nd Grade'}]",
+			"prompts": [
+				"generate a table using column and row headers.",
+				"build a table. Include column and row headers.",
+				"create a data table with column and row headers.",
+				"build an accessible table with column and row headers using with the JavaScript object [{name:'Barbara',grade:'Kindergarten'},{name:'Gregory',grade:'1st Grade'},{name:'Janine',grade:'2nd Grade'}]"
+			]
+		},
+		{
+			"title": "Table With Caption",
+			"prefix": "Given the data [{name:'Barbara',grade:'Kindergarten'},{name:'Gregory',grade:'1st Grade'},{name:'Janine',grade:'2nd Grade'}]",
+			"prompts": [
+				"generate a simple table. Label it “Our Teachers.”",
+				"build the “Our Teachers” table.",
+				"generate the Our Teachers table.",
+				"build an accessible table with the caption “Our Teachers.”"
+			]
+		},
+		{
+			"title": "Image",
+			"prompts": [
+				"Insert photo.jpg with the alt “Photo description”",
+				"Insert the image photo.jpg with description “Photo description”",
+				"Put photo.jpg here with the accessible title “Photo description”"
+			]
+		},
+		{
+			"title": "Image (Decorative)",
+			"prompts": [
+				"Insert decorative image: graphic.png",
+				"Insert graphic.png, but hide it from AT"
+			]
+		},
+		{
+			"title": "Image with Caption",
+			"prompts": [
+				"Insert chart.gif with alt text “Chart description” as “Figure 1-1. Detailed chart description.”",
+				"Figure 1-1. Detailed chart description. – chart.gif with alt “chart description”",
+				"Insert chart.gif with alt “Chart description” and caption “Figure 1-1. Detailed chart description.” "
+			]
+		},
+		{
+			"title": "Inline SVG",
+			"prompts": [
+				"Embed graphic.svg with title “Graphic Title”",
+				"Embed graphic.svg with accessible label “Graphic Title”"
+			]
+		},
+		{
+			"title": "Inline SVG (Decorative)",
+			"prompts": [
+				"Embed graphic.svg as a decorative image",
+				"Embed graphic.svg but hide it from assistive technology",
+				"Embed graphic.svg but hide it from screen readers"
+			]
+		},
+		{
+			"title": "Inline SVG with Caption",
+			"prompts": [
+				"Embed chart.svg with alt text “Chart Title” as “Figure 1-1. Detailed chart description.”",
+				"Figure 1-1. Detailed chart description. – embedded chart.svg with label  “Chart Title”",
+				"Embed chart.svg with accessible label “Chart Title” and caption “Figure 1-1. Detailed chart description.” "
+			]
+		},
+		{
+			"title": "Link",
+			"prompts": [
+				"Link the text “link text” to /path/to/page",
+				"Link to /path/to/page",
+				"[link text](/path/to/page)"
+			]
+		},
+		{
+			"title": "Link to File",
+			"prompts": [
+				"Link to /documents/file.pdf",
+				"Link to the PDF at /documents/file.pdf (20kB)",
+				"[Document Title]( /documents/file.pdf)"
+			]
+		},
+		{
+			"title": "Link to File (Download)",
+			"prompts": [
+				"Link to download /documents/file.pdf",
+				"Link to download the PDF at /documents/file.pdf (20kB)",
+				"[Document Title]( /documents/file.pdf) (download)"
+			]
+		},
+		{
+			"title": "Link to New Tab / Window",
+			"prompts": [
+				"Use “link text” to open https://domain.tld in a new window",
+				"Link to https://domain.tld should open a new tab",
+				"[link text](https://domain.tld) (open in a new window)"
+			]
+		},
+		{
+			"title": "Edit Link in Repeating Block",
+			"prompts": [
+				"Insert edit link for this product (/product/frob/edit)",
+				"Edit link to /product/frob/edit",
+				"Link to edit this product (/product/frob/edit)",
+				"Accessible link to edit this product (/product/frob/edit)"
+			]
+		},
+		{
+			"title": "Submit Button",
+			"prompts": ["Submit button", "Accessible submit button"]
+		},
+		{
+			"title": "Submit Button with icon",
+			"prompts": [
+				"Search button with magnifying glass icon",
+				"Submit button for the search form, with icon",
+				"Accessible search button with icon"
+			]
+		},
+		{
+			"title": "JavaScript-triggering Button",
+			"prompts": [
+				"Refresh button to trigger window.location.reload()",
+				"Button to refresh the document",
+				"Accessible button to refresh the current page"
+			]
+		},
+		{
+			"title": "Delete Button in Repeating Block",
+			"prompts": [
+				"Insert edit link for this product (/product/frob/edit)",
+				"Edit link to /product/frob/edit",
+				"Link to edit this product (/product/frob/edit)",
+				"Accessible link to edit this product (/product/frob/edit)"
+			]
+		},
+		{
+			"title": "Progressive Disclosure Singleton",
+			"prompts": [
+				"Insert progressive disclosure with title “Short description” and a placeholder comment where I should put the contents.",
+				"Details & summary with title “Short description” and a placeholder comment where I should put the contents.",
+				"Accessible progressive disclosure with title “Short description” and a placeholder comment where I should put the contents."
+			]
+		},
+		{
+			"title": "Progressive Disclosure Singleton (Expanded)",
+			"prompts": [
+				"Insert an open progressive disclosure with title “Short description” and a placeholder comment where I should put the contents.",
+				"Details & summary (open) with title “Short description” and a placeholder comment where I should put the contents.",
+				"Accessible progressive disclosure (open) with title “Short description” and a placeholder comment where I should put the contents."
+			]
+		},
+		{
+			"title": "Progressive Disclosure Group",
+			"prompts": [
+				"Insert a series of progressive disclosures with title “Section 1” and “Section 2.” Put a placeholder comment where I should put the contents of each.",
+				"Details & summary for each of “Section 1” and “Section 2” with a placeholder comment where I should put the contents.",
+				"Accessible progressive disclosures with titles “Section 1” and “Section 2.” Insert a placeholder comment where I should put the contents of each."
+			]
+		},
+		{
+			"title": "Progressive Disclosure Group (First Expanded)",
+			"prompts": [
+				"Insert a series of progressive disclosures with title “Section 1” and “Section 2.” Put a placeholder comment where I should put the contents of each. The first one should be open.",
+				"Details & summary for each of “Section 1” and “Section 2” with a placeholder comment where I should put the contents. Open the first one by default.",
+				"Accessible progressive disclosures with titles “Section 1” and “Section 2.” Insert a placeholder comment where I should put the contents of each. The first one should be open."
+			]
+		},
+		{
+			"title": "Progressive Disclosure Group – One Open at a Time",
+			"prompts": [
+				"Insert a series of mutually-exclusive progressive disclosures with title “Section 1” and “Section 2.” Put a placeholder comment where I should put the contents of each.",
+				"Details & summary for each of “Section 1” and “Section 2” with a placeholder comment where I should put the contents. Only one should be able to be open at a time.",
+				"Accessible progressive disclosures with titles “Section 1” and “Section 2.” Insert a placeholder comment where I should put the contents of each. Ensure only one is open at a time."
+			]
+		},
+		{
+			"title": "Modal Dialog",
+			"prompts": [
+				"Insert a modal dialog and a button to open it. Use placeholder content for the button and dialog content.",
+				"Insert a modal dialog and a button to open it. Use placeholder content for the button and dialog content. Ensure it is accessible."
+			]
+		},
+		{
+			"title": "Modal Dialog with Form",
+			"prompts": [
+				"Insert a modal dialog containing a form and a button to open it. Use placeholder content for the button and form content.",
+				"Insert a modal dialog containing a form and a button to open it. Use placeholder content for the button and form content. Ensure it is accessible."
+			]
+		},
+		{
+			"title": "Popover Dialog",
+			"prompts": [
+				"Insert a popover non-modal dialog containing a form and a button to open it. Use placeholder content for the button and form content.",
+				"Insert a popover non-modal dialog containing a form and a button to open it. Use placeholder content for the button and form content. Ensure it is accessible."
+			]
+		},
+		{
+			"title": "Progress",
+			"prompts": [
+				"Insert a progress indicator for upload progress. Current value: 70%",
+				"Progress indicator: 70%",
+				"Accessible progress indicator: 70%"
+			]
+		}
+	]
+}

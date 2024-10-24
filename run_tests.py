@@ -1,4 +1,8 @@
 import openai
+from openai import AzureOpenAI
+
+client = AzureOpenAI(api_key=os.getenv('AZURE_OPENAI_API_KEY'),
+api_version=os.getenv('AZURE_OPENAI_API_VERSION'))
 import time
 import json
 import os
@@ -9,23 +13,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set up your Azure OpenAI API key and endpoint
-openai.api_key = os.getenv('AZURE_OPENAI_API_KEY')
-openai.api_base = os.getenv('AZURE_OPENAI_API_BASE')
-openai.api_type = 'azure'
-openai.api_version = os.getenv('AZURE_OPENAI_API_VERSION')
+# TODO: The 'openai.api_base' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(base_url=os.getenv('AZURE_OPENAI_API_BASE'))'
+# openai.api_base = os.getenv('AZURE_OPENAI_API_BASE')
 
 # How many runs?
 num_iterations = 10  # Number of times to send the prompt
 
 def get_code_response(prompt):
-    response = openai.ChatCompletion.create(
-        engine="gpt-4-code-interpreter",  # Use the deployment name for the model
-        messages=[
-            {"role": "system", "content": "You are an AI programming assistant."},
-            {"role": "user", "content": prompt}
-        ]
-    )
-    return response.choices[0].message['content']
+    response = client.chat.completions.create(model="gpt-4-code-interpreter",  # Use the deployment name for the model
+    messages=[
+        {"role": "system", "content": "You are an AI programming assistant."},
+        {"role": "user", "content": prompt}
+    ])
+    return response.choices[0].message.content
 
 def main():
     # Load the JSON file

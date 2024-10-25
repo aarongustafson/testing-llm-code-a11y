@@ -1,31 +1,72 @@
-import openai
-from openai import AzureOpenAI
-
-client = AzureOpenAI(api_key=os.getenv('AZURE_OPENAI_API_KEY'),
-api_version=os.getenv('AZURE_OPENAI_API_VERSION'))
+import os
+import requests  
 import time
 import json
-import os
 import uuid
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
+API_BASE = os.environ.get("AZURE_OPENAI_API_BASE")
+DEPLOYMENT = os.environ.get("AZURE_OPENAI_API_MODEL")
+API_VERSION = os.environ.get("AZURE_OPENAI_API_VERSION")
+API_KEY = os.environ.get("AZURE_OPENAI_API_KEY")
+ENDPOINT = API_BASE + "openai/deployments/" + DEPLOYMENT + "/chat/completions?api-version=" + API_VERSION
 
-# Set up your Azure OpenAI API key and endpoint
-# TODO: The 'openai.api_base' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(base_url=os.getenv('AZURE_OPENAI_API_BASE'))'
-# openai.api_base = os.getenv('AZURE_OPENAI_API_BASE')
+# headers
+headers = {  
+    "Content-Type": "application/json",  
+    "api-key": API_KEY  
+}  
 
-# How many runs?
+# configuration
+temperature = 0.95
+top_p = 0.95
 num_iterations = 10  # Number of times to send the prompt
+sleep_time = 10  # Time to sleep between requests
+
+instructions = [
+  "You are an AI programming assistant.",
+  "You return only code snippets with NO OTHER TEXT, code fences, etc.",
+  "Assume your responses will be used in a code editor within an existing HTML document.",
+  # "Your responses only include the amount of HTML required to properly and validly fulfill the request.",
+  "You may include inline CSS or JavaScript, but only as much as absolutely necessary."
+]
 
 def get_code_response(prompt):
-    response = client.chat.completions.create(model="gpt-4-code-interpreter",  # Use the deployment name for the model
-    messages=[
-        {"role": "system", "content": "You are an AI programming assistant."},
-        {"role": "user", "content": prompt}
-    ])
-    return response.choices[0].message.content
+    print(f"Prompt: {prompt}")
+    payload = {
+      "messages": [
+        {
+          "role": "system",
+          "content": [{
+            "type": "text",
+            "text": " ".join(instructions)
+          }]
+        },
+        {
+          "role": "user",
+          "content": [{
+            "type": "text",
+            "text": prompt
+          }]
+        }
+      ],
+      "temperature": temperature,
+      "top_p": top_p,
+      "max_tokens": 800
+    }  
+
+    try:  
+      response = requests.post(ENDPOINT, headers=headers, json=payload)  
+      response.raise_for_status()  # Will raise an HTTPError if the HTTP request returned an unsuccessful status code  
+    except requests.RequestException as e:  
+      raise SystemExit(f"Failed to make the request. Error: {e}")  
+  
+    result = response.json()
+    code = result['choices'][0]['message']['content']
+    print(f"Response: {code}")
+    return code
 
 def main():
     # Load the JSON file
@@ -39,8 +80,8 @@ def main():
 
         prefix = test.get('prefix', '')
 
-        for prompt in test['prompts']:
-            prompt_folder = os.path.join(test_folder, prompt.replace(" ", "_"))
+        for prompt_index, prompt in enumerate(test['prompts'], start=1):
+            prompt_folder = os.path.join(test_folder, str(prompt_index))
             os.makedirs(prompt_folder, exist_ok=True)
 
             unique_responses = set()
@@ -53,7 +94,7 @@ def main():
                     filename = os.path.join(prompt_folder, f"{uuid.uuid4()}.txt")
                     with open(filename, 'w') as response_file:
                         response_file.write(response)
-                time.sleep(1)  # To avoid hitting rate limits
+                time.sleep(sleep_time)  # To avoid hitting rate limits
 
 if __name__ == "__main__":
     main()

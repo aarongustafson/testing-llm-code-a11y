@@ -171,7 +171,7 @@
 		},
 		{
 			"title": "Select Field",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a select field to choose a theme",
 				"a “theme” field using a select",
@@ -182,7 +182,7 @@
 		},
 		{
 			"title": "Select Field with Required",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a required select field to choose a theme",
 				"a “theme” field using a select (required)",
@@ -193,7 +193,7 @@
 		},
 		{
 			"title": "Select Field with Accessible Description",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a select field to choose a theme and a note “You can change this later”",
 				"a “theme” field using a select. Help text: You can change this later",
@@ -203,7 +203,7 @@
 		},
 		{
 			"title": "Radio Group",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a radio group to choose a theme",
 				"a “theme” picker using radio controls",
@@ -213,7 +213,7 @@
 		},
 		{
 			"title": "Radio Group with Accessible Description",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a radio group to choose a theme and a helper text “You can change this later”",
 				"a “theme” picker using radio controls with note: You can change this later",
@@ -223,7 +223,7 @@
 		},
 		{
 			"title": "Radio Group with Validation Error",
-			"prefix": "Given the options light, dark, and high contrast, create",
+			"prefix": "Given the options light, dark, and high contrast, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a radio group to choose a theme and a validation error “You must choose a theme to proceed”",
 				"a “theme” picker using radio controls with a validation error: You must choose a theme to proceed",
@@ -233,7 +233,7 @@
 		},
 		{
 			"title": "Checkbox Group",
-			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prefix": "Given the options bananas, oranges, and apples, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a checkbox control to answer “What fruits do you like?”",
 				"a field set for “What fruits do you like?” ",
@@ -243,7 +243,7 @@
 		},
 		{
 			"title": "Checkbox Group with Accessible Description",
-			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prefix": "Given the options bananas, oranges, and apples, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a checkbox control to answer “What fruits do you like?” with help text “You can change this later”",
 				"a field set for “What fruits do you like?” with note: You can change this later ",
@@ -253,7 +253,7 @@
 		},
 		{
 			"title": "Checkbox Group with Validation Error",
-			"prefix": "Given the options bananas, oranges, and apples, create",
+			"prefix": "Given the options bananas, oranges, and apples, create the HTML only (no JavaScript) for",
 			"prompts": [
 				"a checkbox control to answer “What fruits do you like?” with a validation error “You must choose one or more fruits”",
 				"a field set for “What fruits do you like?” with a validation error: You must choose one or more fruits",

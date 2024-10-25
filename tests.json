@@ -488,7 +488,7 @@
 			]
 		},
 		{
-			"title": "Link to File (Download)",
+			"title": "Link to Download File",
 			"prompts": [
 				"Link to download /documents/file.pdf",
 				"Link to download the PDF at /documents/file.pdf (20kB)",
@@ -496,7 +496,7 @@
 			]
 		},
 		{
-			"title": "Link to New Tab / Window",
+			"title": "Link to New Tab or Window",
 			"prompts": [
 				"Use “link text” to open https://domain.tld in a new window",
 				"Link to https://domain.tld should open a new tab",

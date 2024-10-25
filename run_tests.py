@@ -91,7 +91,7 @@ def main():
                 response = get_code_response(full_prompt)
                 if response not in unique_responses:
                     unique_responses.add(response)
-                    filename = os.path.join(prompt_folder, f"{uuid.uuid4()}.txt")
+                    filename = os.path.join(prompt_folder, f"{uuid.uuid4()}.html")
                     with open(filename, 'w') as response_file:
                         response_file.write(response)
                 time.sleep(sleep_time)  # To avoid hitting rate limits

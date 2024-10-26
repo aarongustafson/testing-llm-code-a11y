@@ -1,0 +1,17 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  ul { list-style: none; padding: 0; }
+  li { position: relative; }
+  li ul { display: none; position: absolute; left: 0; top: 100%; }
+  li:hover ul { display: block; }
+</style>

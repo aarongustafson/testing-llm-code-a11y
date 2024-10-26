@@ -1,0 +1,18 @@
+<button aria-expanded="true" onclick="toggleDisclosure()">Short description</button>
+<div id="disclosure-content">
+  <!-- Contents go here -->
+</div>
+<script>
+  function toggleDisclosure() {
+    const content = document.getElementById('disclosure-content');
+    const button = content.previousElementSibling;
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !isOpen);
+    content.style.display = isOpen ? 'none' : 'block';
+  }
+</script>
+<style>
+  #disclosure-content {
+    display: block;
+  }
+</style>

@@ -1,0 +1,18 @@
+<button onclick="document.getElementById('popover').style.display='block'">Open Form</button>
+<div id="popover" style="display:none; position:absolute; border:1px solid #ccc; background:white; padding:10px;">
+  <form>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" placeholder="Enter something"><br><br>
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" placeholder="Enter something"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+  document.addEventListener('click', function(event) {
+    var popover = document.getElementById('popover');
+    if (!popover.contains(event.target) && event.target !== document.querySelector('button')) {
+      popover.style.display = 'none';
+    }
+  });
+</script>

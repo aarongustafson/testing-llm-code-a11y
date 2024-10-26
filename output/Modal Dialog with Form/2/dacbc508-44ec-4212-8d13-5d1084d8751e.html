@@ -1,0 +1,29 @@
+<button id="openModal">Open Form</button>
+<div id="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style="display:none;">
+  <div role="document">
+    <h2 id="modalTitle">Form Title</h2>
+    <form>
+      <label for="input1">Input 1</label>
+      <input id="input1" type="text" placeholder="Placeholder 1">
+      <label for="input2">Input 2</label>
+      <input id="input2" type="text" placeholder="Placeholder 2">
+      <button type="submit">Submit</button>
+      <button type="button" id="closeModal">Close</button>
+    </form>
+  </div>
+</div>
+<script>
+  const openModalBtn = document.getElementById('openModal');
+  const modal = document.getElementById('modal');
+  const closeModalBtn = document.getElementById('closeModal');
+
+  openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  });
+</script>

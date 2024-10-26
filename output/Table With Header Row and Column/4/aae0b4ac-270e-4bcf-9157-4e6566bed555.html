@@ -1,0 +1,45 @@
+```html
+<script>
+const data = [
+  {name: 'Barbara', grade: 'Kindergarten'},
+  {name: 'Gregory', grade: '1st Grade'},
+  {name: 'Janine', grade: '2nd Grade'}
+];
+
+function createTable(data) {
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+  
+  const headerRow = document.createElement('tr');
+  const nameHeader = document.createElement('th');
+  nameHeader.textContent = 'Name';
+  const gradeHeader = document.createElement('th');
+  gradeHeader.textContent = 'Grade';
+  
+  headerRow.appendChild(nameHeader);
+  headerRow.appendChild(gradeHeader);
+  thead.appendChild(headerRow);
+  
+  data.forEach(item => {
+    const row = document.createElement('tr');
+    const nameCell = document.createElement('td');
+    nameCell.textContent = item.name;
+    const gradeCell = document.createElement('td');
+    gradeCell.textContent = item.grade;
+    
+    row.appendChild(nameCell);
+    row.appendChild(gradeCell);
+    tbody.appendChild(row);
+  });
+  
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  document.body.appendChild(table);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  createTable(data);
+});
+</script>
+```

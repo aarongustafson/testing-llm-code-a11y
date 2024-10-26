@@ -1,0 +1,36 @@
+<style>
+  .disclosure {
+    margin-bottom: 1em;
+  }
+  .disclosure-content {
+    display: none;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+  .disclosure[aria-expanded="true"] .disclosure-content {
+    display: block;
+  }
+</style>
+
+<div class="disclosure" aria-expanded="false">
+  <button onclick="toggleDisclosure(this)">Section 1</button>
+  <div class="disclosure-content">
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+
+<div class="disclosure" aria-expanded="false">
+  <button onclick="toggleDisclosure(this)">Section 2</button>
+  <div class="disclosure-content">
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+
+<script>
+  function toggleDisclosure(button) {
+    document.querySelectorAll('.disclosure').forEach(disclosure => {
+      disclosure.setAttribute('aria-expanded', 'false');
+    });
+    button.parentElement.setAttribute('aria-expanded', 'true');
+  }
+</script>

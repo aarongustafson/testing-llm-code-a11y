@@ -1,0 +1,63 @@
+```html
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<script>
+  const navItems = [{url:'/',label:'Home'},{url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},{url:'/services',label:'Services'}];
+  const navContainer = document.querySelector('nav ul');
+  navItems.forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.url;
+    a.textContent = item.label;
+    li.appendChild(a);
+    if(item.subnav) {
+      const ul = document.createElement('ul');
+      item.subnav.forEach(subitem => {
+        const subli = document.createElement('li');
+        const suba = document.createElement('a');
+        suba.href = subitem.url;
+        suba.textContent = subitem.label;
+        subli.appendChild(suba);
+        ul.appendChild(subli);
+      });
+      li.appendChild(ul);
+    }
+    navContainer.appendChild(li);
+  });
+</script>
+<style>
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+    position: relative;
+  }
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  nav ul li:hover > ul {
+    display: block;
+  }
+  nav a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+</style>
+```

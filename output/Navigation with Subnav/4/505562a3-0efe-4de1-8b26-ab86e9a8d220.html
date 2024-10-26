@@ -1,0 +1,27 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products" aria-haspopup="true" aria-expanded="false">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  ul { list-style: none; padding: 0; }
+  li { position: relative; }
+  ul ul { display: none; position: absolute; top: 100%; left: 0; }
+  li:hover > ul { display: block; }
+</style>
+<script>
+  document.querySelectorAll('a[aria-haspopup]').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault();
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      this.nextElementSibling.style.display = expanded ? 'none' : 'block';
+    });
+  });
+</script>

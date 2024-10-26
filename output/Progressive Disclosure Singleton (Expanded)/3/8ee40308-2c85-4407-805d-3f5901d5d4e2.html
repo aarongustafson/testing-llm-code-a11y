@@ -1,0 +1,14 @@
+<button onclick="toggleDetails()">Short description</button>
+<div id="details" style="display:none;">
+  <!-- Content goes here -->
+</div>
+<script>
+function toggleDetails() {
+  var details = document.getElementById('details');
+  if (details.style.display === 'none') {
+    details.style.display = 'block';
+  } else {
+    details.style.display = 'none';
+  }
+}
+</script>

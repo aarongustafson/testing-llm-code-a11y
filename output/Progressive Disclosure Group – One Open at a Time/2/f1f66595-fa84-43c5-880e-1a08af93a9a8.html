@@ -1,0 +1,15 @@
+<details id="section1" onclick="toggleSection('section1')">
+  <summary>Section 1</summary>
+  <!-- Content for Section 1 -->
+</details>
+<details id="section2" onclick="toggleSection('section2')">
+  <summary>Section 2</summary>
+  <!-- Content for Section 2 -->
+</details>
+<script>
+function toggleSection(section) {
+  document.querySelectorAll('details').forEach((detail) => {
+    if (detail.id !== section) detail.removeAttribute('open');
+  });
+}
+</script>

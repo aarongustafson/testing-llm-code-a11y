@@ -1,0 +1,19 @@
+<form>
+  <p>What fruits do you like?</p>
+  <label><input type="checkbox" name="fruits" value="bananas" required> Bananas</label><br>
+  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+  <label><input type="checkbox" name="fruits" value="apples"> Apples</label>
+  <div class="error-message" style="display:none;color:red;">You must choose one or more fruits</div>
+  <input type="submit" value="Submit">
+</form>
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    if (checkboxes.length === 0) {
+      e.preventDefault();
+      document.querySelector('.error-message').style.display = 'block';
+    } else {
+      document.querySelector('.error-message').style.display = 'none';
+    }
+  });
+</script>

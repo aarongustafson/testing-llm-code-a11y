@@ -1,0 +1,34 @@
+<button id="popoverButton" aria-haspopup="dialog" aria-expanded="false">Open Form</button>
+<div id="popoverDialog" role="dialog" aria-hidden="true" aria-labelledby="dialogTitle" style="display:none; position:absolute; border:1px solid #ccc; background:white; padding:1em;">
+  <h2 id="dialogTitle">Form Title</h2>
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <button id="closeButton">Close</button>
+</div>
+<script>
+  const popoverButton = document.getElementById('popoverButton');
+  const popoverDialog = document.getElementById('popoverDialog');
+  const closeButton = document.getElementById('closeButton');
+
+  popoverButton.addEventListener('click', () => {
+    const expanded = popoverButton.getAttribute('aria-expanded') === 'true';
+    popoverButton.setAttribute('aria-expanded', !expanded);
+    popoverDialog.style.display = expanded ? 'none' : 'block';
+    popoverDialog.setAttribute('aria-hidden', expanded);
+    if (!expanded) popoverDialog.focus();
+  });
+
+  closeButton.addEventListener('click', () => {
+    popoverButton.setAttribute('aria-expanded', 'false');
+    popoverDialog.style.display = 'none';
+    popoverDialog.setAttribute('aria-hidden', 'true');
+    popoverButton.focus();
+  });
+</script>

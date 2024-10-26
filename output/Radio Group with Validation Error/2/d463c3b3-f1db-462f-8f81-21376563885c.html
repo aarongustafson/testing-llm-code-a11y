@@ -1,0 +1,27 @@
+<form>
+  <fieldset>
+    <legend>Choose a theme:</legend>
+    <label>
+      <input type="radio" name="theme" value="light">
+      Light
+    </label>
+    <label>
+      <input type="radio" name="theme" value="dark">
+      Dark
+    </label>
+    <label>
+      <input type="radio" name="theme" value="high-contrast">
+      High Contrast
+    </label>
+    <span class="error">You must choose a theme to proceed</span>
+  </fieldset>
+</form>
+<style>
+  .error {
+    color: red;
+    display: none;
+  }
+  form:invalid .error {
+    display: block;
+  }
+</style>

@@ -1,0 +1,15 @@
+<details>
+  <summary onclick="closeOtherDetails(this)">Section 1</summary>
+  <!-- Content for Section 1 -->
+</details>
+<details>
+  <summary onclick="closeOtherDetails(this)">Section 2</summary>
+  <!-- Content for Section 2 -->
+</details>
+<script>
+  function closeOtherDetails(current) {
+    document.querySelectorAll('details').forEach(el => {
+      if (el !== current.parentNode && el.open) el.removeAttribute('open');
+    });
+  }
+</script>

@@ -1,0 +1,26 @@
+<ul id="main-nav"></ul>
+<script>
+const navItems = [
+  { url: '/', label: 'Home' },
+  { url: '/products', label: 'Products', subnav: [{ url: '/products/frobs', label: 'Frobs' }, { url: '/products/thrips', label: 'Thrips' }] },
+  { url: '/services', label: 'Services' }
+];
+
+function createNavItem(item) {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = item.url;
+  a.textContent = item.label;
+  li.appendChild(a);
+  
+  if (item.subnav) {
+    const subUl = document.createElement('ul');
+    item.subnav.forEach(subItem => subUl.appendChild(createNavItem(subItem)));
+    li.appendChild(subUl);
+  }
+  return li;
+}
+
+const mainNav = document.getElementById('main-nav');
+navItems.forEach(item => mainNav.appendChild(createNavItem(item)));
+</script>

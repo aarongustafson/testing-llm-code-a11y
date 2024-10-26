@@ -1,0 +1,24 @@
+```html
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <button onclick="document.getElementById('subnav-products').classList.toggle('show')">Toggle Subnav</button>
+      <ul id="subnav-products" style="display:none;">
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const subnav = btn.nextElementSibling;
+      subnav.style.display = subnav.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+</script>
+```

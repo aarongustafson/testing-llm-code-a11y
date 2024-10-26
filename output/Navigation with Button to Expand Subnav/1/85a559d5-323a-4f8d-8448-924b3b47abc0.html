@@ -1,0 +1,20 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <button onclick="document.getElementById('subnav-products').classList.toggle('show')">▼</button>
+    <ul id="subnav-products" class="subnav">
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  .subnav {
+    display: none;
+  }
+  .subnav.show {
+    display: block;
+  }
+</style>

@@ -1,0 +1,7 @@
+<label for="cc-number">Credit Card Number:</label>
+<input type="text" id="cc-number" name="cc-number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="1234 5678 9012 3456" required>
+<script>
+document.getElementById('cc-number').addEventListener('input', function (e) {
+    e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
+});
+</script>

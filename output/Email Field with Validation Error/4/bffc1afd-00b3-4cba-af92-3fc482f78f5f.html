@@ -1,0 +1,14 @@
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email">
+<span style="color: red; display: none;" id="emailError">Your email address is invalid.</span>
+<script>
+  document.getElementById('email').addEventListener('input', function() {
+    const email = this.value;
+    const errorSpan = document.getElementById('emailError');
+    if (!email.includes('@') || !email.includes('.')) {
+      errorSpan.style.display = 'inline';
+    } else {
+      errorSpan.style.display = 'none';
+    }
+  });
+</script>

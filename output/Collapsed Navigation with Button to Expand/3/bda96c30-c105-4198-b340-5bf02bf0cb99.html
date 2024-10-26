@@ -1,0 +1,24 @@
+<nav>
+  <div class="hamburger" onclick="toggleNav()">☰</div>
+  <ul id="main-nav" class="hidden">
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  .hamburger { cursor: pointer; }
+  .hidden { display: none; }
+  #main-nav ul { list-style-type: none; }
+</style>
+<script>
+  function toggleNav() {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('hidden');
+  }
+</script>

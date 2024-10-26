@@ -1,0 +1,26 @@
+<style>
+  .section { margin: 10px 0; }
+  .content { display: none; margin-left: 20px; }
+</style>
+
+<div class="section">
+  <button onclick="toggleContent('content1')">Section 1</button>
+  <div id="content1" class="content">
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+
+<div class="section">
+  <button onclick="toggleContent('content2')">Section 2</button>
+  <div id="content2" class="content">
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+
+<script>
+  function toggleContent(id) {
+    var contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>

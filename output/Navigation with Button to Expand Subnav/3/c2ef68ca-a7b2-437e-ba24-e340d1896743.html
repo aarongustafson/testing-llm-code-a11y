@@ -1,0 +1,23 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <button onclick="toggleSubnav(this)">Toggle Subnav</button>
+    <ul style="display:none;">
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+
+<script>
+function toggleSubnav(button) {
+  var subnav = button.nextElementSibling;
+  if (subnav.style.display === "none" || subnav.style.display === "") {
+    subnav.style.display = "block";
+  } else {
+    subnav.style.display = "none";
+  }
+}
+</script>

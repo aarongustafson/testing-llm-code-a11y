@@ -1,0 +1,32 @@
+<ul>
+  <script>
+    const menuItems = [
+      { url: '/', label: 'Home' },
+      { url: '/products', label: 'Products', subnav: [{ url: '/products/frobs', label: 'Frobs' }, { url: '/products/thrips', label: 'Thrips' }] },
+      { url: '/services', label: 'Services' }
+    ];
+
+    menuItems.forEach(item => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      li.appendChild(a);
+
+      if (item.subnav) {
+        const ul = document.createElement('ul');
+        item.subnav.forEach(subitem => {
+          const subLi = document.createElement('li');
+          const subA = document.createElement('a');
+          subA.href = subitem.url;
+          subA.textContent = subitem.label;
+          subLi.appendChild(subA);
+          ul.appendChild(subLi);
+        });
+        li.appendChild(ul);
+      }
+
+      document.querySelector('ul').appendChild(li);
+    });
+  </script>
+</ul>

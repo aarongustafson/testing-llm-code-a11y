@@ -1,0 +1,39 @@
+<button id="openModal" aria-haspopup="dialog" aria-controls="modal">Open Form</button>
+
+<div id="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+  <h2 id="modalTitle">Form Title</h2>
+  <p id="modalDesc">Form description goes here.</p>
+  <form>
+    <label for="input1">Input 1:</label>
+    <input id="input1" name="input1" type="text" placeholder="Placeholder text 1">
+
+    <label for="input2">Input 2:</label>
+    <input id="input2" name="input2" type="text" placeholder="Placeholder text 2">
+    
+    <button type="submit">Submit</button>
+    <button type="button" id="closeModal">Close</button>
+  </form>
+</div>
+
+<style>
+  #modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+</style>
+
+<script>
+  document.getElementById('openModal').addEventListener('click', function() {
+    document.getElementById('modal').hidden = false;
+    document.getElementById('input1').focus();
+  });
+
+  document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').hidden = true;
+  });
+</script>

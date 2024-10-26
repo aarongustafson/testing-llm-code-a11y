@@ -1,0 +1,18 @@
+<nav id="mainNav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<div id="hamburgerMenu" onclick="toggleNav()">☰</div>
+<style>
+  #mainNav { display: none; }
+  #hamburgerMenu { cursor: pointer; }
+</style>
+<script>
+  function toggleNav() {
+    var nav = document.getElementById('mainNav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+</script>

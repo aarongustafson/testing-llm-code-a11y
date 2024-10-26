@@ -1,0 +1,19 @@
+<button onclick="document.getElementById('nav').classList.toggle('show')">Menu</button>
+<nav id="nav" style="display:none">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<script>
+  document.querySelector('button').addEventListener('click', function() {
+    document.getElementById('nav').style.display = 
+      document.getElementById('nav').style.display === 'none' ? 'block' : 'none';
+  });
+</script>

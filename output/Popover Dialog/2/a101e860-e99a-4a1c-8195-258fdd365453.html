@@ -1,0 +1,21 @@
+<button id="openPopover" aria-haspopup="dialog" aria-controls="popoverDialog">Open Form</button>
+<div id="popoverDialog" role="dialog" aria-labelledby="dialogTitle" aria-hidden="true" style="display:none; position:absolute; border:1px solid #ccc; padding:10px; background:white;">
+  <h2 id="dialogTitle">Form Title</h2>
+  <form>
+    <label for="input1">Label 1</label>
+    <input id="input1" type="text" placeholder="Input 1">
+    <label for="input2">Label 2</label>
+    <input id="input2" type="text" placeholder="Input 2">
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+  const button = document.getElementById('openPopover');
+  const dialog = document.getElementById('popoverDialog');
+
+  button.addEventListener('click', () => {
+    const isHidden = dialog.getAttribute('aria-hidden') === 'true';
+    dialog.style.display = isHidden ? 'block' : 'none';
+    dialog.setAttribute('aria-hidden', !isHidden);
+  });
+</script>

@@ -1,0 +1,25 @@
+<nav>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <button aria-expanded="false" aria-controls="products-subnav">Products</button>
+      <ul id="products-subnav" hidden>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/services">Services</a>
+    </li>
+  </ul>
+</nav>
+<script>
+  document.querySelector('button[aria-controls="products-subnav"]').addEventListener('click', function() {
+    const subnav = document.getElementById('products-subnav');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    subnav.hidden = expanded;
+  });
+</script>

@@ -1,0 +1,23 @@
+<div>
+  <button aria-expanded="false" aria-controls="section1" onclick="toggleSection('section1', this)">Section 1</button>
+  <div id="section1" hidden>
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+<div>
+  <button aria-expanded="false" aria-controls="section2" onclick="toggleSection('section2', this)">Section 2</button>
+  <div id="section2" hidden>
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+
+<script>
+  function toggleSection(id, button) {
+    document.querySelectorAll('div[id^="section"]').forEach(section => {
+      section.hidden = section.id !== id;
+      document.querySelector(`button[aria-controls="${section.id}"]`).setAttribute('aria-expanded', section.id === id);
+    });
+    button.setAttribute('aria-expanded', !document.getElementById(id).hidden);
+    document.getElementById(id).hidden = !document.getElementById(id).hidden;
+  }
+</script>

@@ -1,0 +1,9 @@
+<label for="dino">Who is your favorite dinosaur?</label>
+<input type="text" id="dino" name="dino" oninput="checkHint(this.value)">
+<script>
+function checkHint(value) {
+  if (value.toLowerCase().includes('rex')) {
+    alert('Hint: “Rex”');
+  }
+}
+</script>

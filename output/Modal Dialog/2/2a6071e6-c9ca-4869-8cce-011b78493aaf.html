@@ -1,0 +1,40 @@
+<button id="openModal">Open Modal</button>
+
+<div id="myModal" style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
+  <div style="background-color:#fff; margin:15% auto; padding:20px; border:1px solid #888; width:80%;">
+    <span id="closeModal" style="color:#aaa; float:right; font-size:28px; font-weight:bold;">&times;</span>
+    <p>Modal Content</p>
+  </div>
+</div>
+
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModal");
+  var span = document.getElementById("closeModal");
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+    modal.setAttribute('aria-hidden', 'false');
+    modal.querySelector('div').setAttribute('tabindex', '-1');
+    modal.querySelector('div').focus();
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  document.onkeydown = function(event) {
+    if (event.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
+</script>

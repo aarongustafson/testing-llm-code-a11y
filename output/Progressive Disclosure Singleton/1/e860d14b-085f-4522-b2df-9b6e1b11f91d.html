@@ -1,0 +1,12 @@
+<div>
+  <button onclick="toggleDisclosure()">Short description</button>
+  <div id="disclosureContent" style="display:none;">
+    <!-- Put the contents here -->
+  </div>
+</div>
+<script>
+  function toggleDisclosure() {
+    var content = document.getElementById('disclosureContent');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+  }
+</script>

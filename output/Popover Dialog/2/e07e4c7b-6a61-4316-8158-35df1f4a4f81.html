@@ -1,0 +1,35 @@
+<button id="openPopover">Open Form</button>
+<div id="popover" role="dialog" aria-labelledby="popoverTitle" aria-hidden="true" style="display:none; position:absolute; border:1px solid #ccc; padding:1em; background:#fff;">
+  <h2 id="popoverTitle">Form Title</h2>
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter name">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter email">
+    <button type="submit">Submit</button>
+  </form>
+  <button id="closePopover" style="margin-top:1em;">Close</button>
+</div>
+
+<script>
+  const openPopover = document.getElementById('openPopover');
+  const popover = document.getElementById('popover');
+  const closePopover = document.getElementById('closePopover');
+
+  openPopover.addEventListener('click', () => {
+    popover.style.display = 'block';
+    popover.setAttribute('aria-hidden', 'false');
+  });
+
+  closePopover.addEventListener('click', () => {
+    popover.style.display = 'none';
+    popover.setAttribute('aria-hidden', 'true');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!popover.contains(event.target) && !openPopover.contains(event.target)) {
+      popover.style.display = 'none';
+      popover.setAttribute('aria-hidden', 'true');
+    }
+  });
+</script>

@@ -1,0 +1,37 @@
+<button id="openModalButton">Open Modal</button>
+
+<div id="myModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style="display:none;">
+  <div role="document">
+    <h2 id="modalTitle">Modal Title</h2>
+    <p>Modal content goes here.</p>
+    <button id="closeModalButton">Close</button>
+  </div>
+</div>
+
+<style>
+  #myModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    background: white;
+    border: 1px solid #ccc;
+  }
+</style>
+
+<script>
+  const openModalButton = document.getElementById('openModalButton');
+  const closeModalButton = document.getElementById('closeModalButton');
+  const myModal = document.getElementById('myModal');
+
+  openModalButton.addEventListener('click', () => {
+    myModal.style.display = 'block';
+    myModal.setAttribute('aria-hidden', 'false');
+  });
+
+  closeModalButton.addEventListener('click', () => {
+    myModal.style.display = 'none';
+    myModal.setAttribute('aria-hidden', 'true');
+  });
+</script>

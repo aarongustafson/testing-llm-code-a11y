@@ -1,0 +1,27 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/section">Section</a></li>
+    <li class="breadcrumb-item"><a href="/section/subsection">Subsection</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Page</li>
+  </ol>
+</nav>
+<style>
+  .breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    background: none;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: " / ";
+  }
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  .breadcrumb-item.active a {
+    color: #6c757d;
+    pointer-events: none;
+  }
+</style>

@@ -1,0 +1,10 @@
+<input type="text" id="colorInput" placeholder="What color is an orange?" oninput="validateColor()">
+<p id="errorMessage" style="color: red; display: none;">That's not right. Try again.</p>
+
+<script>
+function validateColor() {
+  const input = document.getElementById('colorInput').value.toLowerCase();
+  const errorMessage = document.getElementById('errorMessage');
+  errorMessage.style.display = input === 'orange' ? 'none' : 'block';
+}
+</script>

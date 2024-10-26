@@ -1,0 +1,11 @@
+<button onclick="document.getElementById('popover').style.display='block'">Open Form</button>
+<div id="popover" style="display:none; position:absolute; top:50px; left:50px; border:1px solid #ccc; padding:10px; background-color:#fff;">
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <button onclick="document.getElementById('popover').style.display='none'">Close</button>
+</div>

@@ -1,0 +1,45 @@
+<script>
+const menuItems = [
+  { url: '/', label: 'Home' },
+  { url: '/products', label: 'Products', subnav: [
+    { url: '/products/frobs', label: 'Frobs' },
+    { url: '/products/thrips', label: 'Thrips' }
+  ]},
+  { url: '/services', label: 'Services' }
+];
+
+function createMenu(items) {
+  const ul = document.createElement('ul');
+
+  items.forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.url;
+    a.textContent = item.label;
+    li.appendChild(a);
+
+    if (item.subnav) {
+      const button = document.createElement('button');
+      button.textContent = '▼';
+      button.onclick = () => subnav.classList.toggle('hidden');
+      li.appendChild(button);
+
+      const subnav = createMenu(item.subnav);
+      subnav.classList.add('hidden');
+      li.appendChild(subnav);
+    }
+    
+    ul.appendChild(li);
+  });
+
+  return ul;
+}
+
+document.body.appendChild(createMenu(menuItems));
+</script>
+
+<style>
+ul { list-style: none; padding: 0; }
+.hidden { display: none; }
+button { margin-left: 10px; }
+</style>

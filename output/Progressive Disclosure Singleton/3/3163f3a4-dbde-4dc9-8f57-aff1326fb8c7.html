@@ -1,0 +1,14 @@
+<button onclick="toggleDetails()" aria-expanded="false" id="disclosureButton">Short description</button>
+<div id="details" hidden>
+  <!-- Put the contents here -->
+</div>
+
+<script>
+function toggleDetails() {
+  var details = document.getElementById('details');
+  var button = document.getElementById('disclosureButton');
+  var isHidden = details.hidden;
+  details.hidden = !isHidden;
+  button.setAttribute('aria-expanded', isHidden);
+}
+</script>

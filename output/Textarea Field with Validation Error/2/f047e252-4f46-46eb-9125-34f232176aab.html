@@ -1,0 +1,11 @@
+<textarea id="message" placeholder="Your message" oninput="validateMessage()"></textarea>
+<p id="error" style="color: red; display: none;">Your message should be at least 20 words long. Please describe your problem in as much detail as possible.</p>
+
+<script>
+function validateMessage() {
+    const message = document.getElementById('message').value;
+    const error = document.getElementById('error');
+    const wordCount = message.trim().split(/\s+/).length;
+    error.style.display = wordCount < 20 ? 'block' : 'none';
+}
+</script>

@@ -1,0 +1,25 @@
+<nav>
+  <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+  <ul id="nav-menu" hidden>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  
+  toggleButton.addEventListener('click', () => {
+    const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    toggleButton.setAttribute('aria-expanded', !isExpanded);
+    navMenu.hidden = isExpanded;
+  });
+</script>

@@ -1,0 +1,17 @@
+<details ontoggle="toggleSection(this)">
+  <summary>Section 1</summary>
+  <!-- Content for Section 1 -->
+</details>
+<details ontoggle="toggleSection(this)">
+  <summary>Section 2</summary>
+  <!-- Content for Section 2 -->
+</details>
+<script>
+  function toggleSection(element) {
+    if (element.open) {
+      document.querySelectorAll('details').forEach((details) => {
+        if (details !== element) details.open = false;
+      });
+    }
+  }
+</script>

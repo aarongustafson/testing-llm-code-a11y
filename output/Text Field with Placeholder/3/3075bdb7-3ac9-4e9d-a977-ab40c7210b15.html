@@ -1,0 +1,8 @@
+<input type="text" id="dinoInput" placeholder="Who is your favorite dinosaur?" oninput="checkDino()">
+<p id="hint" style="display:none; color: red;">Hint: "Rex"</p>
+<script>
+function checkDino() {
+  const input = document.getElementById('dinoInput').value.toLowerCase();
+  document.getElementById('hint').style.display = input.includes("rex") ? "none" : "block";
+}
+</script>

@@ -1,0 +1,19 @@
+<details>
+  <summary>Section 1</summary>
+  <!-- Content for Section 1 -->
+</details>
+<details>
+  <summary>Section 2</summary>
+  <!-- Content for Section 2 -->
+</details>
+<script>
+document.querySelectorAll('details').forEach((detail) => {
+  detail.addEventListener('toggle', () => {
+    if (detail.open) {
+      document.querySelectorAll('details').forEach((otherDetail) => {
+        if (otherDetail !== detail) otherDetail.removeAttribute('open');
+      });
+    }
+  });
+});
+</script>

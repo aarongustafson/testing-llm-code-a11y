@@ -1,0 +1,8 @@
+<form onsubmit="return this.querySelectorAll('input[type=checkbox]:checked').length > 0;">
+  <p>What fruits do you like?</p>
+  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
+  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+  <label><input type="checkbox" name="fruits" value="apples"> Apples</label><br>
+  <p id="error" style="color: red; display: none;">You must choose one or more fruits</p>
+  <button type="submit" onclick="document.getElementById('error').style.display = this.form.querySelectorAll('input[type=checkbox]:checked').length > 0 ? 'none' : 'block'">Submit</button>
+</form>

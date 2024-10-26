@@ -1,0 +1,34 @@
+<button id="openModal">Open Form</button>
+<div id="myModal" aria-hidden="true" style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
+  <div style="background-color:#fff; margin:15% auto; padding:20px; border:1px solid #888; width:80%;">
+    <span id="closeModal" style="color:#aaa; float:right; font-size:28px; font-weight:bold;">&times;</span>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<script>
+  document.getElementById('openModal').onclick = function() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+  }
+  document.getElementById('closeModal').onclick = function() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  }
+  window.onclick = function(event) {
+    var modal = document.getElementById('myModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
+</script>

@@ -1,0 +1,24 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <button aria-haspopup="true" aria-expanded="false">Products</button>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<script>
+  document.querySelectorAll('button[aria-haspopup="true"]').forEach(button => {
+    button.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      const subnav = this.nextElementSibling;
+      subnav.style.display = expanded ? 'none' : 'block';
+    });
+  });
+</script>
+<style>
+  ul ul { display: none; }
+</style>

@@ -1,0 +1,18 @@
+<div>
+    <button onclick="toggleDisclosure('content1')">Section 1</button>
+    <div id="content1" style="display:block;">
+        <!-- Contents of Section 1 -->
+    </div>
+</div>
+<div>
+    <button onclick="toggleDisclosure('content2')">Section 2</button>
+    <div id="content2" style="display:none;">
+        <!-- Contents of Section 2 -->
+    </div>
+</div>
+<script>
+    function toggleDisclosure(id) {
+        var content = document.getElementById(id);
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>

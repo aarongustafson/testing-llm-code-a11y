@@ -1,0 +1,32 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products" aria-haspopup="true" aria-expanded="false" aria-controls="subnav-products">Products</a>
+      <ul id="subnav-products" aria-hidden="true">
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('nav > ul > li > a[aria-haspopup="true"]').forEach(menu => {
+    menu.addEventListener('click', function(event) {
+      event.preventDefault();
+      const subnav = this.nextElementSibling;
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      subnav.setAttribute('aria-hidden', expanded);
+    });
+  });
+</script>
+<style>
+  nav > ul > li > ul {
+    display: none;
+  }
+  nav > ul > li > a[aria-expanded="true"] + ul {
+    display: block;
+  }
+</style>

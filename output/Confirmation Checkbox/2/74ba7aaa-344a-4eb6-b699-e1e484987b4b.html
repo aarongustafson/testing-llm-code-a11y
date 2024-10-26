@@ -1,0 +1,18 @@
+```html
+<form onsubmit="return validateForm()">
+  <input type="checkbox" id="terms" name="terms">
+  <label for="terms">I agree to the terms and conditions</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+  var terms = document.getElementById("terms");
+  if (!terms.checked) {
+    alert("You must agree to the terms and conditions to proceed.");
+    return false;
+  }
+  return true;
+}
+</script>
+```

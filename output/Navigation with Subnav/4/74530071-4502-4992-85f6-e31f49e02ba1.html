@@ -1,0 +1,28 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products" aria-haspopup="true" aria-expanded="false">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  nav ul ul {
+    display: none;
+    position: absolute;
+  }
+  nav li:hover > ul {
+    display: block;
+  }
+</style>
+<script>
+  document.querySelectorAll('nav > ul > li > a[aria-haspopup="true"]').forEach(menu => {
+    menu.addEventListener('mouseenter', () => menu.setAttribute('aria-expanded', 'true'));
+    menu.addEventListener('mouseleave', () => menu.setAttribute('aria-expanded', 'false'));
+  });
+</script>

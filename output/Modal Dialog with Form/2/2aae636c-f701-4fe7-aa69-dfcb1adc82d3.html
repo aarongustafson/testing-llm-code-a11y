@@ -1,0 +1,25 @@
+<button id="openModalButton">Open Form</button>
+
+<div id="myModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; border:1px solid #ccc; padding:16px;">
+  <h2 id="modalTitle">Form Title</h2>
+  <form>
+    <label for="input1">Input 1</label>
+    <input id="input1" type="text" placeholder="Placeholder 1">
+    <br>
+    <label for="input2">Input 2</label>
+    <input id="input2" type="text" placeholder="Placeholder 2">
+    <br>
+    <button type="submit">Submit</button>
+    <button type="button" id="closeModalButton">Close</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('openModalButton').addEventListener('click', function() {
+    document.getElementById('myModal').style.display = 'block';
+  });
+
+  document.getElementById('closeModalButton').addEventListener('click', function() {
+    document.getElementById('myModal').style.display = 'none';
+  });
+</script>

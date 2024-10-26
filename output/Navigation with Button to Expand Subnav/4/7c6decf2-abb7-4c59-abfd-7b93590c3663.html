@@ -1,0 +1,29 @@
+<ul role="menubar">
+  <li role="none">
+    <a href="/" role="menuitem">Home</a>
+  </li>
+  <li role="none">
+    <button aria-haspopup="true" aria-expanded="false" aria-controls="products-subnav">Products</button>
+    <ul id="products-subnav" role="menu" hidden>
+      <li role="none">
+        <a href="/products/frobs" role="menuitem">Frobs</a>
+      </li>
+      <li role="none">
+        <a href="/products/thrips" role="menuitem">Thrips</a>
+      </li>
+    </ul>
+  </li>
+  <li role="none">
+    <a href="/services" role="menuitem">Services</a>
+  </li>
+</ul>
+<script>
+  document.querySelectorAll('button[aria-haspopup]').forEach(button => {
+    button.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      const menu = document.getElementById(this.getAttribute('aria-controls'));
+      menu.hidden = expanded;
+    });
+  });
+</script>

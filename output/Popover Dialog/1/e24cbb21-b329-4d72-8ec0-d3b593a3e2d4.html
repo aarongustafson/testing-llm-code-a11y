@@ -1,0 +1,12 @@
+<button onclick="document.getElementById('popover').style.display='block'">Open Popover</button>
+
+<div id="popover" style="display:none; position:absolute; top:50px; left:50px; padding:10px; border:1px solid #ccc; background-color:#fff; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+  <form>
+    <label for="input1">Input 1:</label><br>
+    <input type="text" id="input1" name="input1" placeholder="Placeholder 1"><br><br>
+    <label for="input2">Input 2:</label><br>
+    <input type="text" id="input2" name="input2" placeholder="Placeholder 2"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <button onclick="document.getElementById('popover').style.display='none'">Close</button>
+</div>

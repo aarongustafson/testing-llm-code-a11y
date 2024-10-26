@@ -1,0 +1,15 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <button onclick="document.getElementById('subnav-products').classList.toggle('hidden')">+</button>
+    <ul id="subnav-products" class="hidden">
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  .hidden { display: none; }
+</style>

@@ -1,0 +1,19 @@
+<button id="popoverBtn">Open Form</button>
+<div id="popover" style="display:none; position:absolute; border:1px solid #ccc; padding:10px; background:#fff;">
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email"><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+  const btn = document.getElementById('popoverBtn');
+  const popover = document.getElementById('popover');
+  btn.addEventListener('click', () => {
+    popover.style.display = popover.style.display === 'none' ? 'block' : 'none';
+    popover.style.top = btn.offsetTop + btn.offsetHeight + 'px';
+    popover.style.left = btn.offsetLeft + 'px';
+  });
+</script>

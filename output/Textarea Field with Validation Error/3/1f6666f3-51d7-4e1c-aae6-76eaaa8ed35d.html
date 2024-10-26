@@ -1,0 +1,13 @@
+<textarea id="message" rows="10" cols="50" placeholder="Describe your problem in detail..."></textarea>
+<p id="error" style="color:red; display:none;">Your message should be at least 20 words long. Please describe your problem in as much detail as possible.</p>
+<script>
+  document.getElementById('message').addEventListener('input', function() {
+    const words = this.value.trim().split(/\s+/).filter(word => word.length > 0);
+    const error = document.getElementById('error');
+    if (words.length < 20) {
+      error.style.display = 'block';
+    } else {
+      error.style.display = 'none';
+    }
+  });
+</script>

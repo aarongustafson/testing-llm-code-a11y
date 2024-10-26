@@ -1,0 +1,19 @@
+<button onclick="toggleMenu()">Menu</button>
+<ul id="navMenu" style="display:none;">
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('navMenu');
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+}
+</script>

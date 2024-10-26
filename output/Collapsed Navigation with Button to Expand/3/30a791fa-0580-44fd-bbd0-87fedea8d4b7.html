@@ -1,0 +1,26 @@
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <ul id="main-nav" class="hidden">
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  .hidden { display: none; }
+  .hamburger { cursor: pointer; }
+  nav ul { list-style: none; padding: 0; }
+  nav ul li { margin: 0.5em 0; }
+</style>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('hidden');
+  }
+</script>

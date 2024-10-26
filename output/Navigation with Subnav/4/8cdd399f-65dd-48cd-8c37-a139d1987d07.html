@@ -1,0 +1,24 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<script>
+  document.querySelectorAll('ul > li > a').forEach(a => {
+    a.setAttribute('role', 'menuitem');
+  });
+  document.querySelectorAll('ul ul').forEach(ul => {
+    ul.style.display = 'none';
+    ul.parentNode.setAttribute('aria-haspopup', 'true');
+    ul.parentNode.querySelector('a').addEventListener('click', function (e) {
+      e.preventDefault();
+      ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+</script>

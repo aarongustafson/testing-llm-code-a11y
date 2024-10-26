@@ -1,0 +1,7 @@
+<input type="text" id="credit-card-number" name="credit-card-number" placeholder="Credit Card Number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" required>
+<script>
+  document.getElementById('credit-card-number').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    e.target.value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+  });
+</script>

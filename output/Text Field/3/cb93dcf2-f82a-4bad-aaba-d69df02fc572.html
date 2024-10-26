@@ -1,0 +1,6 @@
+<input type="text" id="orangeColorField" placeholder="What color is an orange?">
+<script>
+document.getElementById('orangeColorField').addEventListener('input', function() {
+    this.style.backgroundColor = (this.value.toLowerCase() === 'orange') ? '#FFA500' : 'white';
+});
+</script>

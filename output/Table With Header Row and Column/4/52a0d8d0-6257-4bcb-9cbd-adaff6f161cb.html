@@ -1,0 +1,53 @@
+```html
+<script>
+const data = [
+    { name: 'Barbara', grade: 'Kindergarten' },
+    { name: 'Gregory', grade: '1st Grade' },
+    { name: 'Janine', grade: '2nd Grade' }
+];
+
+const table = document.createElement('table');
+table.setAttribute('role', 'table');
+
+const thead = document.createElement('thead');
+thead.setAttribute('role', 'rowgroup');
+const headerRow = document.createElement('tr');
+headerRow.setAttribute('role', 'row');
+
+const th1 = document.createElement('th');
+th1.setAttribute('role', 'columnheader');
+th1.innerText = 'Name';
+
+const th2 = document.createElement('th');
+th2.setAttribute('role', 'columnheader');
+th2.innerText = 'Grade';
+
+headerRow.appendChild(th1);
+headerRow.appendChild(th2);
+thead.appendChild(headerRow);
+table.appendChild(thead);
+
+const tbody = document.createElement('tbody');
+tbody.setAttribute('role', 'rowgroup');
+
+data.forEach(item => {
+    const row = document.createElement('tr');
+    row.setAttribute('role', 'row');
+
+    const nameCell = document.createElement('td');
+    nameCell.setAttribute('role', 'cell');
+    nameCell.innerText = item.name;
+
+    const gradeCell = document.createElement('td');
+    gradeCell.setAttribute('role', 'cell');
+    gradeCell.innerText = item.grade;
+
+    row.appendChild(nameCell);
+    row.appendChild(gradeCell);
+    tbody.appendChild(row);
+});
+
+table.appendChild(tbody);
+document.body.appendChild(table);
+</script>
+```

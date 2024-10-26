@@ -1,0 +1,22 @@
+<div>
+  <button aria-expanded="false" aria-controls="section1" onclick="toggleSection('section1', this)">Section 1</button>
+  <div id="section1" role="region" hidden>
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+
+<div>
+  <button aria-expanded="false" aria-controls="section2" onclick="toggleSection('section2', this)">Section 2</button>
+  <div id="section2" role="region" hidden>
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+
+<script>
+  function toggleSection(sectionId, button) {
+    var section = document.getElementById(sectionId);
+    var isExpanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !isExpanded);
+    section.hidden = isExpanded;
+  }
+</script>

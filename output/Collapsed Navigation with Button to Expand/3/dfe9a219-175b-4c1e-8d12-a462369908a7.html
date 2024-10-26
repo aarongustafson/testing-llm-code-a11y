@@ -1,0 +1,44 @@
+<style>
+  body { font-family: Arial, sans-serif; }
+  .navbar { display: flex; align-items: center; background-color: #333; padding: 10px; }
+  .navbar a { color: white; padding: 14px 20px; text-decoration: none; }
+  .hamburger { display: none; cursor: pointer; }
+  .hamburger div { width: 25px; height: 3px; background-color: white; margin: 4px 0; }
+  .nav-menu { display: flex; }
+  .subnav { display: none; position: absolute; background-color: #444; }
+  .navbar-item:hover .subnav { display: block; }
+  .navbar-item { position: relative; }
+  @media screen and (max-width: 600px) {
+    .nav-menu { display: none; flex-direction: column; width: 100%; }
+    .navbar a { text-align: center; padding: 10px; }
+    .hamburger { display: block; }
+  }
+</style>
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <div class="navbar-item"><a href="/">Home</a></div>
+    <div class="navbar-item">
+      <a href="/products">Products</a>
+      <div class="subnav">
+        <a href="/products/frobs">Frobs</a>
+        <a href="/products/thrips">Thrips</a>
+      </div>
+    </div>
+    <div class="navbar-item"><a href="/services">Services</a></div>
+  </div>
+</div>
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById('navMenu');
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  }
+</script>

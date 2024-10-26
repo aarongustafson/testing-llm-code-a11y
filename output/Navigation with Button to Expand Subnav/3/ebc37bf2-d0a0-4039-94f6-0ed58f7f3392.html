@@ -1,0 +1,29 @@
+<ul id="main-nav">
+  <script>
+    const navItems = [
+      { url: '/', label: 'Home' },
+      { url: '/products', label: 'Products', subnav: [{ url: '/products/frobs', label: 'Frobs' }, { url: '/products/thrips', label: 'Thrips' }] },
+      { url: '/services', label: 'Services' }
+    ];
+
+    navItems.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${item.url}">${item.label}</a>`;
+      if (item.subnav) {
+        const button = document.createElement('button');
+        button.textContent = 'Toggle Subnav';
+        button.onclick = () => subnav.style.display = subnav.style.display === 'none' ? 'block' : 'none';
+        const subnav = document.createElement('ul');
+        subnav.style.display = 'none';
+        item.subnav.forEach(subitem => {
+          const subLi = document.createElement('li');
+          subLi.innerHTML = `<a href="${subitem.url}">${subitem.label}</a>`;
+          subnav.appendChild(subLi);
+        });
+        li.appendChild(button);
+        li.appendChild(subnav);
+      }
+      document.getElementById('main-nav').appendChild(li);
+    });
+  </script>
+</ul>

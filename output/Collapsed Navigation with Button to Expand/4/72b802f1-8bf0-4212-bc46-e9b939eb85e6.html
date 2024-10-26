@@ -1,0 +1,20 @@
+<nav>
+  <button id="nav-toggle">Menu</button>
+  <ul id="nav-menu" style="display: none;">
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.style.display = navMenu.style.display === 'none' ? 'block' : 'none';
+  });
+</script>

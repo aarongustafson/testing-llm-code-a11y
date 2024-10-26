@@ -1,0 +1,22 @@
+<form>
+  <fieldset>
+    <legend>Choose a theme:</legend>
+    <label><input type="radio" name="theme" value="light"> Light</label>
+    <label><input type="radio" name="theme" value="dark"> Dark</label>
+    <label><input type="radio" name="theme" value="high-contrast"> High Contrast</label>
+    <div style="color:red; display:none;" id="error-message">You must choose a theme to proceed</div>
+  </fieldset>
+  <button type="submit" onclick="event.preventDefault(); validateForm();">Submit</button>
+</form>
+<script>
+  function validateForm() {
+    const selectedTheme = document.querySelector('input[name="theme"]:checked');
+    const errorMessage = document.getElementById('error-message');
+    if (!selectedTheme) {
+      errorMessage.style.display = 'block';
+    } else {
+      errorMessage.style.display = 'none';
+      // Proceed with form submission
+    }
+  }
+</script>

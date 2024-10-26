@@ -1,0 +1,46 @@
+<nav>
+  <div id="hamburger" onclick="toggleNav()">☰</div>
+  <ul id="mainNav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+
+<style>
+  #hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  #mainNav {
+    list-style-type: none;
+    padding: 0;
+  }
+  #mainNav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  @media (max-width: 768px) {
+    #hamburger {
+      display: block;
+    }
+    #mainNav {
+      display: none;
+      flex-direction: column;
+    }
+    #mainNav.show {
+      display: flex;
+    }
+    #mainNav li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+</style>
+
+<script>
+  function toggleNav() {
+    var nav = document.getElementById('mainNav');
+    nav.classList.toggle('show');
+  }
+</script>

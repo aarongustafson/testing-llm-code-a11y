@@ -1,0 +1,28 @@
+<nav id="main-nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<div id="hamburger-menu">&#9776;</div>
+<style>
+  #main-nav { display: none; }
+  #main-nav ul { list-style: none; padding: 0; }
+  #main-nav ul ul { display: none; }
+  #hamburger-menu { cursor: pointer; font-size: 24px; }
+  #hamburger-menu.active + #main-nav { display: block; }
+  #main-nav ul li:hover > ul { display: block; }
+</style>
+<script>
+  document.getElementById('hamburger-menu').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('main-nav').classList.toggle('active');
+  });
+</script>

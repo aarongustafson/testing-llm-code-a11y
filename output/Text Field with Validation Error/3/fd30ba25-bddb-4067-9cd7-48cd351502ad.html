@@ -1,0 +1,13 @@
+<label for="colorQuestion">What color is an orange?</label>
+<input type="text" id="colorQuestion" name="colorQuestion">
+<span id="errorMessage" style="color: red; display: none;">That’s not right. Try again.</span>
+<script>
+document.getElementById('colorQuestion').addEventListener('change', function() {
+    var input = this.value.toLowerCase();
+    if (input !== 'orange') {
+        document.getElementById('errorMessage').style.display = 'inline';
+    } else {
+        document.getElementById('errorMessage').style.display = 'none';
+    }
+});
+</script>

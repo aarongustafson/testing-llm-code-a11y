@@ -1,0 +1,23 @@
+<button id="openModal">Open Form</button>
+
+<div id="myModal" style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
+  <div style="background-color:#fff; margin:15% auto; padding:20px; border:1px solid #888; width:80%;">
+    <span id="closeModal" style="float:right; font-size:20px; cursor:pointer;">&times;</span>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Your name"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Your email"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('openModal').onclick = function() {
+    document.getElementById('myModal').style.display = 'block';
+  }
+  document.getElementById('closeModal').onclick = function() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+</script>

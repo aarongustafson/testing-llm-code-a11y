@@ -1,0 +1,8 @@
+<textarea id="message" placeholder="Message"></textarea>
+<div id="error" style="color: red; display: none;">Your message should be at least 20 words long. Please describe your problem in as much detail as possible.</div>
+<script>
+document.getElementById('message').addEventListener('input', function() {
+    var words = this.value.split(/\s+/).filter(word => word.length > 0).length;
+    document.getElementById('error').style.display = words < 20 ? 'block' : 'none';
+});
+</script>

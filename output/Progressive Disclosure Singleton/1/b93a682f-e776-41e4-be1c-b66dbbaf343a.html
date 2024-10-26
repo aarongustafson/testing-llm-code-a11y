@@ -1,0 +1,12 @@
+<div>
+  <button onclick="toggleContent()">Short description</button>
+  <div id="content" style="display: none;">
+    <!-- Placeholder for the contents -->
+  </div>
+</div>
+<script>
+  function toggleContent() {
+    const content = document.getElementById('content');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+  }
+</script>

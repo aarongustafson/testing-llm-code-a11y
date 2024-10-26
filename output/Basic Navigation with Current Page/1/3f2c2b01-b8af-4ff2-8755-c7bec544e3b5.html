@@ -1,0 +1,20 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products" class="active">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  nav ul { list-style: none; padding: 0; }
+  nav > ul > li { display: inline-block; margin-right: 15px; }
+  nav ul ul { display: none; position: absolute; }
+  nav ul li:hover > ul { display: block; }
+  .active { font-weight: bold; }
+</style>

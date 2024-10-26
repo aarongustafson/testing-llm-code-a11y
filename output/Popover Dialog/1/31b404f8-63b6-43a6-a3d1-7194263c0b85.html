@@ -1,0 +1,18 @@
+<button id="openDialogButton">Open Form</button>
+
+<div id="popoverDialog" style="display:none; position: absolute; border: 1px solid #ccc; background: #fff; padding: 10px; width: 200px;">
+  <form>
+    <label for="input1">Field 1:</label>
+    <input type="text" id="input1" placeholder="Enter text"><br><br>
+    <label for="input2">Field 2:</label>
+    <input type="text" id="input2" placeholder="Enter text"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('openDialogButton').addEventListener('click', function() {
+    var dialog = document.getElementById('popoverDialog');
+    dialog.style.display = (dialog.style.display === 'none' || dialog.style.display === '') ? 'block' : 'none';
+  });
+</script>

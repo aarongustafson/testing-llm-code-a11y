@@ -1,0 +1,28 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products" class="current">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  .current {
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  nav ul ul {
+    display: none;
+  }
+  nav ul li:hover > ul {
+    display: block;
+  }
+</style>

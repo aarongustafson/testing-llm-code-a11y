@@ -1,0 +1,28 @@
+```html
+<div>
+  <button aria-expanded="false" aria-controls="section1-content">Section 1</button>
+  <div id="section1-content" hidden>
+    <!-- Section 1 content goes here -->
+  </div>
+</div>
+
+<div>
+  <button aria-expanded="false" aria-controls="section2-content">Section 2</button>
+  <div id="section2-content" hidden>
+    <!-- Section 2 content goes here -->
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('button[aria-expanded]').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+      button.setAttribute('aria-expanded', !expanded);
+      const content = document.getElementById(button.getAttribute('aria-controls'));
+      if (content) {
+        content.hidden = expanded;
+      }
+    });
+  });
+</script>
+```

@@ -1,0 +1,11 @@
+<input type="email" id="email" placeholder="Email Address" oninput="document.getElementById('error-message').style.display='none'">
+<span id="error-message" style="color: red; display: none;">Your email address is invalid.</span>
+<script>
+  document.getElementById('email').addEventListener('blur', function() {
+    const emailField = this;
+    const errorMessage = document.getElementById('error-message');
+    if (!emailField.validity.valid) {
+      errorMessage.style.display = 'inline';
+    }
+  });
+</script>

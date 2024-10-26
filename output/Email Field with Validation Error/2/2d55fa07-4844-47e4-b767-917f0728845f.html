@@ -1,0 +1,14 @@
+<input type="email" id="email" placeholder="Email Address" oninput="validateEmail()">
+<span id="error-message" style="color: red; display: none;">Your email address is invalid.</span>
+<script>
+function validateEmail() {
+    var email = document.getElementById('email').value;
+    var errorMessage = document.getElementById('error-message');
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (regex.test(email)) {
+        errorMessage.style.display = 'none';
+    } else {
+        errorMessage.style.display = 'block';
+    }
+}
+</script>

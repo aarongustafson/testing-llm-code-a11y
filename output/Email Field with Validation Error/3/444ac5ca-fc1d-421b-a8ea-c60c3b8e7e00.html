@@ -1,0 +1,8 @@
+<input type="email" id="email" name="email" required>
+<span id="emailError" style="color:red; display:none;">Your email address is invalid.</span>
+<script>
+document.getElementById('email').addEventListener('input', function () {
+  var emailError = document.getElementById('emailError');
+  emailError.style.display = this.validity.valid ? 'none' : 'inline';
+});
+</script>

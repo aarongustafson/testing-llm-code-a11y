@@ -1,0 +1,18 @@
+<button onclick="document.querySelector('.nav').classList.toggle('show')">Menu</button>
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  .nav { display: none; }
+  .nav.show { display: block; }
+  .nav ul { display: none; }
+  .nav > li:hover > ul { display: block; }
+</style>

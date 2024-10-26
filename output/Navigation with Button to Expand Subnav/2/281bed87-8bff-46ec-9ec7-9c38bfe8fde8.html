@@ -1,0 +1,39 @@
+<ul id="nav"></ul>
+<script>
+const items = [
+  {url:'/',label:'Home'},
+  {url:'/products',label:'Products',subnav:[{url:'/products/frobs',label:'Frobs'},{url:'/products/thrips',label:'Thrips'}]},
+  {url:'/services',label:'Services'}
+];
+
+const nav = document.getElementById('nav');
+
+items.forEach(item => {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = item.url;
+  a.textContent = item.label;
+  li.appendChild(a);
+
+  if (item.subnav) {
+    const button = document.createElement('button');
+    button.textContent = 'Expand';
+    button.onclick = () => subnav.style.display = subnav.style.display === 'none' ? 'block' : 'none';
+    li.appendChild(button);
+
+    const subnav = document.createElement('ul');
+    subnav.style.display = 'none';
+    item.subnav.forEach(subitem => {
+      const subli = document.createElement('li');
+      const suba = document.createElement('a');
+      suba.href = subitem.url;
+      suba.textContent = subitem.label;
+      subli.appendChild(suba);
+      subnav.appendChild(subli);
+    });
+    li.appendChild(subnav);
+  }
+
+  nav.appendChild(li);
+});
+</script>

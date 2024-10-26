@@ -1,0 +1,13 @@
+<input type="text" id="colorInput" placeholder="What color is an orange?" onblur="validateColor()">
+<span id="errorMessage" style="color:red; display:none;">That’s not right. Try again.</span>
+<script>
+function validateColor() {
+  var colorInput = document.getElementById('colorInput').value.toLowerCase();
+  var errorMessage = document.getElementById('errorMessage');
+  if (colorInput !== 'orange') {
+    errorMessage.style.display = 'inline';
+  } else {
+    errorMessage.style.display = 'none';
+  }
+}
+</script>

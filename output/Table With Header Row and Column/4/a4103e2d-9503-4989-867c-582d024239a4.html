@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Grade</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+</table>
+<script>
+  const data = [
+    {name:'Barbara',grade:'Kindergarten'},
+    {name:'Gregory',grade:'1st Grade'},
+    {name:'Janine',grade:'2nd Grade'}
+  ];
+
+  const tbody = document.getElementById('table-body');
+  data.forEach(item => {
+    const row = document.createElement('tr');
+    const nameCell = document.createElement('th');
+    nameCell.scope = 'row';
+    nameCell.textContent = item.name;
+    const gradeCell = document.createElement('td');
+    gradeCell.textContent = item.grade;
+    row.appendChild(nameCell);
+    row.appendChild(gradeCell);
+    tbody.appendChild(row);
+  });
+</script>

@@ -1,0 +1,21 @@
+<button onclick="document.getElementById('nav-menu').classList.toggle('hidden')">Toggle Menu</button>
+<nav id="nav-menu" class="hidden">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+
+<style>
+  .hidden { display: none; }
+  nav ul { list-style-type: none; }
+  nav ul ul { display: none; }
+  nav ul li:hover > ul { display: block; }
+</style>

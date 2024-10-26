@@ -1,0 +1,39 @@
+<nav id="nav">
+  <button id="menuButton" aria-expanded="false" aria-controls="menu">Menu</button>
+  <ul id="menu" hidden>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products">Products</a>
+      <ul hidden>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+
+<script>
+document.getElementById('menuButton').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  const expanded = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', !expanded);
+  menu.hidden = expanded;
+});
+
+document.querySelectorAll('#menu > li > a').forEach(item => {
+  item.addEventListener('click', function(event) {
+    const subnav = this.nextElementSibling;
+    if (subnav) {
+      event.preventDefault();
+      subnav.hidden = !subnav.hidden;
+    }
+  });
+});
+</script>
+
+<style>
+#menu > li > ul {
+  margin-left: 20px;
+}
+</style>

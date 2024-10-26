@@ -1,0 +1,32 @@
+<div>
+  <button onclick="toggleSection('section1')" aria-expanded="true">Section 1</button>
+  <div id="section1" style="display:block;">
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+<div>
+  <button onclick="toggleSection('section2')" aria-expanded="false">Section 2</button>
+  <div id="section2" style="display:none;">
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+<script>
+  function toggleSection(section) {
+    var sec1 = document.getElementById('section1');
+    var sec2 = document.getElementById('section2');
+    var btn1 = sec1.previousElementSibling;
+    var btn2 = sec2.previousElementSibling;
+
+    if (section === 'section1') {
+      sec1.style.display = 'block';
+      sec2.style.display = 'none';
+      btn1.setAttribute('aria-expanded', 'true');
+      btn2.setAttribute('aria-expanded', 'false');
+    } else {
+      sec1.style.display = 'none';
+      sec2.style.display = 'block';
+      btn1.setAttribute('aria-expanded', 'false');
+      btn2.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>

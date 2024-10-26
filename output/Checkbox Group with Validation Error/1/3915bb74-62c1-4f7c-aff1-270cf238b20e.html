@@ -1,0 +1,20 @@
+<form>
+  <p>What fruits do you like?</p>
+  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
+  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+  <label><input type="checkbox" name="fruits" value="apples"> Apples</label><br>
+  <p class="error" style="display: none; color: red;">You must choose one or more fruits</p>
+  <button type="submit" onclick="validateForm(event)">Submit</button>
+</form>
+<script>
+function validateForm(event) {
+  const checkboxes = document.querySelectorAll('input[name="fruits"]:checked');
+  const error = document.querySelector('.error');
+  if (checkboxes.length === 0) {
+    error.style.display = 'block';
+    event.preventDefault();
+  } else {
+    error.style.display = 'none';
+  }
+}
+</script>

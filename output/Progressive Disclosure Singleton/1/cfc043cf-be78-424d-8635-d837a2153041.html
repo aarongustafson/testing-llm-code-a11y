@@ -1,0 +1,12 @@
+<div>
+  <button onclick="toggleDescription()">Short description</button>
+  <div id="description" style="display:none;">
+    <!-- Placeholder for the contents -->
+  </div>
+</div>
+<script>
+  function toggleDescription() {
+    var desc = document.getElementById("description");
+    desc.style.display = desc.style.display === "none" ? "block" : "none";
+  }
+</script>

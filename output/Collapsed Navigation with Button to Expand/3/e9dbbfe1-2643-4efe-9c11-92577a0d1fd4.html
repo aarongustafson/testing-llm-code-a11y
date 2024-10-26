@@ -1,0 +1,25 @@
+<style>
+  .hamburger { cursor: pointer; display: inline-block; padding: 10px; }
+  .nav { display: none; list-style: none; padding: 0; }
+  .nav li { padding: 10px; }
+  .show { display: block; }
+</style>
+
+<div class="hamburger">☰ Menu</div>
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li>
+    <a href="/products">Products</a>
+    <ul class="nav">
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav').classList.toggle('show');
+  });
+</script>

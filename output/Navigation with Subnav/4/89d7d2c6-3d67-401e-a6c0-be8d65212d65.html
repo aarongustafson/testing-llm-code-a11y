@@ -1,0 +1,40 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/products" aria-haspopup="true" aria-expanded="false">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul ul {
+    display: none;
+  }
+  nav ul li {
+    position: relative;
+  }
+  nav ul li:hover > ul,
+  nav ul li:focus-within > ul {
+    display: block;
+  }
+</style>
+<script>
+  document.querySelectorAll('nav a[aria-haspopup]').forEach(link => {
+    link.addEventListener('focus', () => {
+      link.setAttribute('aria-expanded', 'true');
+    });
+    link.addEventListener('blur', () => {
+      link.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

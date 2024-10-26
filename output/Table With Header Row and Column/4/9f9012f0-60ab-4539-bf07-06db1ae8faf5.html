@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+
+<script>
+  const data = [
+    {name: 'Barbara', grade: 'Kindergarten'},
+    {name: 'Gregory', grade: '1st Grade'},
+    {name: 'Janine', grade: '2nd Grade'}
+  ];
+
+  const tableBody = document.getElementById('table-body');
+  data.forEach(item => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${item.name}</td><td>${item.grade}</td>`;
+    tableBody.appendChild(row);
+  });
+</script>

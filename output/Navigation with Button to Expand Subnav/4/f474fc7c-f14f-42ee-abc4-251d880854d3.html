@@ -1,0 +1,26 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li>
+    <button aria-expanded="false" onclick="toggleSubnav(this)">Products</button>
+    <ul class="subnav" hidden>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<script>
+  function toggleSubnav(button) {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !expanded);
+    button.nextElementSibling.hidden = expanded;
+  }
+</script>
+<style>
+  .subnav {
+    display: none;
+  }
+  [aria-expanded="true"] + .subnav {
+    display: block;
+  }
+</style>

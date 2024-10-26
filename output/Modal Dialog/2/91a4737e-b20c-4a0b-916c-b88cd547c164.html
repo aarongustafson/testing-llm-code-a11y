@@ -1,0 +1,27 @@
+<button id="openModal">Open Modal</button>
+
+<div id="myModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); border:1px solid #ccc; padding:1em; background-color:#fff; z-index:1000;">
+  <h2 id="modalTitle">Modal Title</h2>
+  <p>Placeholder content for the modal dialog.</p>
+  <button id="closeModal">Close</button>
+</div>
+
+<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
+
+<script>
+document.getElementById('openModal').addEventListener('click', function() {
+  document.getElementById('myModal').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('myModal').setAttribute('aria-hidden', 'false');
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+  document.getElementById('myModal').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('myModal').setAttribute('aria-hidden', 'true');
+});
+
+document.getElementById('overlay').addEventListener('click', function() {
+  document.getElementById('closeModal').click();
+});
+</script>

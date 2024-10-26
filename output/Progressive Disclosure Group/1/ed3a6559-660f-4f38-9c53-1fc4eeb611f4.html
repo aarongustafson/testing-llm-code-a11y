@@ -1,0 +1,18 @@
+<div>
+  <button onclick="toggleSection('section1')">Section 1</button>
+  <div id="section1" style="display:none;">
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+<div>
+  <button onclick="toggleSection('section2')">Section 2</button>
+  <div id="section2" style="display:none;">
+    <!-- Content for Section 2 -->
+  </div>
+</div>
+<script>
+  function toggleSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+  }
+</script>

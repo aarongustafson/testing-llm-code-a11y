@@ -1,0 +1,11 @@
+<label for="email">Email Address</label>
+<input type="email" id="email" aria-describedby="email-error" required>
+<span id="email-error" role="alert" style="color: red; display: none;">Your email address is invalid.</span>
+<script>
+document.getElementById('email').addEventListener('input', function() {
+  var email = this.value;
+  var errorSpan = document.getElementById('email-error');
+  var isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  errorSpan.style.display = isValid ? 'none' : 'inline';
+});
+</script>

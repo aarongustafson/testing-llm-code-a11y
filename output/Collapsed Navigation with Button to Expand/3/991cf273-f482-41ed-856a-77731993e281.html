@@ -1,0 +1,25 @@
+<nav id="main-nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<div id="hamburger-menu">☰</div>
+
+<style>
+  #main-nav { display: none; }
+  #hamburger-menu { cursor: pointer; }
+</style>
+
+<script>
+  document.getElementById('hamburger-menu').onclick = function() {
+    var nav = document.getElementById('main-nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  };
+</script>

@@ -1,0 +1,34 @@
+<form>
+  <fieldset>
+    <legend>Choose a theme</legend>
+    <div>
+      <input type="radio" id="light" name="theme" value="light">
+      <label for="light">Light</label>
+    </div>
+    <div>
+      <input type="radio" id="dark" name="theme" value="dark">
+      <label for="dark">Dark</label>
+    </div>
+    <div>
+      <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+      <label for="high-contrast">High Contrast</label>
+    </div>
+    <div id="error" style="color: red; display: none;">You must choose a theme to proceed</div>
+    <button type="submit" onclick="validateTheme(event)">Submit</button>
+  </fieldset>
+</form>
+<script>
+  function validateTheme(event) {
+    const themes = document.querySelectorAll('input[name="theme"]');
+    let selected = false;
+    themes.forEach(theme => {
+      if (theme.checked) selected = true;
+    });
+    if (!selected) {
+      event.preventDefault();
+      document.getElementById('error').style.display = 'block';
+    } else {
+      document.getElementById('error').style.display = 'none';
+    }
+  }
+</script>

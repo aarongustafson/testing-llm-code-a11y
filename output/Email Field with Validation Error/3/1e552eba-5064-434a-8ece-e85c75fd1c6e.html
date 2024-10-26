@@ -1,0 +1,14 @@
+<input type="email" id="email" name="email" required>
+<span id="error" style="color:red; display:none;">Your email address is invalid.</span>
+<script>
+document.getElementById('email').addEventListener('input', function() {
+  var email = this.value;
+  var error = document.getElementById('error');
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(email)) {
+    error.style.display = 'inline';
+  } else {
+    error.style.display = 'none';
+  }
+});
+</script>

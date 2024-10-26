@@ -1,0 +1,13 @@
+<button id="toggleButton" aria-expanded="false" aria-controls="content" onclick="toggleContent()">Short description</button>
+<div id="content" hidden>
+  <!-- Place your content here -->
+</div>
+<script>
+function toggleContent() {
+  const content = document.getElementById('content');
+  const button = document.getElementById('toggleButton');
+  const expanded = button.getAttribute('aria-expanded') === 'true';
+  content.hidden = expanded;
+  button.setAttribute('aria-expanded', !expanded);
+}
+</script>

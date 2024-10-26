@@ -1,0 +1,28 @@
+<style>
+  .disclosure { cursor: pointer; }
+  .content { display: none; margin-left: 20px; }
+  .open .content { display: block; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.disclosure').forEach(function(section) {
+      section.addEventListener('click', function() {
+        section.classList.toggle('open');
+      });
+    });
+  });
+</script>
+
+<div class="disclosure open">
+  <h3>Section 1</h3>
+  <div class="content">
+    <!-- Content for Section 1 -->
+  </div>
+</div>
+<div class="disclosure">
+  <h3>Section 2</h3>
+  <div class="content">
+    <!-- Content for Section 2 -->
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<ul id="navMenu"></ul>
+<script>
+const navItems = [
+    { url: '/', label: 'Home' },
+    { url: '/products', label: 'Products', subnav: [{ url: '/products/frobs', label: 'Frobs' }, { url: '/products/thrips', label: 'Thrips' }] },
+    { url: '/services', label: 'Services' }
+];
+
+const navMenu = document.getElementById('navMenu');
+
+navItems.forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.url;
+    a.textContent = item.label;
+    li.appendChild(a);
+
+    if (item.subnav) {
+        const btn = document.createElement('button');
+        btn.textContent = 'Expand';
+        btn.onclick = () => {
+            subUl.style.display = subUl.style.display === 'none' ? 'block' : 'none';
+        };
+        li.appendChild(btn);
+
+        const subUl = document.createElement('ul');
+        subUl.style.display = 'none';
+        item.subnav.forEach(subItem => {
+            const subLi = document.createElement('li');
+            const subA = document.createElement('a');
+            subA.href = subItem.url;
+            subA.textContent = subItem.label;
+            subLi.appendChild(subA);
+            subUl.appendChild(subLi);
+        });
+        li.appendChild(subUl);
+    }
+
+    navMenu.appendChild(li);
+});
+</script>

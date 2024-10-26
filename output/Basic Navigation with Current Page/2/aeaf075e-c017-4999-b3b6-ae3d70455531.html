@@ -1,0 +1,37 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a>
+      <ul>
+        <li><a href="/products/frobs">Frobs</a></li>
+        <li><a href="/products/thrips">Thrips</a></li>
+      </ul>
+    </li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+<style>
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  nav ul li:hover > ul {
+    display: block;
+  }
+  nav ul ul li {
+    display: block;
+  }
+  a[href="/products"] {
+    font-weight: bold;
+  }
+</style>

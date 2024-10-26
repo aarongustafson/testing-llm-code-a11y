@@ -1,0 +1,30 @@
+<button id="openModal" aria-controls="modal" aria-expanded="false">Open Form</button>
+
+<div id="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" hidden>
+  <div role="document">
+    <h2 id="modalTitle">Form Title</h2>
+    <form>
+      <label for="input1">Label 1</label>
+      <input type="text" id="input1" placeholder="Input 1">
+      <label for="input2">Label 2</label>
+      <input type="text" id="input2" placeholder="Input 2">
+      <button type="submit">Submit</button>
+    </form>
+    <button id="closeModal">Close</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('openModal').addEventListener('click', function() {
+  var modal = document.getElementById('modal');
+  modal.hidden = false;
+  this.setAttribute('aria-expanded', 'true');
+  modal.querySelector('input').focus();
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+  var modal = document.getElementById('modal');
+  modal.hidden = true;
+  document.getElementById('openModal').setAttribute('aria-expanded', 'false');
+});
+</script>

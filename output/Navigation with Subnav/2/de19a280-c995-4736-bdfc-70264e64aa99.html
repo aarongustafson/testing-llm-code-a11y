@@ -1,0 +1,30 @@
+<script>
+const menuItems = [
+    {url: '/', label: 'Home'},
+    {url: '/products', label: 'Products', subnav: [
+        {url: '/products/frobs', label: 'Frobs'},
+        {url: '/products/thrips', label: 'Thrips'}
+    ]},
+    {url: '/services', label: 'Services'}
+];
+
+function createMenu(items) {
+    const ul = document.createElement('ul');
+    items.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.label;
+        li.appendChild(a);
+        if (item.subnav) {
+            li.appendChild(createMenu(item.subnav));
+        }
+        ul.appendChild(li);
+    });
+    return ul;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(createMenu(menuItems));
+});
+</script>

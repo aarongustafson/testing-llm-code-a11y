@@ -1,0 +1,15 @@
+<button id="openModal">Open Modal</button>
+
+<div id="myModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; padding:20px; background-color:white; border:1px solid #ccc;">
+  <span id="closeModal" style="cursor:pointer; float:right;">&times;</span>
+  <p>Modal Content Here</p>
+</div>
+
+<script>
+document.getElementById('openModal').onclick = function() {
+  document.getElementById('myModal').style.display = 'block';
+};
+document.getElementById('closeModal').onclick = function() {
+  document.getElementById('myModal').style.display = 'none';
+};
+</script>

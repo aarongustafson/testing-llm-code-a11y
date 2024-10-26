@@ -1,0 +1,15 @@
+<label for="message">Message</label>
+<textarea id="message" name="message" aria-describedby="message-error"></textarea>
+<p id="message-error" style="color: red; display: none;">Your message should be at least 20 words long. Please describe your problem in as much detail as possible.</p>
+
+<script>
+document.getElementById('message').addEventListener('input', function() {
+    var message = this.value.split(' ').filter(function(word) { return word.length > 0; }).length;
+    var error = document.getElementById('message-error');
+    if (message < 20) {
+        error.style.display = 'block';
+    } else {
+        error.style.display = 'none';
+    }
+});
+</script>

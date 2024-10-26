@@ -1,0 +1,16 @@
+<button id="openDialog">Open Form</button>
+<dialog id="popoverDialog">
+  <form method="dialog">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email">
+    <button type="submit">Submit</button>
+  </form>
+  <button id="closeDialog">Close</button>
+</dialog>
+<script>
+  const dialog = document.getElementById('popoverDialog');
+  document.getElementById('openDialog').addEventListener('click', () => dialog.show());
+  document.getElementById('closeDialog').addEventListener('click', () => dialog.close());
+</script>

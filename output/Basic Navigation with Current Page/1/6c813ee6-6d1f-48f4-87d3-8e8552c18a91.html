@@ -1,0 +1,21 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/products" class="active">Products</a>
+    <ul>
+      <li><a href="/products/frobs">Frobs</a></li>
+      <li><a href="/products/thrips">Thrips</a></li>
+    </ul>
+  </li>
+  <li><a href="/services">Services</a></li>
+</ul>
+<style>
+  .active {
+    font-weight: bold;
+  }
+  ul ul {
+    display: none;
+  }
+  ul li:hover > ul {
+    display: block;
+  }
+</style>

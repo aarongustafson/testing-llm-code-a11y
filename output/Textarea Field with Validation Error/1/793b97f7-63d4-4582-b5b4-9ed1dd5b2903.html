@@ -1,0 +1,17 @@
+<form>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+  <p id="error-message" style="color:red; display:none;">Your message should be at least 20 words long. Please describe your problem in as much detail as possible.</p>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    const message = document.getElementById('message').value;
+    const wordCount = message.trim().split(/\s+/).length;
+    if (wordCount < 20) {
+      event.preventDefault();
+      document.getElementById('error-message').style.display = 'block';
+    }
+  });
+</script>

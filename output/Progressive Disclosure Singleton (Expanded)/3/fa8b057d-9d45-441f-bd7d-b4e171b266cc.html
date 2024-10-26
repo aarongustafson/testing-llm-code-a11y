@@ -1,0 +1,15 @@
+<button aria-expanded="true" aria-controls="details" id="toggleButton">Short description</button>
+<div id="details">
+  <!-- Put contents here -->
+</div>
+<script>
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    const details = document.getElementById('details');
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+    details.style.display = isExpanded ? 'none' : 'block';
+  });
+</script>
+<style>
+  #details { display: block; }
+</style>

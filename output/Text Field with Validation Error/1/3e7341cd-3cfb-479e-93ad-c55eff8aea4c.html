@@ -1,0 +1,12 @@
+<input type="text" id="colorField" placeholder="What color is an orange?" />
+<span id="error" style="color: red; display: none;">That's not right. Try again.</span>
+<script>
+document.getElementById('colorField').addEventListener('input', function() {
+  const errorField = document.getElementById('error');
+  if (this.value.toLowerCase() !== 'orange') {
+    errorField.style.display = 'inline';
+  } else {
+    errorField.style.display = 'none';
+  }
+});
+</script>

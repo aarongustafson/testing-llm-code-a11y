@@ -1,0 +1,12 @@
+Error: The `placeholder` attribute is not recommended as a substitute for an accessible `label`
+Error: `input` was missing its `name` attribute
+diff --git a/output/Text Field/2/745a6b33-86f0-456f-bb61-95a7de094b82.html b/output/Text Field/2/745a6b33-86f0-456f-bb61-95a7de094b82.html
+index 406f8d8..8e1ac1a 100644
+--- a/output/Text Field/2/745a6b33-86f0-456f-bb61-95a7de094b82.html	
++++ b/output/Text Field/2/745a6b33-86f0-456f-bb61-95a7de094b82.html	
+@@ -1 +1,2 @@
+-<input type="text" id="colorQuestion" placeholder="What color is an orange?">
+\ No newline at end of file
++<label for="colorQuestion">What color is an orange?</label>
++<input type="text" id="colorQuestion" name="color">
+\ No newline at end of file

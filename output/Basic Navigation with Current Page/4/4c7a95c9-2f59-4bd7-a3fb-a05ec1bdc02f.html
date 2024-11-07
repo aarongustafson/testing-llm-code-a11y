@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
-    <li aria-haspopup="true">
+    <li>
       <a href="/products" aria-current="page">Products</a>
       <ul>
         <li><a href="/products/frobs">Frobs</a></li>
@@ -11,23 +11,3 @@
     <li><a href="/services">Services</a></li>
   </ul>
 </nav>
-
-<style>
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  nav li {
-    position: relative;
-  }
-  nav ul ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background: white;
-  }
-  nav li[aria-haspopup="true"]:hover > ul {
-    display: block;
-  }
-</style>

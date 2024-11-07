@@ -2,7 +2,7 @@
   <ul>
     <li><a href="/" class="nav-item">Home</a></li>
     <li>
-      <a href="/products" class="nav-item active">Products</a>
+      <a href="/products" class="nav-item active" aria-current="page">Products</a>
       <ul class="subnav">
         <li><a href="/products/frobs" class="subnav-item">Frobs</a></li>
         <li><a href="/products/thrips" class="subnav-item">Thrips</a></li>
@@ -11,24 +11,3 @@
     <li><a href="/services" class="nav-item">Services</a></li>
   </ul>
 </nav>
-<style>
-  .nav-item {
-    text-decoration: none;
-    padding: 10px;
-    color: black;
-  }
-  .nav-item.active {
-    font-weight: bold;
-  }
-  .subnav {
-    display: none;
-  }
-  .nav-item.active + .subnav {
-    display: block;
-  }
-  .subnav-item {
-    text-decoration: none;
-    padding: 5px;
-    color: grey;
-  }
-</style>

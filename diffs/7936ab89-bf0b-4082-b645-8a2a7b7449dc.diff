@@ -1,0 +1,33 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Nothing in the requested component required `aria-expanded` be used
+Error: Nothing in the requested component required `aria-haspopup` be used
+Error: Styles were not requested
+diff --git a/output/Basic Navigation with Current Page/4/7936ab89-bf0b-4082-b645-8a2a7b7449dc.html b/output/Basic Navigation with Current Page/4/7936ab89-bf0b-4082-b645-8a2a7b7449dc.html
+index 94201e4..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/4/7936ab89-bf0b-4082-b645-8a2a7b7449dc.html	
++++ b/output/Basic Navigation with Current Page/4/7936ab89-bf0b-4082-b645-8a2a7b7449dc.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" aria-haspopup="true" aria-expanded="true">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>
+@@ -10,12 +10,4 @@
+     </li>
+     <li><a href="/services">Services</a></li>
+   </ul>
+-</nav>
+-<style>
+-  nav ul ul {
+-    display: block;
+-  }
+-  nav ul ul li {
+-    display: block;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

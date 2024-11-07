@@ -1,0 +1,12 @@
+Error: An accessible description was not requested by the prompt
+diff --git a/output/Text Field/5/57ddbd61-5f32-45fc-ba76-a99eda0938b2.html b/output/Text Field/5/57ddbd61-5f32-45fc-ba76-a99eda0938b2.html
+index cd9188c..994e005 100644
+--- a/output/Text Field/5/57ddbd61-5f32-45fc-ba76-a99eda0938b2.html	
++++ b/output/Text Field/5/57ddbd61-5f32-45fc-ba76-a99eda0938b2.html	
+@@ -1,3 +1,2 @@
+ <label for="orange-color">What color is an orange?</label>
+-<input type="text" id="orange-color" name="orange-color" aria-describedby="orange-color-description">
+-<span id="orange-color-description">Please describe the color of an orange fruit.</span>
+\ No newline at end of file
++<input type="text" id="orange-color" name="orange-color">
+\ No newline at end of file

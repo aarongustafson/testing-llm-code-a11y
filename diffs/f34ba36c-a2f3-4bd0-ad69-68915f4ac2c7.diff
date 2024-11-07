@@ -1,0 +1,45 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Styles were not requested
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+diff --git a/output/Basic Navigation with Current Page/3/f34ba36c-a2f3-4bd0-ad69-68915f4ac2c7.html b/output/Basic Navigation with Current Page/3/f34ba36c-a2f3-4bd0-ad69-68915f4ac2c7.html
+index 8df3532..52d3bdd 100644
+--- a/output/Basic Navigation with Current Page/3/f34ba36c-a2f3-4bd0-ad69-68915f4ac2c7.html	
++++ b/output/Basic Navigation with Current Page/3/f34ba36c-a2f3-4bd0-ad69-68915f4ac2c7.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/" class="nav-item">Home</a></li>
+     <li>
+-      <a href="/products" class="nav-item active">Products</a>
++      <a href="/products" class="nav-item active" aria-current="page">Products</a>
+       <ul class="subnav">
+         <li><a href="/products/frobs" class="subnav-item">Frobs</a></li>
+         <li><a href="/products/thrips" class="subnav-item">Thrips</a></li>
+@@ -10,25 +10,4 @@
+     </li>
+     <li><a href="/services" class="nav-item">Services</a></li>
+   </ul>
+-</nav>
+-<style>
+-  .nav-item {
+-    text-decoration: none;
+-    padding: 10px;
+-    color: black;
+-  }
+-  .nav-item.active {
+-    font-weight: bold;
+-  }
+-  .subnav {
+-    display: none;
+-  }
+-  .nav-item.active + .subnav {
+-    display: block;
+-  }
+-  .subnav-item {
+-    text-decoration: none;
+-    padding: 5px;
+-    color: grey;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

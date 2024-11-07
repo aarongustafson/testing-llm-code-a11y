@@ -1,0 +1,44 @@
+Error: Nothing in the requested component required `aria-haspopup` be used
+Error: Styles were not requested
+Error: No request was made for a popover sub-navigation
+diff --git a/output/Basic Navigation with Current Page/4/4c7a95c9-2f59-4bd7-a3fb-a05ec1bdc02f.html b/output/Basic Navigation with Current Page/4/4c7a95c9-2f59-4bd7-a3fb-a05ec1bdc02f.html
+index 21c34f5..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/4/4c7a95c9-2f59-4bd7-a3fb-a05ec1bdc02f.html	
++++ b/output/Basic Navigation with Current Page/4/4c7a95c9-2f59-4bd7-a3fb-a05ec1bdc02f.html	
+@@ -1,7 +1,7 @@
+ <nav>
+   <ul>
+     <li><a href="/">Home</a></li>
+-    <li aria-haspopup="true">
++    <li>
+       <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+@@ -10,24 +10,4 @@
+     </li>
+     <li><a href="/services">Services</a></li>
+   </ul>
+-</nav>
+-
+-<style>
+-  nav ul {
+-    list-style: none;
+-    padding: 0;
+-  }
+-  nav li {
+-    position: relative;
+-  }
+-  nav ul ul {
+-    display: none;
+-    position: absolute;
+-    left: 0;
+-    top: 100%;
+-    background: white;
+-  }
+-  nav li[aria-haspopup="true"]:hover > ul {
+-    display: block;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

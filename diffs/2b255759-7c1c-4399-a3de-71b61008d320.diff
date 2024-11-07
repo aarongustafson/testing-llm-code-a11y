@@ -1,0 +1,16 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+Error: Inline styles should be avoided in favor of external CSS, in this case using the `[aria-current=page]` selector
+diff --git a/output/Basic Navigation with Current Page/2/2b255759-7c1c-4399-a3de-71b61008d320.html b/output/Basic Navigation with Current Page/2/2b255759-7c1c-4399-a3de-71b61008d320.html
+index b5302f1..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/2/2b255759-7c1c-4399-a3de-71b61008d320.html	
++++ b/output/Basic Navigation with Current Page/2/2b255759-7c1c-4399-a3de-71b61008d320.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" style="font-weight:bold;">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>

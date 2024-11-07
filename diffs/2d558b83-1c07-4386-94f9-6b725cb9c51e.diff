@@ -1,0 +1,12 @@
+Error: `aria-labelledby` is not necessary as there is already an accessible label (via `for` on the `label`)
+Error: `aria-labelledby` takes a space-separated series of `id` references, in this case you’ve made it self-referential and it would not actually provide a valid label
+diff --git a/output/Text Field/5/2d558b83-1c07-4386-94f9-6b725cb9c51e.html b/output/Text Field/5/2d558b83-1c07-4386-94f9-6b725cb9c51e.html
+index 4811f34..994e005 100644
+--- a/output/Text Field/5/2d558b83-1c07-4386-94f9-6b725cb9c51e.html	
++++ b/output/Text Field/5/2d558b83-1c07-4386-94f9-6b725cb9c51e.html	
+@@ -1,2 +1,2 @@
+ <label for="orange-color">What color is an orange?</label>
+-<input type="text" id="orange-color" name="orange-color" aria-labelledby="orange-color">
+\ No newline at end of file
++<input type="text" id="orange-color" name="orange-color">
+\ No newline at end of file

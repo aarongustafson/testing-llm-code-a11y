@@ -1,0 +1,46 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Styles were not requested
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+diff --git a/output/Basic Navigation with Current Page/3/b6e1dcf0-dace-489f-b3bb-02ce90ca6d3e.html b/output/Basic Navigation with Current Page/3/b6e1dcf0-dace-489f-b3bb-02ce90ca6d3e.html
+index 9d7e2b5..50e0a3d 100644
+--- a/output/Basic Navigation with Current Page/3/b6e1dcf0-dace-489f-b3bb-02ce90ca6d3e.html	
++++ b/output/Basic Navigation with Current Page/3/b6e1dcf0-dace-489f-b3bb-02ce90ca6d3e.html	
+@@ -1,7 +1,7 @@
+ <nav>
+   <ul>
+     <li><a href="/">Home</a></li>
+-    <li><a href="/products" class="current">Products</a>
++    <li><a href="/products" class="current" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>
+@@ -9,26 +9,4 @@
+     </li>
+     <li><a href="/services">Services</a></li>
+   </ul>
+-</nav>
+-<style>
+-  nav ul {
+-    list-style: none;
+-    padding: 0;
+-    margin: 0;
+-  }
+-  nav > ul > li {
+-    display: inline-block;
+-    margin-right: 15px;
+-  }
+-  nav ul ul {
+-    display: none;
+-    position: absolute;
+-    list-style: none;
+-  }
+-  nav ul li:hover > ul {
+-    display: block;
+-  }
+-  .current {
+-    font-weight: bold;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

@@ -1,0 +1,44 @@
+Error: Navigation lists must be nested in a `nav` element
+Error: Current page must be indicated using `aria-current="page"`
+Error: Styles were not requested
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+diff --git a/output/Basic Navigation with Current Page/1/6c813ee6-6d1f-48f4-87d3-8e8552c18a91.html b/output/Basic Navigation with Current Page/1/6c813ee6-6d1f-48f4-87d3-8e8552c18a91.html
+index bbe011f..2618480 100644
+--- a/output/Basic Navigation with Current Page/1/6c813ee6-6d1f-48f4-87d3-8e8552c18a91.html	
++++ b/output/Basic Navigation with Current Page/1/6c813ee6-6d1f-48f4-87d3-8e8552c18a91.html	
+@@ -1,21 +1,12 @@
+-<ul>
+-  <li><a href="/">Home</a></li>
+-  <li><a href="/products" class="active">Products</a>
+-    <ul>
+-      <li><a href="/products/frobs">Frobs</a></li>
+-      <li><a href="/products/thrips">Thrips</a></li>
+-    </ul>
+-  </li>
+-  <li><a href="/services">Services</a></li>
+-</ul>
+-<style>
+-  .active {
+-    font-weight: bold;
+-  }
+-  ul ul {
+-    display: none;
+-  }
+-  ul li:hover > ul {
+-    display: block;
+-  }
+-</style>
+\ No newline at end of file
++<nav>
++  <ul>
++    <li><a href="/">Home</a></li>
++    <li><a href="/products" class="active" aria-current="page">Products</a>
++      <ul>
++        <li><a href="/products/frobs">Frobs</a></li>
++        <li><a href="/products/thrips">Thrips</a></li>
++      </ul>
++    </li>
++    <li><a href="/services">Services</a></li>
++  </ul>
++</nav>
+\ No newline at end of file

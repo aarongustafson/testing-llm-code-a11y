@@ -1,0 +1,14 @@
+Error: Nothing in the requested component required `aria-expanded` be used
+diff --git a/output/Basic Navigation with Current Page/4/2d7971b4-4cd2-424b-aa52-95efd1066f5a.html b/output/Basic Navigation with Current Page/4/2d7971b4-4cd2-424b-aa52-95efd1066f5a.html
+index d3a14f3..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/4/2d7971b4-4cd2-424b-aa52-95efd1066f5a.html	
++++ b/output/Basic Navigation with Current Page/4/2d7971b4-4cd2-424b-aa52-95efd1066f5a.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" aria-expanded="true" aria-current="page">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>

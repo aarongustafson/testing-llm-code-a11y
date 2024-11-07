@@ -1,0 +1,16 @@
+Error: JavaScript over-complicates this component; `placeholder` could be set declaratively in the HTML
+Error: The `placeholder` attribute is not recommended as a substitute for an accessible `label`
+Error: `input` was missing its `name` attribute
+diff --git a/output/Text Field/3/db153561-e7f6-4bea-8bbc-aa64e0a25dad.html b/output/Text Field/3/db153561-e7f6-4bea-8bbc-aa64e0a25dad.html
+index dca3d4c..0ae3c92 100644
+--- a/output/Text Field/3/db153561-e7f6-4bea-8bbc-aa64e0a25dad.html	
++++ b/output/Text Field/3/db153561-e7f6-4bea-8bbc-aa64e0a25dad.html	
+@@ -1,4 +1,2 @@
+-<input type="text" id="orangeColorField">
+-<script>
+-  document.getElementById('orangeColorField').placeholder = 'What color is an orange?';
+-</script>
+\ No newline at end of file
++<label for="orangeColorField">What color is an orange?</label>
++<input type="text" id="orangeColorField" name="orangeColorField">
+\ No newline at end of file

@@ -1,0 +1,11 @@
+Error: `nav` was missing an accessible label
+diff --git a/output/Additional Navigation Element/3/e8f0e2a0-a37f-46d8-b211-fe4840cda163.html b/output/Additional Navigation Element/3/e8f0e2a0-a37f-46d8-b211-fe4840cda163.html
+index c827064..3721a3b 100644
+--- a/output/Additional Navigation Element/3/e8f0e2a0-a37f-46d8-b211-fe4840cda163.html	
++++ b/output/Additional Navigation Element/3/e8f0e2a0-a37f-46d8-b211-fe4840cda163.html	
+@@ -1,4 +1,4 @@
+-<nav>
++<nav aria-label="Policies and Legal Information">
+   <ul>
+     <li><a href="/privacy">Privacy Policy</a></li>
+     <li><a href="/accessibility">Accessibility Statement</a></li>

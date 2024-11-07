@@ -1,0 +1,16 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Nothing in the requested component required `aria-expanded` be used
+Error: Nothing in the requested component required `aria-controls` be used
+diff --git a/output/Basic Navigation with Current Page/4/62eee878-4830-41b7-996a-3bc75b563747.html b/output/Basic Navigation with Current Page/4/62eee878-4830-41b7-996a-3bc75b563747.html
+index 1dd3c45..82acbb1 100644
+--- a/output/Basic Navigation with Current Page/4/62eee878-4830-41b7-996a-3bc75b563747.html	
++++ b/output/Basic Navigation with Current Page/4/62eee878-4830-41b7-996a-3bc75b563747.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" aria-expanded="true" aria-controls="products-subnav">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul id="products-subnav">
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>

@@ -1,0 +1,32 @@
+Error: Navigation lists must be nested in a `nav` element
+diff --git a/output/Basic Navigation with Current Page/3/bdc0efda-fe21-4ab6-939f-b421b8d92a90.html b/output/Basic Navigation with Current Page/3/bdc0efda-fe21-4ab6-939f-b421b8d92a90.html
+index 5eaa87b..2b6f2fd 100644
+--- a/output/Basic Navigation with Current Page/3/bdc0efda-fe21-4ab6-939f-b421b8d92a90.html	
++++ b/output/Basic Navigation with Current Page/3/bdc0efda-fe21-4ab6-939f-b421b8d92a90.html	
+@@ -1,11 +1,13 @@
+-<ul>
+-  <li><a href="/" aria-current="page">Home</a></li>
+-  <li>
+-    <a href="/products" aria-current="page">Products</a>
+-    <ul>
+-      <li><a href="/products/frobs">Frobs</a></li>
+-      <li><a href="/products/thrips">Thrips</a></li>
+-    </ul>
+-  </li>
+-  <li><a href="/services">Services</a></li>
+-</ul>
+\ No newline at end of file
++<nav>
++  <ul>
++    <li><a href="/" aria-current="page">Home</a></li>
++    <li>
++      <a href="/products" aria-current="page">Products</a>
++      <ul>
++        <li><a href="/products/frobs">Frobs</a></li>
++        <li><a href="/products/thrips">Thrips</a></li>
++      </ul>
++    </li>
++    <li><a href="/services">Services</a></li>
++  </ul>
++</nav>
+\ No newline at end of file

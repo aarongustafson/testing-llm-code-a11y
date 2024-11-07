@@ -1,0 +1,49 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Styles were not requested
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+diff --git a/output/Basic Navigation with Current Page/2/aeaf075e-c017-4999-b3b6-ae3d70455531.html b/output/Basic Navigation with Current Page/2/aeaf075e-c017-4999-b3b6-ae3d70455531.html
+index 1140434..cda868a 100644
+--- a/output/Basic Navigation with Current Page/2/aeaf075e-c017-4999-b3b6-ae3d70455531.html	
++++ b/output/Basic Navigation with Current Page/2/aeaf075e-c017-4999-b3b6-ae3d70455531.html	
+@@ -1,7 +1,7 @@
+ <nav>
+   <ul>
+     <li><a href="/">Home</a></li>
+-    <li><a href="/products">Products</a>
++    <li><a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>
+@@ -9,29 +9,4 @@
+     </li>
+     <li><a href="/services">Services</a></li>
+   </ul>
+-</nav>
+-<style>
+-  nav ul {
+-    list-style-type: none;
+-    padding: 0;
+-  }
+-  nav > ul > li {
+-    display: inline-block;
+-    margin-right: 10px;
+-  }
+-  nav ul ul {
+-    display: none;
+-    position: absolute;
+-    background-color: #fff;
+-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+-  }
+-  nav ul li:hover > ul {
+-    display: block;
+-  }
+-  nav ul ul li {
+-    display: block;
+-  }
+-  a[href="/products"] {
+-    font-weight: bold;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

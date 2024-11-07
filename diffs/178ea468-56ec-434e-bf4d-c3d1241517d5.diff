@@ -1,0 +1,12 @@
+Error: `aria-label` is unneeded as the field is already properly labelled by the `label`
+Error: The `aria-label` you inserted is not the requested label
+diff --git a/output/Text Field/5/178ea468-56ec-434e-bf4d-c3d1241517d5.html b/output/Text Field/5/178ea468-56ec-434e-bf4d-c3d1241517d5.html
+index 94925be..9a92b38 100644
+--- a/output/Text Field/5/178ea468-56ec-434e-bf4d-c3d1241517d5.html	
++++ b/output/Text Field/5/178ea468-56ec-434e-bf4d-c3d1241517d5.html	
+@@ -1,2 +1,2 @@
+ <label for="color-question">What color is an orange?</label>
+-<input type="text" id="color-question" name="color-question" aria-label="Answer: What color is an orange?" />
+\ No newline at end of file
++<input type="text" id="color-question" name="color-question" />
+\ No newline at end of file

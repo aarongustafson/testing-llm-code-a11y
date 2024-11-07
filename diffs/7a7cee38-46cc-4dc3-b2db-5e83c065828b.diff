@@ -1,0 +1,27 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Nothing in the requested component required `aria-expanded` be used
+Error: Styles were not requested
+diff --git a/output/Basic Navigation with Current Page/4/7a7cee38-46cc-4dc3-b2db-5e83c065828b.html b/output/Basic Navigation with Current Page/4/7a7cee38-46cc-4dc3-b2db-5e83c065828b.html
+index 06f4d7d..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/4/7a7cee38-46cc-4dc3-b2db-5e83c065828b.html	
++++ b/output/Basic Navigation with Current Page/4/7a7cee38-46cc-4dc3-b2db-5e83c065828b.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" aria-expanded="true">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>
+@@ -10,7 +10,4 @@
+     </li>
+     <li><a href="/services">Services</a></li>
+   </ul>
+-</nav>
+-<style>
+-  nav ul ul { display: block; }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

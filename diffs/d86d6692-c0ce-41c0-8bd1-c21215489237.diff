@@ -1,0 +1,14 @@
+Error: Current page must be indicated using `aria-current="page"`
+diff --git a/output/Basic Navigation with Current Page/1/d86d6692-c0ce-41c0-8bd1-c21215489237.html b/output/Basic Navigation with Current Page/1/d86d6692-c0ce-41c0-8bd1-c21215489237.html
+index 0342c45..ab592f0 100644
+--- a/output/Basic Navigation with Current Page/1/d86d6692-c0ce-41c0-8bd1-c21215489237.html	
++++ b/output/Basic Navigation with Current Page/1/d86d6692-c0ce-41c0-8bd1-c21215489237.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products">Products</a>
++      <a href="/products" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>

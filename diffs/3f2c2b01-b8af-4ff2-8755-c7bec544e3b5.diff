@@ -1,0 +1,16 @@
+Error: Current page must be indicated using `aria-current="page"`
+Error: Styles were not requested
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+diff --git a/output/Basic Navigation with Current Page/1/3f2c2b01-b8af-4ff2-8755-c7bec544e3b5.html b/output/Basic Navigation with Current Page/1/3f2c2b01-b8af-4ff2-8755-c7bec544e3b5.html
+index ca6a115..d4efbe9 100644
+--- a/output/Basic Navigation with Current Page/1/3f2c2b01-b8af-4ff2-8755-c7bec544e3b5.html	
++++ b/output/Basic Navigation with Current Page/1/3f2c2b01-b8af-4ff2-8755-c7bec544e3b5.html	
+@@ -2,7 +2,7 @@
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li>
+-      <a href="/products" class="active">Products</a>
++      <a href="/products" class="active" aria-current="page">Products</a>
+       <ul>
+         <li><a href="/products/frobs">Frobs</a></li>
+         <li><a href="/products/thrips">Thrips</a></li>

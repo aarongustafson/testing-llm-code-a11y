@@ -1,0 +1,19 @@
+Error: The `placeholder` attribute is not recommended as a substitute for an accessible `label`
+Error: `input` was missing its `name` attribute
+Error: JavaScript is not necessary to create this component
+Error: The prompt was not to change the color of the field when a user types
+diff --git a/output/Text Field/3/cb93dcf2-f82a-4bad-aaba-d69df02fc572.html b/output/Text Field/3/cb93dcf2-f82a-4bad-aaba-d69df02fc572.html
+index 2c4891c..e99a852 100644
+--- a/output/Text Field/3/cb93dcf2-f82a-4bad-aaba-d69df02fc572.html	
++++ b/output/Text Field/3/cb93dcf2-f82a-4bad-aaba-d69df02fc572.html	
+@@ -1,6 +1,2 @@
+-<input type="text" id="orangeColorField" placeholder="What color is an orange?">
+-<script>
+-document.getElementById('orangeColorField').addEventListener('input', function() {
+-    this.style.backgroundColor = (this.value.toLowerCase() === 'orange') ? '#FFA500' : 'white';
+-});
+-</script>
+\ No newline at end of file
++<label for="coorangeColorFieldlor">What color is an orange?</label>
++<input type="text" id="orangeColorField" name="orangeColorField">
+\ No newline at end of file

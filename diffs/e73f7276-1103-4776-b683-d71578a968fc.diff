@@ -1,0 +1,39 @@
+Error: Navigation lists must be nested in a `nav` element
+Error: Current page must be indicated using `aria-current="page"`
+Error: JavaScript is unnecessary for this component.
+Error: Style changes (such as bold) must not be the only means of indicating a link is the current page
+Error: Inline styles should be avoided in favor of external CSS, in this case using the `[aria-current=page]` selector
+diff --git a/output/Basic Navigation with Current Page/2/e73f7276-1103-4776-b683-d71578a968fc.html b/output/Basic Navigation with Current Page/2/e73f7276-1103-4776-b683-d71578a968fc.html
+index 03a9643..f51c7bf 100644
+--- a/output/Basic Navigation with Current Page/2/e73f7276-1103-4776-b683-d71578a968fc.html	
++++ b/output/Basic Navigation with Current Page/2/e73f7276-1103-4776-b683-d71578a968fc.html	
+@@ -1,14 +1,13 @@
+-<ul>
+-  <li><a href="/" id="home">Home</a></li>
+-  <li>
+-    <a href="/products" id="products">Products</a>
+-    <ul>
+-      <li><a href="/products/frobs">Frobs</a></li>
+-      <li><a href="/products/thrips">Thrips</a></li>
+-    </ul>
+-  </li>
+-  <li><a href="/services" id="services">Services</a></li>
+-</ul>
+-<script>
+-  document.getElementById('products').style.fontWeight = 'bold';
+-</script>
+\ No newline at end of file
++<nav>
++  <ul>
++    <li><a href="/" id="home">Home</a></li>
++    <li>
++      <a href="/products" id="products" aria-current="page">Products</a>
++      <ul>
++        <li><a href="/products/frobs">Frobs</a></li>
++        <li><a href="/products/thrips">Thrips</a></li>
++      </ul>
++    </li>
++    <li><a href="/services" id="services">Services</a></li>
++  </ul>
++</nav>
+\ No newline at end of file

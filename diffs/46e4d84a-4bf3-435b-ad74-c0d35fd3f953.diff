@@ -1,0 +1,20 @@
+Error: A breadcrumb for the homepage is recommended if it is not duplicated in the primary site navigation.
+Error: This code snippet should not be wrapped in markdown for code
+diff --git a/output/Breadcrumb Navigation/3/46e4d84a-4bf3-435b-ad74-c0d35fd3f953.html b/output/Breadcrumb Navigation/3/46e4d84a-4bf3-435b-ad74-c0d35fd3f953.html
+index 1a06b17..3cbce25 100644
+--- a/output/Breadcrumb Navigation/3/46e4d84a-4bf3-435b-ad74-c0d35fd3f953.html	
++++ b/output/Breadcrumb Navigation/3/46e4d84a-4bf3-435b-ad74-c0d35fd3f953.html	
+@@ -1,9 +1,8 @@
+-```html
+ <nav aria-label="breadcrumb">
+   <ol class="breadcrumb">
++    <li class="breadcrumb-item"><a href="/">Home</a></li>
+     <li class="breadcrumb-item"><a href="/section">Section</a></li>
+     <li class="breadcrumb-item"><a href="/section/subsection">Subsection</a></li>
+     <li class="breadcrumb-item active" aria-current="page">Page</li>
+   </ol>
+-</nav>
+-```
+\ No newline at end of file
++</nav>
+\ No newline at end of file

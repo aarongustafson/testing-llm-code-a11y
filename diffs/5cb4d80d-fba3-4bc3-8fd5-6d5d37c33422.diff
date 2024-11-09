@@ -1,0 +1,34 @@
+Error: The current page must be indicated with aria-current.
+Error: A breadcrumb for the homepage is recommended if it is not duplicated in the primary site navigation.
+Error: The prompt did not request associated styles for this component.
+diff --git a/output/Breadcrumb Navigation/2/5cb4d80d-fba3-4bc3-8fd5-6d5d37c33422.html b/output/Breadcrumb Navigation/2/5cb4d80d-fba3-4bc3-8fd5-6d5d37c33422.html
+index 0fbd5ea..41e3c70 100644
+--- a/output/Breadcrumb Navigation/2/5cb4d80d-fba3-4bc3-8fd5-6d5d37c33422.html	
++++ b/output/Breadcrumb Navigation/2/5cb4d80d-fba3-4bc3-8fd5-6d5d37c33422.html	
+@@ -1,21 +1,8 @@
+ <nav aria-label="breadcrumb">
+   <ol>
++    <li><a href="/">Home</a></li>
+     <li><a href="/section">Section</a></li>
+     <li><a href="/section/subsection">Subsection</a></li>
+-    <li>Page</li>
++    <li aria-current="page">Page</li>
+   </ol>
+-</nav>
+-<style>
+-  nav[aria-label="breadcrumb"] ol {
+-    list-style: none;
+-    padding: 0;
+-    display: flex;
+-  }
+-  nav[aria-label="breadcrumb"] li {
+-    margin-right: 8px;
+-  }
+-  nav[aria-label="breadcrumb"] li+li:before {
+-    content: ">";
+-    margin-right: 8px;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

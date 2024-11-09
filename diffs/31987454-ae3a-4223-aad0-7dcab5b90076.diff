@@ -1,0 +1,12 @@
+Error: A breadcrumb for the homepage is recommended if it is not duplicated in the primary site navigation.
+diff --git a/output/Breadcrumb Navigation/4/31987454-ae3a-4223-aad0-7dcab5b90076.html b/output/Breadcrumb Navigation/4/31987454-ae3a-4223-aad0-7dcab5b90076.html
+index 0a583fe..41e3c70 100644
+--- a/output/Breadcrumb Navigation/4/31987454-ae3a-4223-aad0-7dcab5b90076.html	
++++ b/output/Breadcrumb Navigation/4/31987454-ae3a-4223-aad0-7dcab5b90076.html	
+@@ -1,5 +1,6 @@
+ <nav aria-label="breadcrumb">
+   <ol>
++    <li><a href="/">Home</a></li>
+     <li><a href="/section">Section</a></li>
+     <li><a href="/section/subsection">Subsection</a></li>
+     <li aria-current="page">Page</li>

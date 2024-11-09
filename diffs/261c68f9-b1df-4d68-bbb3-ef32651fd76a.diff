@@ -1,0 +1,32 @@
+Error: The prompt did not request associated styles for this component.
+diff --git a/output/Breadcrumb Navigation/4/261c68f9-b1df-4d68-bbb3-ef32651fd76a.html b/output/Breadcrumb Navigation/4/261c68f9-b1df-4d68-bbb3-ef32651fd76a.html
+index fe6923a..41e3c70 100644
+--- a/output/Breadcrumb Navigation/4/261c68f9-b1df-4d68-bbb3-ef32651fd76a.html	
++++ b/output/Breadcrumb Navigation/4/261c68f9-b1df-4d68-bbb3-ef32651fd76a.html	
+@@ -5,23 +5,4 @@
+     <li><a href="/section/subsection">Subsection</a></li>
+     <li aria-current="page">Page</li>
+   </ol>
+-</nav>
+-<style>
+-  nav[aria-label="breadcrumb"] ol {
+-    list-style: none;
+-    padding: 0;
+-    margin: 0;
+-    display: flex;
+-  }
+-  nav[aria-label="breadcrumb"] li+li::before {
+-    content: ">";
+-    margin: 0 8px;
+-  }
+-  nav[aria-label="breadcrumb"] a {
+-    text-decoration: none;
+-    color: blue;
+-  }
+-  nav[aria-label="breadcrumb"] li[aria-current="page"] {
+-    font-weight: bold;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

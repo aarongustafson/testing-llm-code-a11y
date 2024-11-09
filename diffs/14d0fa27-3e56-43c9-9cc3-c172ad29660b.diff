@@ -1,0 +1,40 @@
+Error: The prompt did not request associated styles for this component.
+Error: A breadcrumb for the homepage is recommended if it is not duplicated in the primary site navigation.
+diff --git a/output/Breadcrumb Navigation/2/14d0fa27-3e56-43c9-9cc3-c172ad29660b.html b/output/Breadcrumb Navigation/2/14d0fa27-3e56-43c9-9cc3-c172ad29660b.html
+index 96a3d26..41e3c70 100644
+--- a/output/Breadcrumb Navigation/2/14d0fa27-3e56-43c9-9cc3-c172ad29660b.html	
++++ b/output/Breadcrumb Navigation/2/14d0fa27-3e56-43c9-9cc3-c172ad29660b.html	
+@@ -1,29 +1,8 @@
+ <nav aria-label="breadcrumb">
+   <ol>
++    <li><a href="/">Home</a></li>
+     <li><a href="/section">Section</a></li>
+     <li><a href="/section/subsection">Subsection</a></li>
+     <li aria-current="page">Page</li>
+   </ol>
+-</nav>
+-
+-<style>
+-  nav[aria-label="breadcrumb"] ol {
+-    list-style: none;
+-    padding: 0;
+-    display: flex;
+-  }
+-  nav[aria-label="breadcrumb"] li {
+-    margin-right: 0.5em;
+-  }
+-  nav[aria-label="breadcrumb"] li+li:before {
+-    content: ">";
+-    margin-right: 0.5em;
+-  }
+-  nav[aria-label="breadcrumb"] a {
+-    text-decoration: none;
+-    color: blue;
+-  }
+-  nav[aria-label="breadcrumb"] li[aria-current="page"] {
+-    font-weight: bold;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

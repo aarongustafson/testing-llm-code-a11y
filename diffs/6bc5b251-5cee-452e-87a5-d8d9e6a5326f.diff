@@ -1,0 +1,38 @@
+Error: The prompt did not request associated styles for this component.
+Error: A breadcrumb for the homepage is recommended if it is not duplicated in the primary site navigation.
+diff --git a/output/Breadcrumb Navigation/2/6bc5b251-5cee-452e-87a5-d8d9e6a5326f.html b/output/Breadcrumb Navigation/2/6bc5b251-5cee-452e-87a5-d8d9e6a5326f.html
+index 8cc2ac1..3cbce25 100644
+--- a/output/Breadcrumb Navigation/2/6bc5b251-5cee-452e-87a5-d8d9e6a5326f.html	
++++ b/output/Breadcrumb Navigation/2/6bc5b251-5cee-452e-87a5-d8d9e6a5326f.html	
+@@ -1,27 +1,8 @@
+ <nav aria-label="breadcrumb">
+   <ol class="breadcrumb">
++    <li class="breadcrumb-item"><a href="/">Home</a></li>
+     <li class="breadcrumb-item"><a href="/section">Section</a></li>
+     <li class="breadcrumb-item"><a href="/section/subsection">Subsection</a></li>
+     <li class="breadcrumb-item active" aria-current="page">Page</li>
+   </ol>
+-</nav>
+-
+-<style>
+-  .breadcrumb {
+-    display: flex;
+-    list-style: none;
+-    padding: 0;
+-  }
+-  .breadcrumb-item + .breadcrumb-item::before {
+-    content: ">";
+-    margin: 0 8px;
+-    color: #6c757d;
+-  }
+-  .breadcrumb-item a {
+-    text-decoration: none;
+-    color: #007bff;
+-  }
+-  .breadcrumb-item.active {
+-    color: #6c757d;
+-  }
+-</style>
+\ No newline at end of file
++</nav>
+\ No newline at end of file

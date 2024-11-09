@@ -3,21 +3,6 @@
     <li><a href="/">Home</a></li>
     <li><a href="/section">Section</a></li>
     <li><a href="/section/subsection">Subsection</a></li>
-    <li>Page</li>
+    <li aria-current="page">Page</li>
   </ol>
 </nav>
-
-<style>
-  nav[aria-label="breadcrumb"] ol {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-  nav[aria-label="breadcrumb"] ol li {
-    margin-right: 0.5em;
-  }
-  nav[aria-label="breadcrumb"] ol li+li:before {
-    content: ">";
-    margin-right: 0.5em;
-  }
-</style>

@@ -1,0 +1,40 @@
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar). Note: The `div` wrapper is unnecessary.
+diff --git a/output/Checkbox Group/4/affffcec-b382-4b89-a6e1-17e20aa13007.html b/output/Checkbox Group/4/affffcec-b382-4b89-a6e1-17e20aa13007.html
+index 6627b2c..06dfeec 100644
+--- a/output/Checkbox Group/4/affffcec-b382-4b89-a6e1-17e20aa13007.html	
++++ b/output/Checkbox Group/4/affffcec-b382-4b89-a6e1-17e20aa13007.html	
+@@ -1,17 +1,15 @@
+-<div>
+-  <fieldset>
+-    <legend>What fruits do you like?</legend>
+-    <div>
+-      <input type="checkbox" id="bananas" name="fruits" value="bananas">
+-      <label for="bananas">Bananas</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="oranges" name="fruits" value="oranges">
+-      <label for="oranges">Oranges</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="apples" name="fruits" value="apples">
+-      <label for="apples">Apples</label>
+-    </div>
+-  </fieldset>
+-</div>
+\ No newline at end of file
++<fieldset>
++  <legend>What fruits do you like?</legend>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

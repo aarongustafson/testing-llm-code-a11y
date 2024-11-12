@@ -1,0 +1,25 @@
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group/4/5f0b7a3f-f749-4403-8436-02492ada74f9.html b/output/Checkbox Group/4/5f0b7a3f-f749-4403-8436-02492ada74f9.html
+index 577741f..06dfeec 100644
+--- a/output/Checkbox Group/4/5f0b7a3f-f749-4403-8436-02492ada74f9.html	
++++ b/output/Checkbox Group/4/5f0b7a3f-f749-4403-8436-02492ada74f9.html	
+@@ -1,15 +1,15 @@
+ <fieldset>
+   <legend>What fruits do you like?</legend>
+   <div>
+-    <input type="checkbox" id="bananas" name="fruits" value="bananas">
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
+     <label for="bananas">Bananas</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="oranges" name="fruits" value="oranges">
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
+     <label for="oranges">Oranges</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="apples" name="fruits" value="apples">
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
+     <label for="apples">Apples</label>
+   </div>
+ </fieldset>
+\ No newline at end of file

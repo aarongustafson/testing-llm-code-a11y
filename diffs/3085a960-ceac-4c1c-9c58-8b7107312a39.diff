@@ -1,0 +1,28 @@
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group/2/3085a960-ceac-4c1c-9c58-8b7107312a39.html b/output/Checkbox Group/2/3085a960-ceac-4c1c-9c58-8b7107312a39.html
+index e656ade..09b24a1 100644
+--- a/output/Checkbox Group/2/3085a960-ceac-4c1c-9c58-8b7107312a39.html	
++++ b/output/Checkbox Group/2/3085a960-ceac-4c1c-9c58-8b7107312a39.html	
+@@ -1,12 +1,15 @@
+ <fieldset>
+   <legend>What fruits do you like?</legend>
+-  <label>
+-    <input type="checkbox" name="fruits" value="bananas"> Bananas
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
++    Bananas
+   </label>
+-  <label>
+-    <input type="checkbox" name="fruits" value="oranges"> Oranges
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
++    Oranges
+   </label>
+-  <label>
+-    <input type="checkbox" name="fruits" value="apples"> Apples
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples">
++    Apples
+   </label>
+ </fieldset>
+\ No newline at end of file

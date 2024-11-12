@@ -1,0 +1,29 @@
+Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar). Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group.
+diff --git a/output/Checkbox Group/3/195a774e-64a5-41cd-a3a0-920f917246e4.html b/output/Checkbox Group/3/195a774e-64a5-41cd-a3a0-920f917246e4.html
+index ba5b012..06dfeec 100644
+--- a/output/Checkbox Group/3/195a774e-64a5-41cd-a3a0-920f917246e4.html	
++++ b/output/Checkbox Group/3/195a774e-64a5-41cd-a3a0-920f917246e4.html	
+@@ -1,6 +1,15 @@
+-<label for="bananas">Bananas</label>
+-<input type="checkbox" id="bananas" name="fruits" value="bananas">
+-<label for="oranges">Oranges</label>
+-<input type="checkbox" id="oranges" name="fruits" value="oranges">
+-<label for="apples">Apples</label>
+-<input type="checkbox" id="apples" name="fruits" value="apples">
+\ No newline at end of file
++<fieldset>
++  <legend>What fruits do you like?</legend>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

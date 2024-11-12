@@ -1,0 +1,28 @@
+Error: The `form` element was not requested. Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`. Error: All form controls must have an accessible label. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group/1/afac190c-2280-44cf-8861-6466e375ac48.html b/output/Checkbox Group/1/afac190c-2280-44cf-8861-6466e375ac48.html
+index ad2210a..c173a45 100644
+--- a/output/Checkbox Group/1/afac190c-2280-44cf-8861-6466e375ac48.html	
++++ b/output/Checkbox Group/1/afac190c-2280-44cf-8861-6466e375ac48.html	
+@@ -1,6 +1,15 @@
+-<form>
+-  <label>What fruits do you like?</label><br>
+-  <input type="checkbox" name="fruits" value="bananas"> Bananas<br>
+-  <input type="checkbox" name="fruits" value="oranges"> Oranges<br>
+-  <input type="checkbox" name="fruits" value="apples"> Apples
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>What fruits do you like?</legend>
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
++    Bananas
++  </label>
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
++    Oranges
++  </label>
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples">
++    Apples
++  </label>
++</fieldset>

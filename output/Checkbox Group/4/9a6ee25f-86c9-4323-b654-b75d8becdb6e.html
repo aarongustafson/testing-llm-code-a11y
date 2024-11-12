@@ -1,6 +1,15 @@
-<label for="fruits">What fruits do you like?</label>
-<div id="fruits">
-  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label>
-  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label>
-  <label><input type="checkbox" name="fruits" value="apples"> Apples</label>
+<label id="fruits">What fruits do you like?</label>
+<div role="group" aria-labelledby="fruits">
+  <label for="bananas">
+    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
+    Bananas
+  </label>
+  <label for="oranges">
+    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
+    Oranges
+  </label>
+  <label for="apples">
+    <input type="checkbox" name="fruits[]" id="apples" value="apples">
+    Apples
+  </label>
 </div>

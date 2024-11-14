@@ -1,10 +1,16 @@
-<form>
-  <label>What fruits do you like?</label><br>
-  <input type="checkbox" id="bananas" name="fruit" value="bananas">
-  <label for="bananas">Bananas</label><br>
-  <input type="checkbox" id="oranges" name="fruit" value="oranges">
-  <label for="oranges">Oranges</label><br>
-  <input type="checkbox" id="apples" name="fruit" value="apples">
-  <label for="apples">Apples</label><br>
-  <small>You can change this later</small>
-</form>
+<fieldset aria-describedby="fruit-desc">
+  <legend>What fruits do you like?</legend>
+  <small id="fruit-desc">You can change this later</small>
+  <div>
+    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
+    <label for="bananas">Bananas</label>
+  </div>
+  <div>
+    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
+    <label for="oranges">Oranges</label>
+  </div>
+  <div>
+    <input type="checkbox" id="apples" name="fruits[]" value="apples">
+    <label for="apples">Apples</label>
+  </div>
+</fieldset>

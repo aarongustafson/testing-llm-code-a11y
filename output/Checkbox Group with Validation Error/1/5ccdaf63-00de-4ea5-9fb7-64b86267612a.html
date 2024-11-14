@@ -1,19 +1,16 @@
-<form>
-  <fieldset>
-    <legend>What fruits do you like?</legend>
-    <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label>
-    <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label>
-    <label><input type="checkbox" name="fruits" value="apples"> Apples</label>
-    <span class="error">You must choose one or more fruits</span>
-  </fieldset>
-</form>
-
-<style>
-  .error {
-    display: none;
-    color: red;
-  }
-  input:invalid + .error {
-    display: block;
-  }
-</style>
+<fieldset aria-describedby="fruits-error">
+  <legend>What fruits do you like?</legend>
+  <span class="error" id="fruits-error">You must choose one or more fruits</span>
+  <label for="bananas">
+    <input type="checkbox" name="fruits[]" id="bananas" value="bananas" aria-invalid="true">
+    Bananas
+  </label>
+  <label for="oranges">
+    <input type="checkbox" name="fruits[]" id="oranges" value="oranges" aria-invalid="true">
+    Oranges
+  </label>
+  <label for="apples">
+    <input type="checkbox" name="fruits[]" id="apples" value="apples" aria-invalid="true">
+    Apples
+  </label>
+</fieldset>

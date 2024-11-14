@@ -1,7 +1,16 @@
-<label for="fruits">What fruits do you like?</label>
+<label id="fruits">What fruits do you like?</label>
 <p id="fruits-description">You can change this later</p>
 <div role="group" aria-labelledby="fruits" aria-describedby="fruits-description">
-  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label>
-  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label>
-  <label><input type="checkbox" name="fruits" value="apples"> Apples</label>
+  <label for="bananas">
+    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
+    Bananas
+  </label>
+  <label for="oranges">
+    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
+    Oranges
+  </label>
+  <label for="apples">
+    <input type="checkbox" name="fruits[]" id="apples" value="apples">
+    Apples
+  </label>
 </div>

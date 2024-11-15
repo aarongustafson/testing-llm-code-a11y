@@ -1,26 +1,20 @@
-<form>
-  <p>Choose a theme:</p>
-  <label>
-    <input type="radio" name="theme" value="light"> Light
+<fieldset aria-describedby="theme-error">
+  <legend>Choose a theme:</legend>
+  <div class="error" id="theme-error">You must choose a theme to proceed</div>
+  <label for="light">
+    <input type="radio" id="light" name="theme" value="light"
+           required aria-invalid="true">
+    Light
   </label>
-  <br>
-  <label>
-    <input type="radio" name="theme" value="dark"> Dark
+  <label for="dark">
+    <input type="radio" id="dark" name="theme" value="dark"
+           required aria-invalid="true">
+    Dark
   </label>
-  <br>
-  <label>
-    <input type="radio" name="theme" value="high-contrast"> High Contrast
+  <label for="high-contrast">
+    <input type="radio" id="high-contrast" name="theme"
+           value="high-contrast"
+           required aria-invalid="true">
+      High Contrast
   </label>
-  <br>
-  <div class="error" style="color:red; display:none;">You must choose a theme to proceed</div>
-  <button type="submit" onclick="validateForm(event)">Submit</button>
-</form>
-<script>
-  function validateForm(event) {
-    const selectedTheme = document.querySelector('input[name="theme"]:checked');
-    if (!selectedTheme) {
-      document.querySelector('.error').style.display = 'block';
-      event.preventDefault();
-    }
-  }
-</script>
+</fieldset>

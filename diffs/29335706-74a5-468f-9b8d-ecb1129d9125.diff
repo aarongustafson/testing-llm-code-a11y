@@ -1,0 +1,33 @@
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/3/29335706-74a5-468f-9b8d-ecb1129d9125.html b/output/Checkbox Group with Accessible Description/3/29335706-74a5-468f-9b8d-ecb1129d9125.html
+index 7b2b853..ce9780d 100644
+--- a/output/Checkbox Group with Accessible Description/3/29335706-74a5-468f-9b8d-ecb1129d9125.html	
++++ b/output/Checkbox Group with Accessible Description/3/29335706-74a5-468f-9b8d-ecb1129d9125.html	
+@@ -1,5 +1,16 @@
+-<label>What fruits do you like?</label><br>
+-<label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
+-<label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+-<label><input type="checkbox" name="fruits" value="apples"> Apples</label><br>
+-<small>You can change this later</small>
+\ No newline at end of file
++<fieldset aria-describedby="fruit-description">
++  <legend>What fruits do you like?</legend>
++  <small id="fruit-description">You can change this later</small>
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
++    Bananas
++  </label>
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
++    Oranges
++  </label>
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples">
++    Apples
++  </label>
++</fieldset>
+\ No newline at end of file

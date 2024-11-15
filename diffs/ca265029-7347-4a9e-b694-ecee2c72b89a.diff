@@ -1,0 +1,27 @@
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/4/ca265029-7347-4a9e-b694-ecee2c72b89a.html b/output/Checkbox Group with Accessible Description/4/ca265029-7347-4a9e-b694-ecee2c72b89a.html
+index 55a1725..d13a11b 100644
+--- a/output/Checkbox Group with Accessible Description/4/ca265029-7347-4a9e-b694-ecee2c72b89a.html	
++++ b/output/Checkbox Group with Accessible Description/4/ca265029-7347-4a9e-b694-ecee2c72b89a.html	
+@@ -1,7 +1,16 @@
+ <div role="group" aria-labelledby="fruits-label" aria-describedby="fruits-desc">
+   <h2 id="fruits-label">What fruits do you like?</h2>
+   <p id="fruits-desc">You can change this later</p>
+-  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
+-  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+-  <label><input type="checkbox" name="fruits" value="apples"> Apples</label>
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
++    Bananas
++  </label>
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
++    Oranges
++  </label>
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples">
++    Apples
++  </label>
+ </div>
+\ No newline at end of file

@@ -1,0 +1,50 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: Color alone should not be used to convey errors.
+Error: The error text should not be hidden when the component has an error.
+Error: A `button` is not part of this component.
+diff --git a/output/Checkbox Group with Validation Error/1/8bf45a76-2a07-4451-a80f-f802053cacad.html b/output/Checkbox Group with Validation Error/1/8bf45a76-2a07-4451-a80f-f802053cacad.html
+index b06c89f..e00694a 100644
+--- a/output/Checkbox Group with Validation Error/1/8bf45a76-2a07-4451-a80f-f802053cacad.html	
++++ b/output/Checkbox Group with Validation Error/1/8bf45a76-2a07-4451-a80f-f802053cacad.html	
+@@ -1,19 +1,16 @@
+-<form>
+-  <fieldset>
+-    <legend>What fruits do you like?</legend>
+-    <div>
+-      <input type="checkbox" id="bananas" name="fruits" value="bananas">
+-      <label for="bananas">Bananas</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="oranges" name="fruits" value="oranges">
+-      <label for="oranges">Oranges</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="apples" name="fruits" value="apples">
+-      <label for="apples">Apples</label>
+-    </div>
+-  </fieldset>
+-  <div class="error" style="color: red; display: none;">You must choose one or more fruits</div>
+-  <button type="submit">Submit</button>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="fruits-error">
++  <legend>What fruits do you like?</legend>
++  <div class="error" id="fruits-error">You must choose one or more fruits</div>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

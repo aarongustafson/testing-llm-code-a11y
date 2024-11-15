@@ -1,0 +1,43 @@
+Error: The `form` element was not requested.
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: Color alone should not be used to convey errors.
+Error: The error text should not be hidden when the component has an error.
+Error: A `button` is not part of this component.
+diff --git a/output/Checkbox Group with Validation Error/1/034f9e9e-2402-4d77-9d50-82887440a922.html b/output/Checkbox Group with Validation Error/1/034f9e9e-2402-4d77-9d50-82887440a922.html
+index f331e42..1a66e87 100644
+--- a/output/Checkbox Group with Validation Error/1/034f9e9e-2402-4d77-9d50-82887440a922.html	
++++ b/output/Checkbox Group with Validation Error/1/034f9e9e-2402-4d77-9d50-82887440a922.html	
+@@ -1,11 +1,16 @@
+-<form>
+-  <label>What fruits do you like?</label><br>
+-  <input type="checkbox" id="bananas" name="fruits" value="bananas">
+-  <label for="bananas">Bananas</label><br>
+-  <input type="checkbox" id="oranges" name="fruits" value="oranges">
+-  <label for="oranges">Oranges</label><br>
+-  <input type="checkbox" id="apples" name="fruits" value="apples">
+-  <label for="apples">Apples</label><br>
+-  <span id="validation-error" style="color: red; display: none;">You must choose one or more fruits</span><br>
+-  <input type="submit" value="Submit">
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="validation-error">
++  <legend>What fruits do you like?</legend>
++  <span id="validation-error">You must choose one or more fruits</span>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

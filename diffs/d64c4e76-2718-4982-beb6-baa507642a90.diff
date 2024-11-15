@@ -1,4 +1,6 @@
-Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar). Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
 diff --git a/output/Checkbox Group/1/d64c4e76-2718-4982-beb6-baa507642a90.html b/output/Checkbox Group/1/d64c4e76-2718-4982-beb6-baa507642a90.html
 index 2e0a335..c173a45 100644
 --- a/output/Checkbox Group/1/d64c4e76-2718-4982-beb6-baa507642a90.html	

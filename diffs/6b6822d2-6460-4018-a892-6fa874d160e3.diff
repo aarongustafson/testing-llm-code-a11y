@@ -1,4 +1,5 @@
-Error: `for` must be an `id` reference to a form control and may not reference other element types. To create the intended relationship, the `div` must have a `role` of "group" and an `aria-labelledby` attribute that references the label. Or use `fieldset` and `legend`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `for` must be an `id` reference to a form control and may not reference other element types. To create the intended relationship, the `div` must have a `role` of "group" and an `aria-labelledby` attribute that references the label. Or use `fieldset` and `legend`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
 diff --git a/output/Checkbox Group/4/6b6822d2-6460-4018-a892-6fa874d160e3.html b/output/Checkbox Group/4/6b6822d2-6460-4018-a892-6fa874d160e3.html
 index 7ba5e68..488a413 100644
 --- a/output/Checkbox Group/4/6b6822d2-6460-4018-a892-6fa874d160e3.html	

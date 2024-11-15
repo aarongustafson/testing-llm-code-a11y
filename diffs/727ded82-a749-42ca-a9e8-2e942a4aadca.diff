@@ -1,0 +1,40 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: Color alone should not be used to convey errors.
+Error: The error text should not be hidden when the component has an error.
+Error: A `button` is not part of this component. Note: If checkbox elements are wrapped in their `label`, `br` is unnecessary.
+diff --git a/output/Checkbox Group with Validation Error/3/727ded82-a749-42ca-a9e8-2e942a4aadca.html b/output/Checkbox Group with Validation Error/3/727ded82-a749-42ca-a9e8-2e942a4aadca.html
+index 04e5f76..22a99b8 100644
+--- a/output/Checkbox Group with Validation Error/3/727ded82-a749-42ca-a9e8-2e942a4aadca.html	
++++ b/output/Checkbox Group with Validation Error/3/727ded82-a749-42ca-a9e8-2e942a4aadca.html	
+@@ -1,8 +1,16 @@
+-<form onsubmit="return this.querySelectorAll('input[type=checkbox]:checked').length > 0;">
+-  <p>What fruits do you like?</p>
+-  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
+-  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
+-  <label><input type="checkbox" name="fruits" value="apples"> Apples</label><br>
+-  <p id="error" style="color: red; display: none;">You must choose one or more fruits</p>
+-  <button type="submit" onclick="document.getElementById('error').style.display = this.form.querySelectorAll('input[type=checkbox]:checked').length > 0 ? 'none' : 'block'">Submit</button>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="fruits-error">
++  <legend>What fruits do you like?</legend>
++  <p class="error" id="fruits-error">You must choose one or more fruits</p>
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas" aria-invalid="true">
++    Bananas
++  </label>
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges" aria-invalid="true">
++    Oranges
++  </label>
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples" aria-invalid="true">
++    Apples
++  </label>
++</fieldset>
+\ No newline at end of file

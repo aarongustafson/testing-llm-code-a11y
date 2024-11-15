@@ -1,0 +1,38 @@
+Error: In order to serve as an `id`-reference for `aria-labelledby`, the `label` must have an `id` attribute.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: The error message is not a live region.
+Error: Color alone should not be used to convey errors. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+diff --git a/output/Checkbox Group with Validation Error/4/ca0848c6-2c2d-4235-93d0-8dbe3e912737.html b/output/Checkbox Group with Validation Error/4/ca0848c6-2c2d-4235-93d0-8dbe3e912737.html
+index ad1aca9..9131aa1 100644
+--- a/output/Checkbox Group with Validation Error/4/ca0848c6-2c2d-4235-93d0-8dbe3e912737.html	
++++ b/output/Checkbox Group with Validation Error/4/ca0848c6-2c2d-4235-93d0-8dbe3e912737.html	
+@@ -1,10 +1,16 @@
+-<label>What fruits do you like?</label>
+-<div role="group" aria-labelledby="fruits-label">
+-  <input type="checkbox" id="bananas" name="fruits" value="bananas">
+-  <label for="bananas">Bananas</label>
+-  <input type="checkbox" id="oranges" name="fruits" value="oranges">
+-  <label for="oranges">Oranges</label>
+-  <input type="checkbox" id="apples" name="fruits" value="apples">
+-  <label for="apples">Apples</label>
+-  <div aria-live="polite" style="color: red;">You must choose one or more fruits</div>
++<label id="fruits-label">What fruits do you like?</label>
++<div role="group" aria-labelledby="fruits-label" aria-describedby="fruits-error">
++  <div id="fruits-error">You must choose one or more fruits</div>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
++    <label for="apples">Apples</label>
++  </div>
+ </div>
+\ No newline at end of file

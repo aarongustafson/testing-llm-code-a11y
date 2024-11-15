@@ -1,4 +1,6 @@
-Error: The `form` element was not requested. Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: The `form` element was not requested.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
 diff --git a/output/Checkbox Group/4/389d0bb0-25c9-49b8-9301-1faf0bc23978.html b/output/Checkbox Group/4/389d0bb0-25c9-49b8-9301-1faf0bc23978.html
 index 0f7cadc..09b24a1 100644
 --- a/output/Checkbox Group/4/389d0bb0-25c9-49b8-9301-1faf0bc23978.html	

@@ -1,0 +1,57 @@
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: When a checkbox is marked as `required`, it must be checked to be valid. Per the instructions, the user only needs to choose one or more, so `required` must not be used on any of the checkbox inputs.
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: The error text should not be hidden when the component has an error.
+Error: JavaScript is unnecessary for this component. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+diff --git a/output/Checkbox Group with Validation Error/3/9ed12387-c143-47eb-a7e7-07e14aa50dd3.html b/output/Checkbox Group with Validation Error/3/9ed12387-c143-47eb-a7e7-07e14aa50dd3.html
+index a7b3130..4e1bf4d 100644
+--- a/output/Checkbox Group with Validation Error/3/9ed12387-c143-47eb-a7e7-07e14aa50dd3.html	
++++ b/output/Checkbox Group with Validation Error/3/9ed12387-c143-47eb-a7e7-07e14aa50dd3.html	
+@@ -1,26 +1,16 @@
+-<label for="fruits">What fruits do you like?</label><br>
+-<input type="checkbox" id="bananas" name="fruits" value="bananas" required>
+-<label for="bananas">Bananas</label><br>
+-<input type="checkbox" id="oranges" name="fruits" value="oranges">
+-<label for="oranges">Oranges</label><br>
+-<input type="checkbox" id="apples" name="fruits" value="apples">
+-<label for="apples">Apples</label><br>
+-<div style="display: none;" id="fruitsError">You must choose one or more fruits</div>
+-<script>
+-  document.querySelectorAll('[name="fruits"]').forEach(function(checkbox) {
+-    checkbox.addEventListener('invalid', function() {
+-      document.getElementById('fruitsError').style.display = 'block';
+-    });
+-    checkbox.addEventListener('change', function() {
+-      if (document.querySelectorAll('[name="fruits"]:checked').length) {
+-        document.getElementById('fruitsError').style.display = 'none';
+-        document.querySelectorAll('[name="fruits"]').forEach(function(chk) {
+-          chk.removeAttribute('required');
+-        });
+-      } else {
+-        document.getElementById('fruitsError').style.display = 'block';
+-        document.querySelector('[name="fruits"]').setAttribute('required', 'required');
+-      }
+-    });
+-  });
+-</script>
+\ No newline at end of file
++<fieldset aria-describedby="fruitsError">
++  <legend>What fruits do you like?</legend>
++  <div id="fruitsError">You must choose one or more fruits</div>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

@@ -1,0 +1,25 @@
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/4/9c00c8e1-f5e6-41f6-a89f-18d612d317a6.html b/output/Checkbox Group with Accessible Description/4/9c00c8e1-f5e6-41f6-a89f-18d612d317a6.html
+index 295757b..7e806d4 100644
+--- a/output/Checkbox Group with Accessible Description/4/9c00c8e1-f5e6-41f6-a89f-18d612d317a6.html	
++++ b/output/Checkbox Group with Accessible Description/4/9c00c8e1-f5e6-41f6-a89f-18d612d317a6.html	
+@@ -2,15 +2,15 @@
+   <div id="fruits-label">What fruits do you like?</div>
+   <div id="fruits-description">You can change this later</div>
+   <div>
+-    <input type="checkbox" id="bananas" name="fruits" value="bananas">
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
+     <label for="bananas">Bananas</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="oranges" name="fruits" value="oranges">
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
+     <label for="oranges">Oranges</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="apples" name="fruits" value="apples">
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
+     <label for="apples">Apples</label>
+   </div>
+ </div>
+\ No newline at end of file

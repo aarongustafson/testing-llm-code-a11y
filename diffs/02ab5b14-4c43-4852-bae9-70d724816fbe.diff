@@ -1,0 +1,58 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: The error message is not a live region.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: When a checkbox is marked as `required`, it must be checked to be valid. Per the instructions, the user only needs to choose one or more, so `required` must not be used on any of the checkbox inputs.
+Error: Color alone should not be used to convey errors.
+Error: The error text should not be hidden when the component has an error.
+Error: A `button` is not part of this component.
+Error: styles were not requested.
+diff --git a/output/Checkbox Group with Validation Error/3/02ab5b14-4c43-4852-bae9-70d724816fbe.html b/output/Checkbox Group with Validation Error/3/02ab5b14-4c43-4852-bae9-70d724816fbe.html
+index bd44489..1ba726e 100644
+--- a/output/Checkbox Group with Validation Error/3/02ab5b14-4c43-4852-bae9-70d724816fbe.html	
++++ b/output/Checkbox Group with Validation Error/3/02ab5b14-4c43-4852-bae9-70d724816fbe.html	
+@@ -1,24 +1,16 @@
+-<form>
+-  <fieldset>
+-    <legend>What fruits do you like?</legend>
+-    <div>
+-      <input type="checkbox" id="bananas" name="fruits" value="bananas" required>
+-      <label for="bananas">Bananas</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="oranges" name="fruits" value="oranges" required>
+-      <label for="oranges">Oranges</label>
+-    </div>
+-    <div>
+-      <input type="checkbox" id="apples" name="fruits" value="apples" required>
+-      <label for="apples">Apples</label>
+-    </div>
+-    <input type="submit" value="Submit">
+-    <div class="error" aria-live="polite"></div>
+-  </fieldset>
+-  <style>
+-    .error {
+-      color: red;
+-    }
+-  </style>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="fruits-error">
++  <legend>What fruits do you like?</legend>
++  <small class="error" id="fruits-error">You must choose one or more fruits</small>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

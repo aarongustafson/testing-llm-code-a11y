@@ -1,4 +1,6 @@
-Error: The `form` element was not requested. Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`. Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar). Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+Error: The `form` element was not requested.
+Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar). Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
 diff --git a/output/Checkbox Group/1/3f9dd1e8-d1c8-4cfd-a55c-b9185fb8c456.html b/output/Checkbox Group/1/3f9dd1e8-d1c8-4cfd-a55c-b9185fb8c456.html
 index 91af3ab..06dfeec 100644
 --- a/output/Checkbox Group/1/3f9dd1e8-d1c8-4cfd-a55c-b9185fb8c456.html	

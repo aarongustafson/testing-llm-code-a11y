@@ -1,0 +1,32 @@
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/3/c509ab6f-6ae4-42a7-b2b8-6a71bea28a36.html b/output/Checkbox Group with Accessible Description/3/c509ab6f-6ae4-42a7-b2b8-6a71bea28a36.html
+index 8c3e225..af47121 100644
+--- a/output/Checkbox Group with Accessible Description/3/c509ab6f-6ae4-42a7-b2b8-6a71bea28a36.html	
++++ b/output/Checkbox Group with Accessible Description/3/c509ab6f-6ae4-42a7-b2b8-6a71bea28a36.html	
+@@ -1,5 +1,16 @@
+-<label>What fruits do you like?</label>
+-<p>You can change this later</p>
+-<label><input type="checkbox" name="fruits" value="bananas"> Bananas</label>
+-<label><input type="checkbox" name="fruits" value="oranges"> Oranges</label>
+-<label><input type="checkbox" name="fruits" value="apples"> Apples</label>
+\ No newline at end of file
++<fieldset aria-describedby="fruit-desc">
++  <legend>What fruits do you like?</legend>
++  <p id="fruit-desc">You can change this later</p>
++  <label for="bananas">
++    <input type="checkbox" name="fruits[]" id="bananas" value="bananas">
++    Bananas
++  </label>
++  <label for="oranges">
++    <input type="checkbox" name="fruits[]" id="oranges" value="oranges">
++    Oranges
++  </label>
++  <label for="apples">
++    <input type="checkbox" name="fruits[]" id="apples" value="apples">
++    Apples
++  </label>
++</fieldset>
+\ No newline at end of file

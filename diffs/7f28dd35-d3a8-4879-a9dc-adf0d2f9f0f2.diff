@@ -1,0 +1,33 @@
+Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/3/7f28dd35-d3a8-4879-a9dc-adf0d2f9f0f2.html b/output/Checkbox Group with Accessible Description/3/7f28dd35-d3a8-4879-a9dc-adf0d2f9f0f2.html
+index 2ac4e2a..e8a02dc 100644
+--- a/output/Checkbox Group with Accessible Description/3/7f28dd35-d3a8-4879-a9dc-adf0d2f9f0f2.html	
++++ b/output/Checkbox Group with Accessible Description/3/7f28dd35-d3a8-4879-a9dc-adf0d2f9f0f2.html	
+@@ -1,7 +1,16 @@
+-<p>What fruits do you like? <small>You can change this later</small></p>
+-<input type="checkbox" id="bananas" name="fruit" value="bananas">
+-<label for="bananas">Bananas</label>
+-<input type="checkbox" id="oranges" name="fruit" value="oranges">
+-<label for="oranges">Oranges</label>
+-<input type="checkbox" id="apples" name="fruit" value="apples">
+-<label for="apples">Apples</label>
+\ No newline at end of file
++<fieldset aria-describedby="fruit-desc">
++  <legend>What fruits do you like?</legend>
++  <small id="fruit-desc">You can change this later</small>
++  <div>
++    <input type="checkbox" id="bananas" name="fruit[]" value="bananas">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruit[]" value="oranges">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruit[]" value="apples">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

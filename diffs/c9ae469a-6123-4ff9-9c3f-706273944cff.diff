@@ -1,0 +1,29 @@
+Error: `for` must be an `id` reference to a form control and may not reference other element types. To create the intended relationship, the `div` must have a `role` of "group" and an `aria-labelledby` attribute that references the `label`. Or use `fieldset` and `legend`.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/4/c9ae469a-6123-4ff9-9c3f-706273944cff.html b/output/Checkbox Group with Accessible Description/4/c9ae469a-6123-4ff9-9c3f-706273944cff.html
+index bf93c8e..7fc53d7 100644
+--- a/output/Checkbox Group with Accessible Description/4/c9ae469a-6123-4ff9-9c3f-706273944cff.html	
++++ b/output/Checkbox Group with Accessible Description/4/c9ae469a-6123-4ff9-9c3f-706273944cff.html	
+@@ -1,16 +1,16 @@
+-<label for="fruit-checkboxes">What fruits do you like?</label>
++<label id="fruit-checkboxes">What fruits do you like?</label>
+ <p id="fruit-desc">You can change this later</p>
+-<div id="fruit-checkboxes" role="group" aria-describedby="fruit-desc">
++<div aria-labelledby="fruit-checkboxes" role="group" aria-describedby="fruit-desc">
+   <div>
+-    <input type="checkbox" id="bananas" name="fruits" value="bananas">
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
+     <label for="bananas">Bananas</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="oranges" name="fruits" value="oranges">
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
+     <label for="oranges">Oranges</label>
+   </div>
+   <div>
+-    <input type="checkbox" id="apples" name="fruits" value="apples">
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
+     <label for="apples">Apples</label>
+   </div>
+ </div>
+\ No newline at end of file

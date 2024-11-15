@@ -1,0 +1,37 @@
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Labels can only be associated with a single field using the `for` attribute. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+Error: Checkboxes in a group should use a `name` value that ends with "[]" to allow server-side code to collect the values as an array (or similar).
+diff --git a/output/Checkbox Group with Accessible Description/1/ea79538c-0b0d-465a-b4c0-03676066709a.html b/output/Checkbox Group with Accessible Description/1/ea79538c-0b0d-465a-b4c0-03676066709a.html
+index 3bd38af..97928b2 100644
+--- a/output/Checkbox Group with Accessible Description/1/ea79538c-0b0d-465a-b4c0-03676066709a.html	
++++ b/output/Checkbox Group with Accessible Description/1/ea79538c-0b0d-465a-b4c0-03676066709a.html	
+@@ -1,10 +1,16 @@
+-<div>
+-  <label>What fruits do you like?</label><br>
+-  <input type="checkbox" id="bananas" name="fruits" value="bananas">
+-  <label for="bananas">Bananas</label><br>
+-  <input type="checkbox" id="oranges" name="fruits" value="oranges">
+-  <label for="oranges">Oranges</label><br>
+-  <input type="checkbox" id="apples" name="fruits" value="apples">
+-  <label for="apples">Apples</label><br>
+-  <small>You can change this later</small>
+-</div>
+\ No newline at end of file
++<fieldset aria-describedby="fruit-desc">
++  <legend>What fruits do you like?</legend>
++  <p id="fruit-desc">You can change this later</p>
++  <div>
++    <input type="checkbox" id="bananas" name="fruits[]" value="bananas">
++    <label for="bananas">Bananas</label>
++  </div>
++  <div>
++    <input type="checkbox" id="oranges" name="fruits[]" value="oranges">
++    <label for="oranges">Oranges</label>
++  </div>
++  <div>
++    <input type="checkbox" id="apples" name="fruits[]" value="apples">
++    <label for="apples">Apples</label>
++  </div>
++</fieldset>
+\ No newline at end of file

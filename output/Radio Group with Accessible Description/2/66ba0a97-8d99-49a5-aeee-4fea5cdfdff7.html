@@ -1,10 +1,16 @@
-<form>
-  <label>Choose a theme:</label><br>
-  <input type="radio" id="light" name="theme" value="light">
-  <label for="light">Light</label><br>
-  <input type="radio" id="dark" name="theme" value="dark">
-  <label for="dark">Dark</label><br>
-  <input type="radio" id="high-contrast" name="theme" value="high-contrast">
-  <label for="high-contrast">High Contrast</label><br>
-  <small>You can change this later</small>
-</form>
+<fieldset aria-describedby="theme-description">
+  <legend>Choose a theme:</legend>
+  <small id="theme-description">You can change this later</small>
+  <div>
+    <input type="radio" id="light" name="theme" value="light">
+    <label for="light">Light</label>
+  </div>
+  <div>
+    <input type="radio" id="dark" name="theme" value="dark">
+    <label for="dark">Dark</label>
+  </div>
+  <div>
+    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+    <label for="high-contrast">High Contrast</label>
+  </div>
+</fieldset>

@@ -1,19 +1,16 @@
-<form onsubmit="return validateCheckboxes()">
-  <label>What fruits do you like?</label><br>
-  <input type="checkbox" name="fruits" value="bananas"> Bananas<br>
-  <input type="checkbox" name="fruits" value="oranges"> Oranges<br>
-  <input type="checkbox" name="fruits" value="apples"> Apples<br>
-  <span id="error-message" style="color: red;"></span><br>
-  <input type="submit" value="Submit">
-</form>
-<script>
-  function validateCheckboxes() {
-    const checkboxes = document.querySelectorAll('input[name="fruits"]:checked');
-    if (checkboxes.length === 0) {
-      document.getElementById('error-message').textContent = 'You must choose one or more fruits';
-      return false;
-    }
-    document.getElementById('error-message').textContent = '';
-    return true;
-  }
-</script>
+<fieldset aria-describedby="error-message">
+  <legend>What fruits do you like?</legend>
+  <span id="error-message">You must choose one or more fruits</span>
+  <label for="bananas">
+    <input type="checkbox" name="fruits[]" id="bananas" value="bananas" aria-invalid="true">
+    Bananas
+  </label>
+  <label for="oranges">
+    <input type="checkbox" name="fruits[]" id="oranges" value="oranges" aria-invalid="true">
+    Oranges
+  </label>
+  <label for="apples">
+    <input type="checkbox" name="fruits[]" id="apples" value="apples" aria-invalid="true">
+    Apples
+  </label>
+</fieldset>

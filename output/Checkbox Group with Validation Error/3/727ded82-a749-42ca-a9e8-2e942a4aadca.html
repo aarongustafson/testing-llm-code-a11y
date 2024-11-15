@@ -1,8 +1,16 @@
-<form onsubmit="return this.querySelectorAll('input[type=checkbox]:checked').length > 0;">
-  <p>What fruits do you like?</p>
-  <label><input type="checkbox" name="fruits" value="bananas"> Bananas</label><br>
-  <label><input type="checkbox" name="fruits" value="oranges"> Oranges</label><br>
-  <label><input type="checkbox" name="fruits" value="apples"> Apples</label><br>
-  <p id="error" style="color: red; display: none;">You must choose one or more fruits</p>
-  <button type="submit" onclick="document.getElementById('error').style.display = this.form.querySelectorAll('input[type=checkbox]:checked').length > 0 ? 'none' : 'block'">Submit</button>
-</form>
+<fieldset aria-describedby="fruits-error">
+  <legend>What fruits do you like?</legend>
+  <p class="error" id="fruits-error">You must choose one or more fruits</p>
+  <label for="bananas">
+    <input type="checkbox" name="fruits[]" id="bananas" value="bananas" aria-invalid="true">
+    Bananas
+  </label>
+  <label for="oranges">
+    <input type="checkbox" name="fruits[]" id="oranges" value="oranges" aria-invalid="true">
+    Oranges
+  </label>
+  <label for="apples">
+    <input type="checkbox" name="fruits[]" id="apples" value="apples" aria-invalid="true">
+    Apples
+  </label>
+</fieldset>

@@ -1,32 +1,16 @@
-<form>
-  <fieldset>
-    <legend>What fruits do you like?</legend>
-    <div>
-      <input type="checkbox" id="bananas" name="fruits" value="bananas" required>
-      <label for="bananas">Bananas</label>
-    </div>
-    <div>
-      <input type="checkbox" id="oranges" name="fruits" value="oranges" required>
-      <label for="oranges">Oranges</label>
-    </div>
-    <div>
-      <input type="checkbox" id="apples" name="fruits" value="apples" required>
-      <label for="apples">Apples</label>
-    </div>
-    <div style="color: red; display: none;" id="validation-error">You must choose one or more fruits</div>
-  </fieldset>
-  <button type="submit">Submit</button>
-</form>
-<script>
-  document.querySelector('form').onsubmit = function(e) {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const validationError = document.getElementById('validation-error');
-    let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-    if (!isChecked) {
-      e.preventDefault();
-      validationError.style.display = 'block';
-    } else {
-      validationError.style.display = 'none';
-    }
-  };
-</script>
+<fieldset aria-describedby="validation-error">
+  <legend>What fruits do you like?</legend>
+  <div id="validation-error">You must choose one or more fruits</div>
+  <div>
+    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
+    <label for="bananas">Bananas</label>
+  </div>
+  <div>
+    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
+    <label for="oranges">Oranges</label>
+  </div>
+  <div>
+    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
+    <label for="apples">Apples</label>
+  </div>
+</fieldset>

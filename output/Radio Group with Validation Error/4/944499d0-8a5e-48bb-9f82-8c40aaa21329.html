@@ -1,18 +1,20 @@
-<form aria-labelledby="theme-chooser">
-  <fieldset>
-    <legend id="theme-chooser">Choose a theme</legend>
-    <label>
-      <input type="radio" name="theme" value="light"> Light
-    </label>
-    <label>
-      <input type="radio" name="theme" value="dark"> Dark
-    </label>
-    <label>
-      <input type="radio" name="theme" value="high-contrast"> High Contrast
-    </label>
-  </fieldset>
-  <div id="theme-error" role="alert" aria-live="assertive" style="color: red; display: none;">
-    You must choose a theme to proceed
-  </div>
-  <button type="submit">Submit</button>
-</form>
+<fieldset aria-describedby="theme-error">
+  <legend>Choose a theme</legend>
+  <div id="theme-error">You must choose a theme to proceed</div>
+  <label for="light">
+    <input type="radio" id="light" name="theme" value="light"
+           required aria-invalid="true">
+    Light
+  </label>
+  <label for="dark">
+    <input type="radio" id="dark" name="theme" value="dark"
+           required aria-invalid="true">
+    Dark
+  </label>
+  <label for="high-contrast">
+    <input type="radio" id="high-contrast" name="theme"
+           value="high-contrast"
+           required aria-invalid="true">
+      High Contrast
+  </label>
+</fieldset>

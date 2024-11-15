@@ -1,10 +1,16 @@
-<label>What fruits do you like?</label>
-<div role="group" aria-labelledby="fruits-label">
-  <input type="checkbox" id="bananas" name="fruits" value="bananas">
-  <label for="bananas">Bananas</label>
-  <input type="checkbox" id="oranges" name="fruits" value="oranges">
-  <label for="oranges">Oranges</label>
-  <input type="checkbox" id="apples" name="fruits" value="apples">
-  <label for="apples">Apples</label>
-  <div aria-live="polite" style="color: red;">You must choose one or more fruits</div>
+<label id="fruits-label">What fruits do you like?</label>
+<div role="group" aria-labelledby="fruits-label" aria-describedby="fruits-error">
+  <div id="fruits-error">You must choose one or more fruits</div>
+  <div>
+    <input type="checkbox" id="bananas" name="fruits[]" value="bananas" aria-invalid="true">
+    <label for="bananas">Bananas</label>
+  </div>
+  <div>
+    <input type="checkbox" id="oranges" name="fruits[]" value="oranges" aria-invalid="true">
+    <label for="oranges">Oranges</label>
+  </div>
+  <div>
+    <input type="checkbox" id="apples" name="fruits[]" value="apples" aria-invalid="true">
+    <label for="apples">Apples</label>
+  </div>
 </div>

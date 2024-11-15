@@ -1,6 +1,13 @@
-<div>
-  <label><input type="radio" name="theme" value="light"> Light</label>
-  <label><input type="radio" name="theme" value="dark"> Dark</label>
-  <label><input type="radio" name="theme" value="high-contrast"> High Contrast</label>
-  <p>You can change this later</p>
-</div>
+<fieldset aria-describedby="theme-description">
+  <legend>Choose a theme:</legend>
+  <p id="theme-description">You can change this later</p>
+  <label for="light">
+    <input type="radio" name="theme" id="light" value="light"> Light
+  </label>
+  <label for="dark">
+    <input type="radio" name="theme" id="dark" value="dark"> Dark
+  </label>
+  <label for="high-contrast">
+    <input type="radio" name="theme" id="high-contrast" value="high-contrast"> High Contrast
+  </label>
+</fieldset>

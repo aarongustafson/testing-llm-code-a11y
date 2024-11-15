@@ -1,0 +1,44 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+diff --git a/output/Radio Group with Accessible Description/4/f664d3b7-d017-4ff4-8a2e-752705bb4e04.html b/output/Radio Group with Accessible Description/4/f664d3b7-d017-4ff4-8a2e-752705bb4e04.html
+index 25be87d..b7820f3 100644
+--- a/output/Radio Group with Accessible Description/4/f664d3b7-d017-4ff4-8a2e-752705bb4e04.html	
++++ b/output/Radio Group with Accessible Description/4/f664d3b7-d017-4ff4-8a2e-752705bb4e04.html	
+@@ -1,18 +1,16 @@
+-<form>
+-  <fieldset>
+-    <legend>Choose a theme</legend>
+-    <div>
+-      <input type="radio" id="light" name="theme" value="light">
+-      <label for="light">Light</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="dark" name="theme" value="dark">
+-      <label for="dark">Dark</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+-      <label for="high-contrast">High Contrast</label>
+-    </div>
+-    <p>You can change this later</p>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a theme</legend>
++  <p id="theme-description">You can change this later</p>
++  <div>
++    <input type="radio" id="light" name="theme" value="light">
++    <label for="light">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark" name="theme" value="dark">
++    <label for="dark">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
++    <label for="high-contrast">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

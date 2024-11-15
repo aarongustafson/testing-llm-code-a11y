@@ -1,0 +1,44 @@
+Error: The `form` element was not requested.
+Error: A checkbox group must have an accessible label. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: A `button` is not part of this component.
+diff --git a/output/Radio Group with Validation Error/2/db83f765-6ad4-4ef7-9e07-28aba1c2da25.html b/output/Radio Group with Validation Error/2/db83f765-6ad4-4ef7-9e07-28aba1c2da25.html
+index b7f6119..ae2106a 100644
+--- a/output/Radio Group with Validation Error/2/db83f765-6ad4-4ef7-9e07-28aba1c2da25.html	
++++ b/output/Radio Group with Validation Error/2/db83f765-6ad4-4ef7-9e07-28aba1c2da25.html	
+@@ -1,13 +1,20 @@
+-<form>
+-  <p>You must choose a theme to proceed</p>
+-  <label>
+-    <input type="radio" name="theme" value="light" required> Light
++<fieldset aria-describedby="error-message">
++  <legend>Choose a theme</legend>
++  <p id="theme-error">You must choose a theme to proceed</p>
++  <label for="light">
++    <input type="radio" id="light" name="theme" value="light"
++           required aria-invalid="true">
++    Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark" required> Dark
++  <label for="dark">
++    <input type="radio" id="dark" name="theme" value="dark"
++           required aria-invalid="true">
++    Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast" required> High Contrast
++  <label for="high-contrast">
++    <input type="radio" id="high-contrast" name="theme"
++           value="high-contrast"
++           required aria-invalid="true">
++    High Contrast
+   </label>
+-  <button type="submit">Submit</button>
+-</form>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

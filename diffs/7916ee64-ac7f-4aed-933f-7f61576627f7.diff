@@ -1,0 +1,30 @@
+Error: The requested field group name is missing.
+Error: Use `aria-describedby` to reference a group description.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: `aria-describedby` is not needed on an individual radio field if the description applies to the group and not the individual item. Apply it to the `fieldset` instead.
+diff --git a/output/Radio Group with Accessible Description/4/7916ee64-ac7f-4aed-933f-7f61576627f7.html b/output/Radio Group with Accessible Description/4/7916ee64-ac7f-4aed-933f-7f61576627f7.html
+index a250e50..10761fc 100644
+--- a/output/Radio Group with Accessible Description/4/7916ee64-ac7f-4aed-933f-7f61576627f7.html	
++++ b/output/Radio Group with Accessible Description/4/7916ee64-ac7f-4aed-933f-7f61576627f7.html	
+@@ -1,12 +1,13 @@
+-<div role="group" aria-labelledby="theme-chooser">
++<div role="group" aria-labelledby="theme-label" aria-describedby="theme-chooser">
++  <p id="theme-label">Choose a theme</p>
+   <p id="theme-chooser">You can change this later</p>
+-  <label>
+-    <input type="radio" name="theme" value="light" aria-describedby="theme-chooser"> Light
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light"> Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark" aria-describedby="theme-chooser"> Dark
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark"> Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast" aria-describedby="theme-chooser"> High Contrast
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast"> High Contrast
+   </label>
+ </div>
+\ No newline at end of file

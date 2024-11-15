@@ -1,0 +1,41 @@
+Error: The `form` element was not requested.
+Error: The prompt did not request a radio be checked by default.
+diff --git a/output/Radio Group/4/4ab711f9-eb11-4607-88ac-e70a6c5ad319.html b/output/Radio Group/4/4ab711f9-eb11-4607-88ac-e70a6c5ad319.html
+index 4fd3370..b2e972b 100644
+--- a/output/Radio Group/4/4ab711f9-eb11-4607-88ac-e70a6c5ad319.html	
++++ b/output/Radio Group/4/4ab711f9-eb11-4607-88ac-e70a6c5ad319.html	
+@@ -1,17 +1,15 @@
+-<form>
+-  <fieldset>
+-    <legend>Choose a theme</legend>
+-    <div>
+-      <input type="radio" id="light" name="theme" value="light" checked>
+-      <label for="light">Light</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="dark" name="theme" value="dark">
+-      <label for="dark">Dark</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+-      <label for="high-contrast">High Contrast</label>
+-    </div>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>Choose a theme</legend>
++  <div>
++    <input type="radio" id="light" name="theme" value="light">
++    <label for="light">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark" name="theme" value="dark">
++    <label for="dark">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
++    <label for="high-contrast">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

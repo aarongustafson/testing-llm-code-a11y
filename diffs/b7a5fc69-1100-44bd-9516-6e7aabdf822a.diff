@@ -1,0 +1,42 @@
+Error: The `form` does not need to be labelled by the `legend` as the `fieldset` & `legend` combination already provides those semantics.
+Error: The `form` element was not requested.
+Error: The prompt did not request a radio be checked by default.
+diff --git a/output/Radio Group/4/b7a5fc69-1100-44bd-9516-6e7aabdf822a.html b/output/Radio Group/4/b7a5fc69-1100-44bd-9516-6e7aabdf822a.html
+index 6240547..b2e972b 100644
+--- a/output/Radio Group/4/b7a5fc69-1100-44bd-9516-6e7aabdf822a.html	
++++ b/output/Radio Group/4/b7a5fc69-1100-44bd-9516-6e7aabdf822a.html	
+@@ -1,17 +1,15 @@
+-<form aria-labelledby="theme-chooser-label">
+-  <fieldset>
+-    <legend id="theme-chooser-label">Choose a theme</legend>
+-    <div>
+-      <input type="radio" id="light" name="theme" value="light" checked>
+-      <label for="light">Light</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="dark" name="theme" value="dark">
+-      <label for="dark">Dark</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+-      <label for="high-contrast">High Contrast</label>
+-    </div>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>Choose a theme</legend>
++  <div>
++    <input type="radio" id="light" name="theme" value="light">
++    <label for="light">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark" name="theme" value="dark">
++    <label for="dark">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
++    <label for="high-contrast">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

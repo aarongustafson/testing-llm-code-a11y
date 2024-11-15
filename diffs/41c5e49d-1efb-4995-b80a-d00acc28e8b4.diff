@@ -1,0 +1,41 @@
+Error: The `form` element was not requested.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+diff --git a/output/Radio Group/3/41c5e49d-1efb-4995-b80a-d00acc28e8b4.html b/output/Radio Group/3/41c5e49d-1efb-4995-b80a-d00acc28e8b4.html
+index 295c7bd..2b63fb0 100644
+--- a/output/Radio Group/3/41c5e49d-1efb-4995-b80a-d00acc28e8b4.html	
++++ b/output/Radio Group/3/41c5e49d-1efb-4995-b80a-d00acc28e8b4.html	
+@@ -1,17 +1,15 @@
+-<form>
+-  <fieldset>
+-    <legend>Choose Theme</legend>
+-    <label>
+-      <input type="radio" name="theme" value="light" checked>
+-      Light
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="dark">
+-      Dark
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="high-contrast">
+-      High Contrast
+-    </label>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>Choose Theme</legend>
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light">
++    Light
++  </label>
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark">
++    Dark
++  </label>
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast">
++    High Contrast
++  </label>
++</fieldset>
+\ No newline at end of file

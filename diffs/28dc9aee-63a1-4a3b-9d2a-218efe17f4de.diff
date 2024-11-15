@@ -1,0 +1,41 @@
+Error: The response should not have been in a Markdown block.
+Error: The `form` element was not requested.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+diff --git a/output/Radio Group/3/28dc9aee-63a1-4a3b-9d2a-218efe17f4de.html b/output/Radio Group/3/28dc9aee-63a1-4a3b-9d2a-218efe17f4de.html
+index 5e287d0..aac94c5 100644
+--- a/output/Radio Group/3/28dc9aee-63a1-4a3b-9d2a-218efe17f4de.html	
++++ b/output/Radio Group/3/28dc9aee-63a1-4a3b-9d2a-218efe17f4de.html	
+@@ -1,16 +1,15 @@
+-```html
+-<form>
+-  <fieldset>
+-    <legend>Choose a theme:</legend>
+-    <label>
+-      <input type="radio" name="theme" value="light" checked> Light
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="dark"> Dark
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="high-contrast"> High Contrast
+-    </label>
+-  </fieldset>
+-</form>
+-```
+\ No newline at end of file
++<fieldset>
++  <legend>Choose a theme:</legend>
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light">
++    Light
++  </label>
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark">
++    Dark
++  </label>
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast">
++    High Contrast
++  </label>
++</fieldset>
+\ No newline at end of file

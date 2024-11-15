@@ -1,0 +1,35 @@
+Error: A field group must have an accessible label. Use `fieldset` and `legend`.
+Error: The requested field group name is missing.
+Error: Use `aria-describedby` to reference a group description. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+diff --git a/output/Radio Group with Accessible Description/3/8042a909-fff6-44a3-a819-23ed330fdf86.html b/output/Radio Group with Accessible Description/3/8042a909-fff6-44a3-a819-23ed330fdf86.html
+index 9ecaa86..93766cc 100644
+--- a/output/Radio Group with Accessible Description/3/8042a909-fff6-44a3-a819-23ed330fdf86.html	
++++ b/output/Radio Group with Accessible Description/3/8042a909-fff6-44a3-a819-23ed330fdf86.html	
+@@ -1,9 +1,16 @@
+-<div>
+-  <p>You can change this later</p>
+-  <input type="radio" id="light" name="theme" value="light">
+-  <label for="light">Light</label><br>
+-  <input type="radio" id="dark" name="theme" value="dark">
+-  <label for="dark">Dark</label><br>
+-  <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+-  <label for="high-contrast">High Contrast</label>
+-</div>
+\ No newline at end of file
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a Theme</legend>
++  <p id="theme-description">You can change this later</p>
++  <div>
++    <input type="radio" id="light" name="theme" value="light">
++    <label for="light">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark" name="theme" value="dark">
++    <label for="dark">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
++    <label for="high-contrast">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

@@ -1,0 +1,25 @@
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+diff --git a/output/Radio Group with Accessible Description/2/46443d08-f874-4855-b9a0-d7ab88d30c95.html b/output/Radio Group with Accessible Description/2/46443d08-f874-4855-b9a0-d7ab88d30c95.html
+index 9282191..0bf2525 100644
+--- a/output/Radio Group with Accessible Description/2/46443d08-f874-4855-b9a0-d7ab88d30c95.html	
++++ b/output/Radio Group with Accessible Description/2/46443d08-f874-4855-b9a0-d7ab88d30c95.html	
+@@ -1,5 +1,6 @@
+-<div>
+-  <label>Select Theme:</label>
++<fieldset aria-describedby="theme-description">
++  <legend>Select theme:</legend>
++  <p id="theme-description">You can change this later</p>
+   <div>
+     <input type="radio" id="light" name="theme" value="light">
+     <label for="light">Light</label>
+@@ -12,5 +13,4 @@
+     <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+     <label for="high-contrast">High Contrast</label>
+   </div>
+-  <p>You can change this later</p>
+-</div>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

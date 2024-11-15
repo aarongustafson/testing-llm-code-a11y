@@ -1,0 +1,19 @@
+Error: The response should not have been in a Markdown block.
+diff --git a/output/Radio Group/4/30cdd323-ed55-4b26-a80a-b668ca1a0eb8.html b/output/Radio Group/4/30cdd323-ed55-4b26-a80a-b668ca1a0eb8.html
+index 25f151d..b2e972b 100644
+--- a/output/Radio Group/4/30cdd323-ed55-4b26-a80a-b668ca1a0eb8.html	
++++ b/output/Radio Group/4/30cdd323-ed55-4b26-a80a-b668ca1a0eb8.html	
+@@ -1,4 +1,3 @@
+-```html
+ <fieldset>
+   <legend>Choose a theme</legend>
+   <div>
+@@ -13,5 +12,4 @@
+     <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+     <label for="high-contrast">High Contrast</label>
+   </div>
+-</fieldset>
+-```
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

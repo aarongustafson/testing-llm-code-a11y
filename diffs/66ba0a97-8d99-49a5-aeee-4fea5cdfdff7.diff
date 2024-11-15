@@ -1,0 +1,37 @@
+Error: The `form` element was not requested.
+Error: A `label` alone cannot be used to provide an accessible label for a group of fields. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label. Note: If the checkbox control is not nested in its `label`, wrapping the two elements within another element (such as a `div`) is preferable. Having a shared parent element gives designers more control over the eventual layout of the checkbox group than a `br` does.
+diff --git a/output/Radio Group with Accessible Description/2/66ba0a97-8d99-49a5-aeee-4fea5cdfdff7.html b/output/Radio Group with Accessible Description/2/66ba0a97-8d99-49a5-aeee-4fea5cdfdff7.html
+index f5a77f1..50bc264 100644
+--- a/output/Radio Group with Accessible Description/2/66ba0a97-8d99-49a5-aeee-4fea5cdfdff7.html	
++++ b/output/Radio Group with Accessible Description/2/66ba0a97-8d99-49a5-aeee-4fea5cdfdff7.html	
+@@ -1,10 +1,16 @@
+-<form>
+-  <label>Choose a theme:</label><br>
+-  <input type="radio" id="light" name="theme" value="light">
+-  <label for="light">Light</label><br>
+-  <input type="radio" id="dark" name="theme" value="dark">
+-  <label for="dark">Dark</label><br>
+-  <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+-  <label for="high-contrast">High Contrast</label><br>
+-  <small>You can change this later</small>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a theme:</legend>
++  <small id="theme-description">You can change this later</small>
++  <div>
++    <input type="radio" id="light" name="theme" value="light">
++    <label for="light">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark" name="theme" value="dark">
++    <label for="dark">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast" name="theme" value="high-contrast">
++    <label for="high-contrast">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

@@ -1,0 +1,16 @@
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+diff --git a/output/Radio Group with Accessible Description/4/526042e2-0661-4253-9fcc-490d71c4d8b1.html b/output/Radio Group with Accessible Description/4/526042e2-0661-4253-9fcc-490d71c4d8b1.html
+index 5a6b335..b7bf932 100644
+--- a/output/Radio Group with Accessible Description/4/526042e2-0661-4253-9fcc-490d71c4d8b1.html	
++++ b/output/Radio Group with Accessible Description/4/526042e2-0661-4253-9fcc-490d71c4d8b1.html	
+@@ -1,7 +1,7 @@
+ <div>
+-  <p>You can change this later</p>
+-  <fieldset>
++  <fieldset aria-describedby="theme-description">
+     <legend>Choose a theme:</legend>
++    <p id="theme-description">You can change this later</p>
+     <div>
+       <input type="radio" id="light" name="theme" value="light">
+       <label for="light">Light</label>

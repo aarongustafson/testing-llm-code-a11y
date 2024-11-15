@@ -1,0 +1,36 @@
+Error: A field group must have an accessible label. Use `fieldset` and `legend`.
+Error: The requested field group name is missing.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: The prompt did not request a radio be checked by default.
+Error: Inline styles are no substitute for semantics, such as `small`.
+diff --git a/output/Radio Group with Accessible Description/1/c1527dbc-3f47-42bb-83f3-2aebe92ca89c.html b/output/Radio Group with Accessible Description/1/c1527dbc-3f47-42bb-83f3-2aebe92ca89c.html
+index 7fb7049..13551ed 100644
+--- a/output/Radio Group with Accessible Description/1/c1527dbc-3f47-42bb-83f3-2aebe92ca89c.html	
++++ b/output/Radio Group with Accessible Description/1/c1527dbc-3f47-42bb-83f3-2aebe92ca89c.html	
+@@ -1,12 +1,13 @@
+-<div>
+-  <label>
+-    <input type="radio" name="theme" value="light" checked> Light
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a theme</legend>
++  <small id="theme-description">You can change this later</small>
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light"> Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark"> Dark
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark"> Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast"> High Contrast
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast"> High Contrast
+   </label>
+-  <p style="font-size: 0.9em; color: #555;">You can change this later</p>
+-</div>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

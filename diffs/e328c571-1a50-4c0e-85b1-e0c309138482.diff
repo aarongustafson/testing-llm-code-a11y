@@ -1,0 +1,24 @@
+Error: A field group must have an accessible label. Use `fieldset` and `legend`.
+Error: The requested field group name is missing.
+Error: Use `aria-describedby` to reference a group description.
+diff --git a/output/Radio Group with Accessible Description/1/e328c571-1a50-4c0e-85b1-e0c309138482.html b/output/Radio Group with Accessible Description/1/e328c571-1a50-4c0e-85b1-e0c309138482.html
+index 1ee9918..b35db3b 100644
+--- a/output/Radio Group with Accessible Description/1/e328c571-1a50-4c0e-85b1-e0c309138482.html	
++++ b/output/Radio Group with Accessible Description/1/e328c571-1a50-4c0e-85b1-e0c309138482.html	
+@@ -1,5 +1,6 @@
+-<div>
+-  <p>You can change this later</p>
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a theme:</legend>
++  <p id="theme-description">You can change this later</p>
+   <div>
+     <input type="radio" id="light" name="theme" value="light">
+     <label for="light">Light</label>
+@@ -12,4 +13,4 @@
+     <input type="radio" id="high-contrast" name="theme" value="high-contrast">
+     <label for="high-contrast">High Contrast</label>
+   </div>
+-</div>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

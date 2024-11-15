@@ -1,0 +1,45 @@
+Error: The `form` element was not requested.
+Error: A radio control group must have an accessible label. Use `fieldset` and `legend`.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: The error message indicates the radio field is required. With radio `input` elements, you can set `required` on each `input` and browsers will only require a user to choose one of them.
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: A submit button is not part of this component.
+diff --git a/output/Radio Group with Validation Error/2/37f1dd91-44bb-48b1-887f-a29523ffec45.html b/output/Radio Group with Validation Error/2/37f1dd91-44bb-48b1-887f-a29523ffec45.html
+index 0d1ea64..ae2106a 100644
+--- a/output/Radio Group with Validation Error/2/37f1dd91-44bb-48b1-887f-a29523ffec45.html	
++++ b/output/Radio Group with Validation Error/2/37f1dd91-44bb-48b1-887f-a29523ffec45.html	
+@@ -1,16 +1,20 @@
+-<form>
+-  <p>You must choose a theme to proceed</p>
+-  <label>
+-    <input type="radio" name="theme" value="light">
++<fieldset aria-describedby="error-message">
++  <legend>Choose a theme</legend>
++  <p id="theme-error">You must choose a theme to proceed</p>
++  <label for="light">
++    <input type="radio" id="light" name="theme" value="light"
++           required aria-invalid="true">
+     Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark">
++  <label for="dark">
++    <input type="radio" id="dark" name="theme" value="dark"
++           required aria-invalid="true">
+     Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast">
++  <label for="high-contrast">
++    <input type="radio" id="high-contrast" name="theme"
++           value="high-contrast"
++           required aria-invalid="true">
+     High Contrast
+   </label>
+-  <input type="submit" value="Submit">
+-</form>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

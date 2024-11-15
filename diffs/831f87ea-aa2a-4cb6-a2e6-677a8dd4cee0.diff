@@ -1,0 +1,42 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: The `aria-label` attributes are not necessary as that information is provided by the related `label` element.
+diff --git a/output/Radio Group with Accessible Description/4/831f87ea-aa2a-4cb6-a2e6-677a8dd4cee0.html b/output/Radio Group with Accessible Description/4/831f87ea-aa2a-4cb6-a2e6-677a8dd4cee0.html
+index d0642ec..938e9e2 100644
+--- a/output/Radio Group with Accessible Description/4/831f87ea-aa2a-4cb6-a2e6-677a8dd4cee0.html	
++++ b/output/Radio Group with Accessible Description/4/831f87ea-aa2a-4cb6-a2e6-677a8dd4cee0.html	
+@@ -1,18 +1,13 @@
+-<form aria-label="Theme chooser">
+-  <fieldset>
+-    <legend>Choose a theme</legend>
+-    <p>You can change this later</p>
+-    <label>
+-      <input type="radio" name="theme" value="light" aria-label="Light theme">
+-      Light
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="dark" aria-label="Dark theme">
+-      Dark
+-    </label>
+-    <label>
+-      <input type="radio" name="theme" value="high-contrast" aria-label="High contrast theme">
+-      High Contrast
+-    </label>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="theme-description">
++  <legend>Choose a theme</legend>
++  <p id="theme-description">You can change this later</p>
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light"> Light
++  </label>
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark"> Dark
++  </label>
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast"> High Contrast
++  </label>
++</fieldset>
+\ No newline at end of file

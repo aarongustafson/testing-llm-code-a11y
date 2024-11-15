@@ -1,0 +1,31 @@
+Error: When your component includes a collection of radio `input` elements with the same name, the "radiogroup" `role` is unnecessary. You only need it if you are not using true form controls. The "group" `role` is sufficient.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: An `aria-checked` attribute is unnecessary on a radio input element. The built-in `checked` attribute (or lack thereof) provides the same information.
+diff --git a/output/Radio Group/4/b9d637fd-71f1-439a-9b0b-852b47756822.html b/output/Radio Group/4/b9d637fd-71f1-439a-9b0b-852b47756822.html
+index d1adf73..f7b96c2 100644
+--- a/output/Radio Group/4/b9d637fd-71f1-439a-9b0b-852b47756822.html	
++++ b/output/Radio Group/4/b9d637fd-71f1-439a-9b0b-852b47756822.html	
+@@ -1,15 +1,15 @@
+-<div role="radiogroup" aria-labelledby="theme-chooser-label">
++<div role="group" aria-labelledby="theme-chooser-label">
+   <div id="theme-chooser-label">Choose theme:</div>
+-  <label>
+-    <input type="radio" name="theme" value="light" aria-checked="false">
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light">
+     Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark" aria-checked="false">
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark">
+     Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast" aria-checked="false">
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast">
+     High Contrast
+   </label>
+ </div>
+\ No newline at end of file

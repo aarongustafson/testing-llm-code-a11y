@@ -1,0 +1,44 @@
+Error: The `form` element was not requested.
+Error: Use `aria-describedby` to reference a group description.
+Error: For usability, it is recommended to put the group description at the top of the component, just after the label.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+Error: The error message indicates the radio field is required. With radio `input` elements, you can set `required` on each `input` and browsers will only require a user to choose one of them.
+Error: `aria-invalid="true"` is used to accessibly indicate fields that have errors.
+Error: Color alone should not be used to convey errors.
+Error: The error text should not be hidden when the component has an error.
+diff --git a/output/Radio Group with Validation Error/1/5f6d2d93-cdc2-49b3-b94f-8e4d2e8fc65f.html b/output/Radio Group with Validation Error/1/5f6d2d93-cdc2-49b3-b94f-8e4d2e8fc65f.html
+index 75e1d84..ddefb9b 100644
+--- a/output/Radio Group with Validation Error/1/5f6d2d93-cdc2-49b3-b94f-8e4d2e8fc65f.html	
++++ b/output/Radio Group with Validation Error/1/5f6d2d93-cdc2-49b3-b94f-8e4d2e8fc65f.html	
+@@ -1,9 +1,20 @@
+-<form>
+-  <fieldset>
+-    <legend>Choose a theme</legend>
+-    <label><input type="radio" name="theme" value="light"> Light</label>
+-    <label><input type="radio" name="theme" value="dark"> Dark</label>
+-    <label><input type="radio" name="theme" value="high-contrast"> High Contrast</label>
+-  </fieldset>
+-  <div class="error" style="color: red; display: none;">You must choose a theme to proceed</div>
+-</form>
+\ No newline at end of file
++<fieldset aria-describedby="theme-error">
++  <legend>Choose a theme</legend>
++  <div class="error" id="theme-error">You must choose a theme to proceed</div>
++  <label for="light">
++    <input type="radio" id="light" name="theme" value="light"
++           required aria-invalid="true">
++    Light
++  </label>
++  <label for="dark">
++    <input type="radio" id="dark" name="theme" value="dark"
++           required aria-invalid="true">
++    Dark
++  </label>
++  <label for="high-contrast">
++    <input type="radio" id="high-contrast" name="theme"
++           value="high-contrast"
++           required aria-invalid="true">
++    High Contrast
++  </label>
++</fieldset>
+\ No newline at end of file

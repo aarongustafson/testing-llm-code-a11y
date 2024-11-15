@@ -1,0 +1,41 @@
+Error: The `form` does not need to be labelled by the `legend` as the `fieldset` & `legend` combination already provides those semantics.
+Error: The `form` element was not requested.
+diff --git a/output/Radio Group/4/7457f519-0e42-4f95-b48a-f224fe0d8bf6.html b/output/Radio Group/4/7457f519-0e42-4f95-b48a-f224fe0d8bf6.html
+index 19a17b7..ddef162 100644
+--- a/output/Radio Group/4/7457f519-0e42-4f95-b48a-f224fe0d8bf6.html	
++++ b/output/Radio Group/4/7457f519-0e42-4f95-b48a-f224fe0d8bf6.html	
+@@ -1,17 +1,15 @@
+-<form aria-labelledby="theme-chooser">
+-  <fieldset>
+-    <legend id="theme-chooser">Choose a theme:</legend>
+-    <div>
+-      <input type="radio" id="light-theme" name="theme" value="light">
+-      <label for="light-theme">Light</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="dark-theme" name="theme" value="dark">
+-      <label for="dark-theme">Dark</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="high-contrast-theme" name="theme" value="high-contrast">
+-      <label for="high-contrast-theme">High Contrast</label>
+-    </div>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>Choose a theme:</legend>
++  <div>
++    <input type="radio" id="light-theme" name="theme" value="light">
++    <label for="light-theme">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark-theme" name="theme" value="dark">
++    <label for="dark-theme">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast-theme" name="theme" value="high-contrast">
++    <label for="high-contrast-theme">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

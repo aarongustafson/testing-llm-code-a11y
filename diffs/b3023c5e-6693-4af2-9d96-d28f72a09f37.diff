@@ -1,0 +1,32 @@
+Error: A field group must have an accessible label. Use `fieldset` and `legend`.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+diff --git a/output/Radio Group/2/b3023c5e-6693-4af2-9d96-d28f72a09f37.html b/output/Radio Group/2/b3023c5e-6693-4af2-9d96-d28f72a09f37.html
+index 53f3c8b..aac94c5 100644
+--- a/output/Radio Group/2/b3023c5e-6693-4af2-9d96-d28f72a09f37.html	
++++ b/output/Radio Group/2/b3023c5e-6693-4af2-9d96-d28f72a09f37.html	
+@@ -1,11 +1,15 @@
+-<div>
+-  <label>
+-    <input type="radio" name="theme" value="light" checked> Light
++<fieldset>
++  <legend>Choose a theme:</legend>
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light">
++    Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark"> Dark
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark">
++    Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast"> High Contrast
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast">
++    High Contrast
+   </label>
+-</div>
+\ No newline at end of file
++</fieldset>
+\ No newline at end of file

@@ -1,0 +1,42 @@
+Error: The `form` does not need to be labelled by the `legend` as the `fieldset` & `legend` combination already provides those semantics.
+Error: The `form` element was not requested.
+Error: If you are using a `label` with a `for` referencing the associated field, you do not need the reciprocal relationship to be established using an `id` on the `label` and `aria-labelledby` on the `input`.
+diff --git a/output/Radio Group/4/583aa97b-08d3-4247-a2b1-72506c8dfafb.html b/output/Radio Group/4/583aa97b-08d3-4247-a2b1-72506c8dfafb.html
+index 24cfade..b5dd6c3 100644
+--- a/output/Radio Group/4/583aa97b-08d3-4247-a2b1-72506c8dfafb.html	
++++ b/output/Radio Group/4/583aa97b-08d3-4247-a2b1-72506c8dfafb.html	
+@@ -1,17 +1,15 @@
+-<form aria-labelledby="theme-chooser-label">
+-  <fieldset>
+-    <legend id="theme-chooser-label">Choose a theme</legend>
+-    <div>
+-      <input type="radio" id="light-theme" name="theme" value="light" aria-labelledby="light-label">
+-      <label id="light-label" for="light-theme">Light</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="dark-theme" name="theme" value="dark" aria-labelledby="dark-label">
+-      <label id="dark-label" for="dark-theme">Dark</label>
+-    </div>
+-    <div>
+-      <input type="radio" id="high-contrast-theme" name="theme" value="high-contrast" aria-labelledby="high-contrast-label">
+-      <label id="high-contrast-label" for="high-contrast-theme">High Contrast</label>
+-    </div>
+-  </fieldset>
+-</form>
+\ No newline at end of file
++<fieldset>
++  <legend>Choose a theme</legend>
++  <div>
++    <input type="radio" id="light-theme" name="theme" value="light">
++    <label for="light-theme">Light</label>
++  </div>
++  <div>
++    <input type="radio" id="dark-theme" name="theme" value="dark">
++    <label for="dark-theme">Dark</label>
++  </div>
++  <div>
++    <input type="radio" id="high-contrast-theme" name="theme" value="high-contrast">
++    <label for="high-contrast-theme">High Contrast</label>
++  </div>
++</fieldset>
+\ No newline at end of file

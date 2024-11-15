@@ -1,0 +1,27 @@
+Error: When your component includes a collection of radio `input` elements with the same name, the "radiogroup" `role` is unnecessary. You only need it if you are not using true form controls. The "group" `role` is sufficient.
+Error: For broadest accessibility, implicitly associated `label` elements should also be explicitly associated with their control, using `for`.
+diff --git a/output/Radio Group/4/f278508c-00f8-4895-9c13-aec9ea9844f3.html b/output/Radio Group/4/f278508c-00f8-4895-9c13-aec9ea9844f3.html
+index b86255c..b54d32a 100644
+--- a/output/Radio Group/4/f278508c-00f8-4895-9c13-aec9ea9844f3.html	
++++ b/output/Radio Group/4/f278508c-00f8-4895-9c13-aec9ea9844f3.html	
+@@ -1,12 +1,12 @@
+-<div role="radiogroup" aria-labelledby="theme-chooser-label">
++<div role="group" aria-labelledby="theme-chooser-label">
+   <p id="theme-chooser-label">Choose a theme:</p>
+-  <label>
+-    <input type="radio" name="theme" value="light"> Light
++  <label for="light">
++    <input type="radio" name="theme" id="light" value="light"> Light
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="dark"> Dark
++  <label for="dark">
++    <input type="radio" name="theme" id="dark" value="dark"> Dark
+   </label>
+-  <label>
+-    <input type="radio" name="theme" value="high-contrast"> High Contrast
++  <label for="high-contrast">
++    <input type="radio" name="theme" id="high-contrast" value="high-contrast"> High Contrast
+   </label>
+ </div>
+\ No newline at end of file

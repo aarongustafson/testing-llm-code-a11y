@@ -33,7 +33,7 @@ instructions = [
   "You may include inline CSS or JavaScript, but only as much as absolutely necessary."
 ]
 
-def get_code_response(prompt):
+def get_code_response(system_prompt, prompt):
     print(f"Prompt: {prompt}")
     payload = {
       "messages": [
@@ -56,6 +56,7 @@ def get_code_response(prompt):
       "top_p": top_p,
       "max_tokens": 800
     }  
+    print(f"Payload: {payload}")
 
     try:  
       response = requests.post(ENDPOINT, headers=headers, json=payload)  
@@ -67,6 +68,22 @@ def get_code_response(prompt):
     code = result['choices'][0]['message']['content']
     print(f"Response: {code}")
     return code
+
+def process_prompts(test_folder, system_prompt, prefix, prompt, prompt_index):
+    prompt_folder = os.path.join(test_folder, str(prompt_index))
+    os.makedirs(prompt_folder, exist_ok=True)
+
+    unique_responses = set()
+
+    for _ in range(num_iterations):
+        full_prompt = f"{prefix} {prompt}".strip()
+        response = get_code_response(system_prompt, full_prompt)
+        if response not in unique_responses:
+            unique_responses.add(response)
+            filename = os.path.join(prompt_folder, f"{uuid.uuid4()}.html")
+            with open(filename, 'w') as response_file:
+                response_file.write(response)
+        time.sleep(sleep_time)  # To avoid hitting rate limits
 
 def main():
     # Load the JSON file
@@ -81,20 +98,7 @@ def main():
         prefix = test.get('prefix', '')
 
         for prompt_index, prompt in enumerate(test['prompts'], start=1):
-            prompt_folder = os.path.join(test_folder, str(prompt_index))
-            os.makedirs(prompt_folder, exist_ok=True)
-
-            unique_responses = set()
-
-            for _ in range(num_iterations):
-                full_prompt = f"{prefix} {prompt}".strip()
-                response = get_code_response(full_prompt)
-                if response not in unique_responses:
-                    unique_responses.add(response)
-                    filename = os.path.join(prompt_folder, f"{uuid.uuid4()}.html")
-                    with open(filename, 'w') as response_file:
-                        response_file.write(response)
-                time.sleep(sleep_time)  # To avoid hitting rate limits
+            process_prompts(test_folder, instructions, prefix, prompt, prompt_index)
 
 if __name__ == "__main__":
     main()

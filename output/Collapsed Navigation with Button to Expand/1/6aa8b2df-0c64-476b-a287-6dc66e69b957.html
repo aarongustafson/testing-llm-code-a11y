@@ -1,6 +1,6 @@
-<button id="navButton">Menu</button>
-<nav id="navMenu" style="display: none;">
-  <ul>
+<nav>
+  <button id="navButton" aria-label="Navigation menu" aria-expanded="false">Menu</button>
+  <ul id="navMenu" style="display: none;">
     <li><a href="/">Home</a></li>
     <li>
       <a href="/products">Products</a>
@@ -12,9 +12,3 @@
     <li><a href="/services">Services</a></li>
   </ul>
 </nav>
-<script>
-  document.getElementById('navButton').onclick = function() {
-    var navMenu = document.getElementById('navMenu');
-    navMenu.style.display = navMenu.style.display === 'none' ? 'block' : 'none';
-  };
-</script>

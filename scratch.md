@@ -89,3 +89,9 @@ Error: A `button` is not part of this component.
 Error: JavaScript is unnecessary for this component.
 
 Error: The response should not have been in a Markdown block.
+
+Error: Button to expand the nav menu should must have an aria-expanded attribute with the current state of the interface.
+
+Error: The navigation list is the element that should be shown/hidden, rather than the navigation element.
+
+Error: JavaScript was not requested as part of this component.

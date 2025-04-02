@@ -1,11 +1,3 @@
 <label>
-  <input type="checkbox" id="termsCheckbox" onclick="toggleButton()"> I agree to the Terms and Conditions
+  <input type="checkbox" id="termsCheckbox" name="termsCheckbox"> I agree to the Terms and Conditions
 </label>
-<br>
-<button id="submitButton" disabled>Confirm</button>
-
-<script>
-function toggleButton() {
-  document.getElementById('submitButton').disabled = !document.getElementById('termsCheckbox').checked;
-}
-</script>

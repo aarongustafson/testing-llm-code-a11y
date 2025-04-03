@@ -1,2 +1,3 @@
 <label for="credit-card-number">Credit Card Number:</label>
-<input type="text" id="credit-card-number" name="credit-card-number" maxlength="19" placeholder="1234 5678 9012 3456" oninput="this.value = this.value.replace(/[^0-9\s]/g, '').replace(/(\d{4})(?=\d)/g, '$1 ');" required>
+<input type="text" id="credit-card-number" name="credit-card-number" placeholder="1234 5678 9012 3456" inputmode="numeric" aria-describedby="cc-instructions">
+<span id="cc-instructions">Enter your credit card number. Spaces and hyphens are optional.</span>

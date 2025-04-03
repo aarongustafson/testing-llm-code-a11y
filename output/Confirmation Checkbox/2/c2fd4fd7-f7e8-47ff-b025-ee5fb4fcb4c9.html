@@ -1,16 +1,3 @@
-<form onsubmit="return checkAgreement()">
-  <label for="terms">
-    <input type="checkbox" id="terms"> I agree to the terms and conditions
-  </label>
-  <br>
-  <button type="submit">Submit</button>
-</form>
-<script>
-  function checkAgreement() {
-    if (!document.getElementById('terms').checked) {
-      alert('You must agree to the terms and conditions.');
-      return false;
-    }
-    return true;
-  }
-</script>
+<label for="terms">
+  <input type="checkbox" id="terms" name="terms"> I agree to the terms and conditions
+</label>

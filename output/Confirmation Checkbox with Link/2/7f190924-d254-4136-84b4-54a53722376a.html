@@ -1,13 +1,2 @@
-<form>
-  <input type="checkbox" id="terms" name="terms">
-  <label for="terms">I agree to the <a href="terms-and-conditions.html" target="_blank">terms and conditions</a></label>
-  <input type="submit" value="Submit" disabled id="submitBtn">
-</form>
-
-<script>
-  const termsCheckbox = document.getElementById('terms');
-  const submitBtn = document.getElementById('submitBtn');
-  termsCheckbox.addEventListener('change', () => {
-    submitBtn.disabled = !termsCheckbox.checked;
-  });
-</script>
+<input type="checkbox" id="terms" name="terms">
+<label for="terms">I agree to the <a href="terms-and-conditions.html" target="_blank">terms and conditions</a></label>

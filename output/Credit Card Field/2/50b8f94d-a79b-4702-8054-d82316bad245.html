@@ -1,3 +1,3 @@
 <label for="cc-number">Credit Card Number</label>
-<input type="text" id="cc-number" name="cc-number" pattern="\d{13,19}" maxlength="19" required>
-<small>Enter a valid credit card number (13-19 digits).</small>
+<input type="text" id="cc-number" name="cc-number" pattern="^(\d+[- ]?)+$" inputmode="numeric" aria-describedby="cc-instructions">
+<small id="cc-instructions">Enter your credit card number. Spaces and hyphens are optional.</small>

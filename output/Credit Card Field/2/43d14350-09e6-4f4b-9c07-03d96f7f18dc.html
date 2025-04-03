@@ -1,7 +1,4 @@
 <label for="cc-number">Credit Card Number:</label>
-<input type="text" id="cc-number" name="cc-number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="1234 5678 9012 3456" required>
-<script>
-document.getElementById('cc-number').addEventListener('input', function (e) {
-    e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
-});
-</script>
+<input type="text" id="cc-number" name="cc-number" pattern="^(\d+[- ]?)+$" placeholder="1234 5678 9012 3456" inputmode="numeric" aria-describedby="cc-instructions">
+<span id="cc-instructions">Enter your credit card number. Spaces and hyphens are optional.</span>
+<!-- Removed <script> block as it does not belong in markup -->

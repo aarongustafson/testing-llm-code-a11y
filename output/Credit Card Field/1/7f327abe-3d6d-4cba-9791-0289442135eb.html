@@ -1,1 +1,3 @@
-<input type="text" id="credit-card" name="credit-card" placeholder="Credit Card Number" pattern="\d{13,16}" required>
+<label for="credit-card">Credit Card Number</label>
+<input type="text" id="credit-card" name="credit-card" pattern="^(\d+[- ]?)+$" inputmode="numeric" aria-describedby="cc-instructions">
+<span id="cc-instructions">Enter your credit card number. Spaces and hyphens are optional.</span>
